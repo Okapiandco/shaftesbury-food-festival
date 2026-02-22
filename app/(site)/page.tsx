@@ -56,14 +56,6 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white md:py-32">
-          <Image
-            src="/images/logo.png"
-            alt="Shaftesbury Food Festival 2026 logo"
-            width={160}
-            height={160}
-            className="mx-auto mb-6 h-32 w-32 md:h-40 md:w-40"
-            priority
-          />
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">3rd May 2026 — Bank Holiday</p>
           <h1 className="mt-4 text-4xl font-bold md:text-6xl lg:text-7xl">
             Shaftesbury<br />Food Festival

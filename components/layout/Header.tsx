@@ -23,19 +23,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo / Site Name */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/">
           <Image
             src="/images/logo.png"
             alt="Shaftesbury Food Festival 2026"
-            width={48}
-            height={48}
-            className="h-12 w-12"
+            width={96}
+            height={96}
+            className="h-24 w-24"
             priority
           />
-          <div className="hidden sm:block">
-            <span className="text-lg font-bold text-primary">Shaftesbury</span>
-            <span className="block text-xs text-text-light leading-tight">Food Festival 2026</span>
-          </div>
         </Link>
 
         {/* Desktop Nav */}
