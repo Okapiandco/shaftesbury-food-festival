@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-white text-text antialiased;
+  }
+
+  /* Accessible focus styles */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary ring-0;
+  }
+}
+
+@layer components {
+  .skip-to-main {
+    @apply absolute -top-10 left-4 z-50 rounded bg-primary px-4 py-2 text-white transition-all focus:top-4;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-sm {
+    @apply py-10 md:py-16;
+  }
+}
