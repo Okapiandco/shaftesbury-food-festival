@@ -6,9 +6,9 @@ import CTAButton from '@/components/shared/CTAButton'
 import VolunteerForm from '@/components/forms/VolunteerForm'
 
 export const metadata: Metadata = {
-  title: 'Become a Volunteer | Shaftesbury Food Festival 3rd May 2026',
+  title: 'Volunteer | Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Join our volunteer team for Shaftesbury Food Festival on 3rd May. Help celebrate local food and community in historic Shaftesbury.',
+    'Volunteer at the Shaftesbury Food Festival on 3rd May 2026. Roles include marshalling, event support, setup and hospitality. Join the team and help bring Dorset\'s biggest food celebration to life.',
 }
 
 const roles = [

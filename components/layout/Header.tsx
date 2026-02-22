@@ -27,9 +27,9 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Shaftesbury Food Festival 2026"
-            width={96}
-            height={96}
-            className="h-24 w-24"
+            width={192}
+            height={192}
+            className="h-48 w-48"
             priority
           />
         </Link>

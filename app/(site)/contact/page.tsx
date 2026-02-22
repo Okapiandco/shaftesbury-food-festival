@@ -4,9 +4,9 @@ import PageHeader from '@/components/shared/PageHeader'
 import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Shaftesbury Food Festival 2026',
+  title: 'Contact Us | Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Get in touch with the Shaftesbury Food Festival team. Questions about the festival, trade stands, cheese race or volunteering? We\'d love to hear from you.',
+    'Contact the Shaftesbury Food Festival team. Questions about trade stands, the Gold Hill Cheese Race, sponsorship or volunteering on 3rd May 2026? Get in touch.',
 }
 
 const socialLinks = [

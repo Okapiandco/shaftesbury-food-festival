@@ -5,9 +5,9 @@ import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'About Shaftesbury Food Festival | 3rd May 2026',
+  title: 'About | Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Learn about the Shaftesbury Food Festival 2026. Celebrating local food producers, regional Dorset cuisine, and the historic town of Shaftesbury on 3rd May.',
+    'Shaftesbury Food Festival on 3rd May 2026 celebrates Dorset food and drink on the historic high street. 100+ trade stands, the Gold Hill Cheese Race, chef talks and live entertainment.',
 }
 
 const highlights = [
