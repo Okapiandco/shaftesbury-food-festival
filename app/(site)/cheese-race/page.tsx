@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Gold Hill Cheese Race | Shaftesbury Food Festival 3rd May 2026',
   description:
     'Enter the world-famous Gold Hill Cheese Race on 3rd May at Shaftesbury Food Festival. All age groups welcome. Carry a 23kg cheese up the iconic Gold Hill. Register now!',
+  alternates: { canonical: '/cheese-race' },
 }
 
 export default function CheeseRacePage() {
@@ -37,8 +38,8 @@ export default function CheeseRacePage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
               <Image
-                src="/images/gold-hill.jpg"
-                alt="Gold Hill, Shaftesbury — the iconic cobbled street"
+                src="/images/Cheese Race Image.jpg"
+                alt="The Gold Hill Cheese Race at Shaftesbury Food Festival"
                 fill
                 className="object-cover"
               />

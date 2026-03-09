@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Contact Us | Shaftesbury Food Festival 3rd May 2026',
   description:
     'Contact the Shaftesbury Food Festival team. Questions about trade stands, the Gold Hill Cheese Race, sponsorship or volunteering on 3rd May 2026? Get in touch.',
+  alternates: { canonical: '/contact' },
 }
 
 const socialLinks = [

@@ -4,11 +4,13 @@ import NewsletterForm from '@/components/shared/NewsletterForm'
 
 const footerLinks = [
   { href: '/about', label: 'About the Festival' },
+  { href: '/volunteers', label: 'Volunteers' },
   { href: '/cheese-race', label: 'Gold Hill Cheese Race' },
+  { href: '/food-trail', label: 'Food Trail' },
+  { href: '/ingredients-hunt', label: 'Ingredients Hunt' },
   { href: '/trade-stands', label: 'Trade Stands' },
   { href: '/events', label: 'Events & Timetable' },
   { href: '/sponsors', label: 'Sponsors' },
-  { href: '/volunteers', label: 'Volunteers' },
   { href: '/contact', label: 'Contact Us' },
 ]
 

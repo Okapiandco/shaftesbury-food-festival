@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Trade Stands | Sell at Shaftesbury Food Festival 3rd May 2026',
   description:
     'Over 100 food vendors and trade stands at Shaftesbury Food Festival on 3rd May. Express your interest to become a food vendor, local producer or craft stall.',
+  alternates: { canonical: '/trade-stands' },
 }
 
 const benefits = [

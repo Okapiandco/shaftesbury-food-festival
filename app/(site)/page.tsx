@@ -19,6 +19,7 @@ const highlights = [
     description: 'Watch contestants carry a 23kg cheese up the world-famous Gold Hill from the Hovis advert. All ages welcome!',
     href: '/cheese-race',
     color: 'bg-accent/10 text-accent-dark',
+    image: '/images/Cheese Race Image.jpg',
   },
   {
     icon: Store,
@@ -58,7 +59,7 @@ export default function HomePage() {
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white md:py-32">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">3rd May 2026 — Bank Holiday</p>
           <h1 className="mt-4 text-4xl font-bold md:text-6xl lg:text-7xl">
-            Shaftesbury<br />Food Festival
+            Shaftesbury<br />Food Festival 2026
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-blue-200 md:text-xl">
             A day packed full of fun food and festivities on Shaftesbury&apos;s historic high street, Park Walk and surrounding areas.
@@ -83,15 +84,27 @@ export default function HomePage() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="group rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-lg transition-shadow"
+                className="group rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
               >
-                <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${item.color}`}>
-                  <item.icon size={28} />
+                {'image' in item && item.image && (
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
+                <div className="p-8 text-center">
+                  <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full ${item.color}`}>
+                    <item.icon size={28} />
+                  </div>
+                  <h3 className="mt-4 text-xl font-bold text-text group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-text-light">{item.description}</p>
                 </div>
-                <h3 className="mt-4 text-xl font-bold text-text group-hover:text-primary transition-colors">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm text-text-light">{item.description}</p>
               </Link>
             ))}
           </div>

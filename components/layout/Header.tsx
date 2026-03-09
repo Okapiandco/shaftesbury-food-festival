@@ -6,13 +6,14 @@ import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/volunteers', label: 'Volunteers' },
   { href: '/cheese-race', label: 'Cheese Race' },
+  { href: '/food-trail', label: 'Food Trail' },
+  { href: '/ingredients-hunt', label: 'Ingredients Hunt' },
   { href: '/trade-stands', label: 'Trade Stands' },
   { href: '/events', label: 'Events' },
   { href: '/sponsors', label: 'Sponsors' },
-  { href: '/volunteers', label: 'Volunteers' },
   { href: '/contact', label: 'Contact' },
 ]
 

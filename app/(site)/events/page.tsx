@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Festival Schedule & Events | Shaftesbury Food Festival 3rd May 2026',
   description:
     'Full event timetable for Shaftesbury Food Festival on 3rd May. Chef talks, races, food demonstrations and entertainment throughout the day.',
+  alternates: { canonical: '/events' },
 }
 
 const timetable = [

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Sponsors | Shaftesbury Food Festival 3rd May 2026',
   description:
     'Sponsor the Shaftesbury Food Festival on 3rd May 2026. Gold, Silver, Bronze and In-Kind sponsorship opportunities available. Support Dorset food, the Gold Hill Cheese Race and local community.',
+  alternates: { canonical: '/sponsors' },
 }
 
 const sponsorBenefits = [

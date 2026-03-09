@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'About | Shaftesbury Food Festival 3rd May 2026',
   description:
     'Shaftesbury Food Festival on 3rd May 2026 celebrates Dorset food and drink on the historic high street. 100+ trade stands, the Gold Hill Cheese Race, chef talks and live entertainment.',
+  alternates: { canonical: '/about' },
 }
 
 const highlights = [
