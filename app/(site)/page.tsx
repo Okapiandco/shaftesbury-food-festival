@@ -232,9 +232,9 @@ export default function HomePage() {
             organizer: {
               '@type': 'Organization',
               name: 'Shaftesbury Chamber of Commerce',
-              url: 'https://shaftesburyfoodfestival.co.uk',
+              url: 'https://shaftesbury-food-festival.co.uk',
             },
-            image: 'https://shaftesburyfoodfestival.co.uk/images/gold-hill.jpg',
+            image: 'https://shaftesbury-food-festival.co.uk/images/gold-hill.jpg',
           }),
         }}
       />

@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     // Send confirmation email
     if (resend) {
       await resend.emails.send({
-        from: `Shaftesbury Food Festival <${process.env.RESEND_FROM_EMAIL || 'noreply@shaftesburyfoodfestival.co.uk'}>`,
+        from: `Shaftesbury Food Festival <${process.env.RESEND_FROM_EMAIL || 'noreply@shaftesbury-food-festival.co.uk'}>`,
         to: email,
         subject: 'Welcome to Shaftesbury Food Festival Updates!',
         html: `

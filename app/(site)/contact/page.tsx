@@ -42,8 +42,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-text">Email</h3>
-                    <a href="mailto:hello@shaftesburyfoodfestival.co.uk" className="text-primary hover:underline">
-                      hello@shaftesburyfoodfestival.co.uk
+                    <a href="mailto:hello@shaftesbury-food-festival.co.uk" className="text-primary hover:underline">
+                      hello@shaftesbury-food-festival.co.uk
                     </a>
                   </div>
                 </div>

@@ -63,7 +63,7 @@ export const festivalConfig = defineType({
       name: 'contactEmail',
       title: 'Contact Email',
       type: 'string',
-      initialValue: 'hello@shaftesburyfoodfestival.co.uk',
+      initialValue: 'hello@shaftesbury-food-festival.co.uk',
     }),
     defineField({
       name: 'townCouncilLogo',

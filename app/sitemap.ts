@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shaftesburyfoodfestival.co.uk'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shaftesbury-food-festival.co.uk'
 
   return [
     { url: siteUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },

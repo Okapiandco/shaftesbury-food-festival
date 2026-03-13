@@ -70,8 +70,8 @@ export default function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-wider">Contact</h3>
             <div className="mt-3 space-y-2 text-sm text-blue-200">
               <p>
-                <a href="mailto:hello@shaftesburyfoodfestival.co.uk" className="hover:text-white">
-                  hello@shaftesburyfoodfestival.co.uk
+                <a href="mailto:hello@shaftesbury-food-festival.co.uk" className="hover:text-white">
+                  hello@shaftesbury-food-festival.co.uk
                 </a>
               </p>
               <p>High Street &amp; Park Walk</p>
