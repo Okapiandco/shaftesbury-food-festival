@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 interface TrailStop {
   name: string
+  location?: string
   description: string
   activities: string[]
   logo?: string
@@ -32,11 +33,12 @@ const trailStops: TrailStop[] = [
   },
   {
     name: 'Gold Hill Organic Farm',
+    location: 'Child Okeford',
     description:
-      'A working organic farm nestled in the Blackmore Vale, producing high-quality organic meat and seasonal vegetables. Experience farm life up close and enjoy freshly prepared food straight from the land.',
-    activities: ['Farm walks', 'BBQ lunch', 'Meet the animals', 'Farm shop'],
+      'Gold Hill Farm Kitchen is a small but perfectly formed café positioned on Gold Hill Organic Farm in Child Okeford. Everything is cooked from scratch — bread, pastries, smoothies, pickles, fermentations and cordials — with the aim of being the only process on your food\'s journey from field to plate. With the help of Wogan Coffee in Bristol, they also deliver an unrivalled cup of coffee. Do you know where your next meal is coming from? Come and find out on Saturday 3rd May.',
+    activities: ['Farm walk with growers — 11am', 'Farm walk with growers — 2pm', 'Farm Kitchen café', 'Coffee by Wogan Coffee'],
     logo: '',
-    image: '',
+    image: '/Events/Gold Hill Farm shop.jpg',
     mapPosition: { top: '20%', left: '60%' },
   },
   {
@@ -150,7 +152,15 @@ export default function FoodTrailPage() {
                       <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white font-bold">
                         {index + 1}
                       </span>
-                      <h3 className="text-2xl font-bold text-text">{stop.name}</h3>
+                      <div>
+                        <h3 className="text-2xl font-bold text-text">{stop.name}</h3>
+                        {stop.location && (
+                          <p className="flex items-center gap-1 text-sm text-text-muted mt-0.5">
+                            <MapPin size={12} />
+                            {stop.location}
+                          </p>
+                        )}
+                      </div>
                     </div>
 
                     {/* Logo placeholder */}
@@ -177,14 +187,25 @@ export default function FoodTrailPage() {
 
                   {/* Image side */}
                   <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center">
-                      <div className="text-center p-4">
-                        {index === 0 && <Wheat size={48} className="mx-auto text-gray-300" />}
-                        {index === 1 && <Beef size={48} className="mx-auto text-gray-300" />}
-                        {index === 2 && <Wine size={48} className="mx-auto text-gray-300" />}
-                        {index === 3 && <Wheat size={48} className="mx-auto text-gray-300" />}
-                        <p className="mt-2 text-sm text-text-muted">Image — {stop.name}</p>
-                      </div>
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-gray-100">
+                      {stop.image ? (
+                        <Image
+                          src={stop.image}
+                          alt={stop.name}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 border-2 border-dashed border-gray-300 flex items-center justify-center">
+                          <div className="text-center p-4">
+                            {index === 0 && <Wheat size={48} className="mx-auto text-gray-300" />}
+                            {index === 1 && <Beef size={48} className="mx-auto text-gray-300" />}
+                            {index === 2 && <Wine size={48} className="mx-auto text-gray-300" />}
+                            {index === 3 && <Wheat size={48} className="mx-auto text-gray-300" />}
+                            <p className="mt-2 text-sm text-text-muted">Image — {stop.name}</p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
