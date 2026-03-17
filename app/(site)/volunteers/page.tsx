@@ -74,8 +74,8 @@ export default function VolunteersPage() {
       {/* Festival image */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
-          src="/images/gifts.jpg"
-          alt="Gifts and crafts at the Shaftesbury Food Festival"
+          src="/images/Food festvial crowds.jpg"
+          alt="Festival crowds enjoying the Shaftesbury Food Festival"
           fill
           className="object-cover"
         />

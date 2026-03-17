@@ -38,7 +38,7 @@ const trailStops: TrailStop[] = [
       'Gold Hill Farm Kitchen is a small but perfectly formed café positioned on Gold Hill Organic Farm in Child Okeford. Everything is cooked from scratch — bread, pastries, smoothies, pickles, fermentations and cordials — with the aim of being the only process on your food\'s journey from field to plate. With the help of Wogan Coffee in Bristol, they also deliver an unrivalled cup of coffee. Do you know where your next meal is coming from? Come and find out on Saturday 3rd May.',
     activities: ['Farm walk with growers — 11am', 'Farm walk with growers — 2pm', 'Farm Kitchen café', 'Coffee by Wogan Coffee'],
     logo: '',
-    image: '/Events/Gold Hill Farm shop.jpg',
+    image: '/Events/Gold hill organic farm.jpg',
     mapPosition: { top: '20%', left: '60%' },
   },
   {

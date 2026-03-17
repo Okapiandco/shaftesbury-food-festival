@@ -26,7 +26,7 @@ export default function Header() {
         {/* Logo / Site Name */}
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src="/Shaftesbury food festival Logo.svg"
             alt="Shaftesbury Food Festival 2026"
             width={192}
             height={192}

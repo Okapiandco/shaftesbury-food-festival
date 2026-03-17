@@ -30,8 +30,8 @@ export default function TradeStandsPage() {
       {/* Food stalls image banner */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
-          src="/images/food-stalls.jpg"
-          alt="Food stalls at the Shaftesbury Food Festival"
+          src="/images/Food festvial crowds.jpg"
+          alt="Crowds enjoying the food stalls at Shaftesbury Food Festival"
           fill
           className="object-cover"
         />
