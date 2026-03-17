@@ -33,7 +33,7 @@ export default function EventsPage() {
             {/* Event image */}
             <div className="relative h-56 sm:h-72 w-full">
               <Image
-                src="/events/Great food quiz.avif"
+                src="/Events/Great food quiz.avif"
                 alt="The Great Food Quiz at Sorelle, Motcombe"
                 fill
                 className="object-cover"
