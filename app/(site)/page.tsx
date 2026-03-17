@@ -27,6 +27,7 @@ const highlights = [
     description: 'Explore a variety of local food and drink producers celebrating the best of Dorset produce.',
     href: '/trade-stands',
     color: 'bg-secondary/10 text-secondary-dark',
+    image: '/Events/Gold Hill Farm shop.jpg',
   },
   {
     icon: ChefHat,
