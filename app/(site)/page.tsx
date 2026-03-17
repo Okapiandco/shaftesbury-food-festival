@@ -35,13 +35,14 @@ const highlights = [
     description: 'Enjoy talks and demonstrations from famous chefs, organised by The Kitchen Table. Learn tips and techniques.',
     href: '/events',
     color: 'bg-primary/10 text-primary',
+    image: '/images/Food Demos.jpg',
   },
 ]
 
 const sampleEvents = [
-  { title: 'Festival Opening Ceremony', time: '9:00 AM - 9:30 AM', location: 'High Street', eventType: 'Main Event', description: 'Official opening of the Shaftesbury Food Festival 2026.' },
-  { title: 'Gold Hill Cheese Race', time: '11:00 AM - 12:00 PM', location: 'Gold Hill', eventType: 'Race', description: 'The world-famous cheese race up iconic Gold Hill.' },
-  { title: 'Chef Talk: Local Dorset Ingredients', time: '1:00 PM - 2:00 PM', location: 'Park Walk Stage', eventType: 'Chef Talk', description: 'Discover the finest local Dorset ingredients and how to cook with them.' },
+  { title: 'Festival Opening Ceremony', time: '9:00 AM - 9:30 AM', location: 'High Street', eventType: 'Main Event', description: 'Official opening of the Shaftesbury Food Festival 2026.', image: '/images/The festival at the town hall.jpg' },
+  { title: 'Gold Hill Cheese Race', time: '11:00 AM - 12:00 PM', location: 'Gold Hill', eventType: 'Race', description: 'The world-famous cheese race up iconic Gold Hill.', image: '/images/The gold hill cheese race 2025.jpg' },
+  { title: 'Chef Talk: Local Dorset Ingredients', time: '1:00 PM - 2:00 PM', location: 'Park Walk Stage', eventType: 'Chef Talk', description: 'Discover the finest local Dorset ingredients and how to cook with them.', image: '/images/Food Demos.jpg' },
 ]
 
 export default function HomePage() {
@@ -141,7 +142,7 @@ export default function HomePage() {
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {sampleEvents.map((event) => (
-              <EventCard key={event.title} title={event.title} time={event.time} location={event.location} eventType={event.eventType} description={event.description} />
+              <EventCard key={event.title} title={event.title} time={event.time} location={event.location} eventType={event.eventType} description={event.description} image={event.image} />
             ))}
           </div>
           <div className="mt-8 text-center">

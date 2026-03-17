@@ -75,8 +75,8 @@ export default function AboutPage() {
       {/* Image break */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
-          src="/images/food-stalls.jpg"
-          alt="Food stalls at the Shaftesbury Food Festival"
+          src="/images/The festival fromm above.jpg"
+          alt="Aerial view of the Shaftesbury Food Festival"
           fill
           className="object-cover"
         />

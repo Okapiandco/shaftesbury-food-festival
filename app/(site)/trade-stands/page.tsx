@@ -53,6 +53,22 @@ export default function TradeStandsPage() {
         </div>
       </section>
 
+      {/* Trade stands atmosphere */}
+      <section className="relative h-64 md:h-80 overflow-hidden">
+        <Image
+          src="/images/Trade stands at the festival.jpg"
+          alt="Trade stands and vendors at the Shaftesbury Food Festival"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-primary/40 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h2 className="text-3xl font-bold md:text-4xl">Join Over 100 Stalls</h2>
+            <p className="mt-3 text-lg text-blue-200">Showcase your produce to thousands of visitors</p>
+          </div>
+        </div>
+      </section>
+
       {/* Why Participate */}
       <section className="section bg-gray-50">
         <div className="container mx-auto px-4">

@@ -117,6 +117,16 @@ export default function EventsPage() {
             </div>
           </div>
 
+          {/* Atmosphere image break */}
+          <div className="relative h-56 sm:h-72 overflow-hidden rounded-2xl">
+            <Image
+              src="/images/Food stalls.jpg"
+              alt="Food stalls at the Shaftesbury Food Festival"
+              fill
+              className="object-cover"
+            />
+          </div>
+
           {/* ── Event 2: Food Trail ── */}
           <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
 

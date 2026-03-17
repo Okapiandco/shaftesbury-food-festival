@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     title: 'Shaftesbury Food Festival 2026 | 3rd May Bank Holiday',
     description:
       'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and more.',
-    images: [{ url: '/images/logo.png', width: 1200, height: 1200, alt: 'Shaftesbury Food Festival 2026 Logo' }],
+    images: [{ url: '/Shaftesbury food festival Logo.png', alt: 'Shaftesbury Food Festival 2026 Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shaftesbury Food Festival 2026',
     description:
       'Join us on 3rd May for the Shaftesbury Food Festival. Gold Hill Cheese Race, local food and drink producers, chef talks and more.',
-    images: ['/images/logo.png'],
+    images: ['/Shaftesbury food festival Logo.png'],
   },
   icons: {
     icon: '/images/logo.png',

@@ -1,4 +1,5 @@
 import { Clock, MapPin } from 'lucide-react'
+import Image from 'next/image'
 import PlaceholderImage from '@/components/shared/PlaceholderImage'
 
 interface EventCardProps {
@@ -8,12 +9,24 @@ interface EventCardProps {
   description?: string
   speaker?: string
   eventType?: string
+  image?: string
 }
 
-export default function EventCard({ title, time, location, description, speaker, eventType }: EventCardProps) {
+export default function EventCard({ title, time, location, description, speaker, eventType, image }: EventCardProps) {
   return (
     <article className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow">
-      <PlaceholderImage label="Event image" />
+      {image ? (
+        <div className="relative aspect-[16/9] overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <PlaceholderImage label="Event image" />
+      )}
       <div className="p-5">
         {eventType && (
           <span className="mb-2 inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-semibold text-secondary">
