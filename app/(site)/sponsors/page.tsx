@@ -25,13 +25,38 @@ export default function SponsorsPage() {
         subtitle="Thank you to our generous sponsors who make this festival possible."
       />
 
-      {/* Coming Soon */}
+      {/* Confirmed Sponsors */}
       <section className="section">
-        <div className="container mx-auto max-w-2xl px-4 text-center">
-          <h2 className="text-2xl font-bold text-text md:text-3xl">Sponsors Coming Soon</h2>
-          <p className="mt-4 text-text-light leading-relaxed">
-            We are currently welcoming sponsors for the Shaftesbury Food Festival 2026. Sponsorship opportunities are available at Gold, Silver, Bronze and In-Kind levels. Check back soon for our confirmed sponsors.
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Our Confirmed Sponsors</h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
+            Thank you to the following organisations for their generous support.
           </p>
+
+          {/* Cheese Race Category */}
+          <div className="mt-12">
+            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Gold Hill Cheese Race — Category Sponsors</h3>
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              <a href="https://www.worldcheeseawards.com" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                <img src="/Sponsors/world-cheese-awards-logo.svg" alt="World Cheese Awards" className="h-24 w-auto object-contain" />
+              </a>
+              <a href="https://www.truckletruck.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                <img src="/Sponsors/TT_Brandmark_FULL_Col_B.avif" alt="The Truckle Truck" className="h-24 w-auto object-contain" />
+              </a>
+            </div>
+          </div>
+
+          {/* Food Demonstrations */}
+          <div className="mt-14">
+            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Festival Food Demonstrations — Sponsor</h3>
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              <a href="https://www.gff.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                <img src="/Sponsors/gff-logo.svg" alt="Guild of Fine Food" className="h-24 w-auto object-contain" />
+              </a>
+            </div>
+          </div>
+
+          <p className="mt-12 text-center text-sm text-text-muted">More sponsors to be announced soon.</p>
         </div>
       </section>
 

@@ -9,7 +9,7 @@ import VendorCard from '@/components/cards/VendorCard'
 export const metadata: Metadata = {
   title: 'Shaftesbury Food Festival 2026 | 3rd May Bank Holiday',
   description:
-    'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy 100+ food stalls, chef talks and Dorset food and drink. Bank holiday celebration on Shaftesbury\'s historic high street.',
+    'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and Dorset food and drink. Bank holiday celebration on Shaftesbury\'s historic high street.',
 }
 
 const highlights = [
@@ -23,8 +23,8 @@ const highlights = [
   },
   {
     icon: Store,
-    title: '100+ Trade Stands',
-    description: 'Explore over 100 food stalls, beverage vendors and craft stands celebrating the best of Dorset produce.',
+    title: 'Local Producers',
+    description: 'Explore a variety of local food and drink producers celebrating the best of Dorset produce.',
     href: '/trade-stands',
     color: 'bg-secondary/10 text-secondary-dark',
   },
@@ -228,7 +228,7 @@ export default function HomePage() {
               },
             },
             description:
-              'A day packed full of fun food and festivities on Shaftesbury\'s historic high street, featuring the Gold Hill Cheese Race, 100+ trade stands, chef talks and entertainment.',
+              'A day packed full of fun food and festivities on Shaftesbury\'s historic high street, featuring the Gold Hill Cheese Race, a variety of local food and drink producers, chef talks and entertainment.',
             organizer: {
               '@type': 'Organization',
               name: 'Shaftesbury Chamber of Commerce',

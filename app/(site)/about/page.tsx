@@ -7,12 +7,12 @@ import CTAButton from '@/components/shared/CTAButton'
 export const metadata: Metadata = {
   title: 'About | Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Shaftesbury Food Festival on 3rd May 2026 celebrates Dorset food and drink on the historic high street. 100+ trade stands, the Gold Hill Cheese Race, chef talks and live entertainment.',
+    'Shaftesbury Food Festival on 3rd May 2026 celebrates Dorset food and drink on the historic high street. A variety of local food and drink producers, the Gold Hill Cheese Race, chef talks and live entertainment.',
   alternates: { canonical: '/about' },
 }
 
 const highlights = [
-  { icon: Store, title: '100+ Trade Stands', description: 'Food vendors, beverage stalls, craft producers and more.' },
+  { icon: Store, title: 'Local Producers', description: 'A variety of local food and drink producers, beverage stalls, craft producers and more.' },
   { icon: Users, title: 'Community Run', description: 'Organised by volunteers from Shaftesbury Chamber of Commerce.' },
   { icon: Award, title: 'Town Council Supported', description: 'Proudly supported by Shaftesbury Town Council.' },
   { icon: MapPin, title: 'Historic Location', description: 'Set across the high street, Park Walk and surrounding areas.' },

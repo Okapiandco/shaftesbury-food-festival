@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Shaftesbury Food Festival 2026',
   },
   description:
-    'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy 100+ food stalls, chef talks and Dorset food and drink. Bank holiday celebration on Shaftesbury\'s historic high street.',
+    'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and more. Bank holiday celebration on Shaftesbury\'s historic high street.',
   keywords: [
     'Shaftesbury Food Festival',
     'Shaftesbury Food Festival 2026',
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
     siteName: 'Shaftesbury Food Festival 2026',
     title: 'Shaftesbury Food Festival 2026 | 3rd May Bank Holiday',
     description:
-      'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy 100+ food stalls, chef talks and Dorset food and drink.',
-    images: [{ url: '/images/gold-hill.jpg', width: 1200, height: 630, alt: 'Gold Hill, Shaftesbury — home of the famous Cheese Race and Food Festival' }],
+      'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and more.',
+    images: [{ url: '/images/logo.png', width: 1200, height: 1200, alt: 'Shaftesbury Food Festival 2026 Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shaftesbury Food Festival 2026',
     description:
-      'Join us on 3rd May for the Shaftesbury Food Festival. Gold Hill Cheese Race, 100+ food stalls, chef talks and more.',
-    images: ['/images/gold-hill.jpg'],
+      'Join us on 3rd May for the Shaftesbury Food Festival. Gold Hill Cheese Race, local food and drink producers, chef talks and more.',
+    images: ['/images/logo.png'],
   },
   icons: {
     icon: '/images/logo.png',

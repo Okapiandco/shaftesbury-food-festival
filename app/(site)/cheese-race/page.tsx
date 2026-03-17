@@ -122,14 +122,30 @@ export default function CheeseRacePage() {
         </div>
       </section>
 
-      {/* Sponsorship */}
+      {/* Category Sponsors */}
       <section className="section bg-accent/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-text md:text-3xl">Sponsor the Cheese Race</h2>
+          <h2 className="text-2xl font-bold text-text md:text-3xl">Category Sponsors</h2>
           <p className="mx-auto mt-3 max-w-xl text-text-light">
-            Help us celebrate this iconic event. Sponsorship opportunities available for businesses who want to be part of something truly special.
+            We are grateful to the following sponsors for supporting a category in this year&apos;s Cheese Race.
           </p>
-          <div className="mt-6">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-10">
+            <a href="https://www.worldcheeseawards.com" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+              <img
+                src="/Sponsors/world-cheese-awards-logo.svg"
+                alt="World Cheese Awards"
+                className="h-20 w-auto object-contain"
+              />
+            </a>
+            <a href="https://www.truckletruck.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+              <img
+                src="/Sponsors/TT_Brandmark_FULL_Col_B.avif"
+                alt="The Truckle Truck"
+                className="h-20 w-auto object-contain"
+              />
+            </a>
+          </div>
+          <div className="mt-8">
             <CTAButton href="/sponsors" variant="primary">Learn About Sponsorship</CTAButton>
           </div>
         </div>
