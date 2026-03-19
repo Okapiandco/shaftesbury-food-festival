@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
@@ -19,10 +19,18 @@ const navLinks = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+    <header className="sticky top-0 z-50 bg-white shadow-sm transition-all duration-300">
+      <div className={`container mx-auto flex items-center justify-between px-4 transition-all duration-300 ${scrolled ? 'py-1' : 'py-3'}`}>
         {/* Logo / Site Name */}
         <Link href="/">
           <Image
@@ -30,7 +38,7 @@ export default function Header() {
             alt="Shaftesbury Food Festival 2026"
             width={192}
             height={192}
-            className="h-48 w-48"
+            className={`transition-all duration-300 ${scrolled ? 'h-16 w-16' : 'h-48 w-48'}`}
             priority
           />
         </Link>
