@@ -1,72 +1,84 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { MapPin, TreePine, Beef, Wine, Wheat } from 'lucide-react'
+import Link from 'next/link'
+import { MapPin, TreePine, Beef, IceCream, Salad, Leaf, ExternalLink, Navigation } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Food Trail | Shaftesbury Food Festival 3rd May 2026',
+  title: 'Food Trail | Shaftesbury Food Festival 2nd May 2026',
   description:
-    'Follow the Shaftesbury Food Trail around local food producers including Dorset Blue Vinny, Gold Hill Organic Farm, Olives Et Al and Cann Mills. Farm walks, BBQs, tours and tastings.',
+    'Follow the Shaftesbury Food Trail on Saturday 2nd May around local food producers including Gold Hill Organic Farm, Sorelle Dorset, Madjeston Animal Park and Primrose Organic Produce.',
   alternates: { canonical: '/food-trail' },
 }
 
 interface TrailStop {
   name: string
   location?: string
+  address: string
   description: string
   activities: string[]
-  logo?: string
   image?: string
+  website?: string
   mapPosition: { top: string; left: string }
 }
 
 const trailStops: TrailStop[] = [
   {
-    name: 'Dorset Blue Vinny',
-    description:
-      'Home of the famous Dorset Blue Vinny cheese — a traditional blue cheese unique to Dorset, made with hand-skimmed milk. Visit the dairy, meet the cheesemakers and sample this iconic local product.',
-    activities: ['Cheese tastings', 'Dairy tours', 'Meet the cheesemakers'],
-    logo: '',
-    image: '',
-    mapPosition: { top: '30%', left: '25%' },
-  },
-  {
     name: 'Gold Hill Organic Farm',
     location: 'Child Okeford',
+    address: 'Ridgeway Lane, Child Okeford, Blandford, Dorset DT11 8HB',
     description:
-      'Gold Hill Farm Kitchen is a small but perfectly formed café positioned on Gold Hill Organic Farm in Child Okeford. Everything is cooked from scratch — bread, pastries, smoothies, pickles, fermentations and cordials — with the aim of being the only process on your food\'s journey from field to plate. With the help of Wogan Coffee in Bristol, they also deliver an unrivalled cup of coffee. Do you know where your next meal is coming from? Come and find out on Saturday 3rd May.',
+      'Gold Hill Farm Kitchen is a small but perfectly formed café positioned on Gold Hill Organic Farm in Child Okeford. Everything is cooked from scratch — bread, pastries, smoothies, pickles, fermentations and cordials — with the aim of being the only process on your food\'s journey from field to plate. With the help of Wogan Coffee in Bristol, they also deliver an unrivalled cup of coffee. Do you know where your next meal is coming from? Come and find out on Saturday 2nd May.',
     activities: ['Farm walk with growers — 11am', 'Farm walk with growers — 2pm', 'Farm Kitchen café', 'Coffee by Wogan Coffee'],
-    logo: '',
     image: '/Events/Gold hill organic farm.jpg',
     mapPosition: { top: '20%', left: '60%' },
   },
   {
-    name: 'Olives Et Al',
+    name: 'Sorelle Dorset',
+    location: 'Motcombe, Shaftesbury',
+    address: 'Brook Farm, Bittles Green, Motcombe, Shaftesbury SP7 9NX',
     description:
-      'Award-winning producers of antipasti, olives, pestos and tapenades. Based in Dorset, they source the finest Mediterranean ingredients and craft them into stunning products loved across the UK.',
-    activities: ['Tasting sessions', 'Production tour', 'Meet the team'],
-    logo: '',
-    image: '',
+      'Sorelle Dorset brings the flavours of Italy to the heart of Dorset. Discover their range of handcrafted Italian-inspired products, meet the team and enjoy tastings at this wonderful local food business.',
+    activities: ['Tastings', 'Meet the team'],
+    website: 'https://www.sorelledorset.com/',
+    mapPosition: { top: '35%', left: '40%' },
+  },
+  {
+    name: 'Madjeston Animal Park',
+    location: 'Gillingham, Dorset',
+    address: 'Newhouse Farm, Cole Street Lane, Gillingham, Dorset SP8 5JQ',
+    description:
+      'Madjeston Animal Park is a family-run farm set in the heart of the Dorset countryside. They proudly produce fresh Ayrshire cow\'s milk and delicious homemade ice cream right on site, available anytime from their 24/7 self-service Milk Station alongside a range of locally sourced produce. As well as being a working farm, Madjeston has grown into a welcoming destination for families, with an animal park, café and play area. From a scoop of their ice cream to locally made treats and pulled pork from their own home-reared pigs, they\'re passionate about creating a true farm-to-table experience.',
+    activities: ['Fresh milk & homemade ice cream', 'Meet the animals', 'Café & farm produce', 'Family-friendly activities'],
+    image: '/images/Food Trail/Madjeston Milk Station/IMG_4106.jpeg',
     mapPosition: { top: '55%', left: '45%' },
   },
   {
-    name: 'Cann Mills',
+    name: 'Primrose Organic Produce',
+    location: 'Lymburghs Farm, Marnhull',
+    address: 'Lymburghs Farm, Marnhull, Sturminster Newton, Dorset',
     description:
-      'A beautifully restored historic watermill producing stoneground flour using traditional methods. Discover the art of milling and take home freshly milled flour and baked goods.',
-    activities: ['Mill tours', 'Flour milling demos', 'Bread baking workshop'],
-    logo: '',
-    image: '',
+      'Primrose Organic Produce is a family-run organic farm, shop and café at Lymburghs Farm near Marnhull. For 60 years, three generations of the Primrose family have farmed here. Around 20 years ago, Jim and Gilla returned to convert the farm to organic, beginning with 100% pasture-fed Red Devon cattle. Sheep for mutton followed, and in recent years they\'ve introduced free-range eggs alongside a thriving market garden. Their farm is alive with restored hedgerows, ponds, wildflower meadows and winter flood meadows, all maintained using regenerative, ecological farming techniques. The shop and café offer organic artisan coffee, specialty drinks, homemade cakes and a simple, seasonal lunch menu.',
+    activities: ['Farm shop & café', 'Organic produce', 'Seasonal fruit & vegetables', '100% pasture-fed beef'],
+    image: '/images/Food Trail/Primrose Organic/Primrose Organic Shop Front.jpeg',
     mapPosition: { top: '70%', left: '30%' },
   },
 ]
+
+const GOOGLE_MAPS_TRAIL_URL =
+  'https://www.google.com/maps/dir/Gold+Hill+Organic+Farm,+Ridgeway+Lane,+Child+Okeford,+DT11+8HB/Brook+Farm,+Bittles+Green,+Motcombe,+SP7+9NX/Newhouse+Farm,+Cole+Street+Lane,+Gillingham,+SP8+5JQ/Lymburghs+Farm,+Marnhull,+Dorset'
+
+function getDirectionsUrl(address: string) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`
+}
 
 export default function FoodTrailPage() {
   return (
     <>
       <PageHeader
         title="The Shaftesbury Food Trail"
-        subtitle="Explore the local food producers around Shaftesbury — farm walks, tastings, BBQs and behind-the-scenes tours."
+        subtitle="Saturday 2nd May 2026 — Explore the local food producers around Shaftesbury with farm walks, tastings and behind-the-scenes tours."
       />
 
       {/* Introduction */}
@@ -80,10 +92,10 @@ export default function FoodTrailPage() {
               Discover Dorset&apos;s Finest Food Producers
             </h2>
             <p className="mt-4 text-text-light leading-relaxed">
-              The Shaftesbury Food Trail takes you on a journey around the local area to meet the people behind the food.
-              From award-winning cheeses to organic farms, artisan olives to historic flour mills — discover
-              the incredible produce on our doorstep. Each stop on the trail offers something special: tastings,
-              tours, farm walks and more.
+              On <strong>Saturday 2nd May</strong>, the Shaftesbury Food Trail takes you on a journey around the local area
+              to meet the people behind the food. From organic farms and artisan producers to family-run
+              animal parks and Italian-inspired flavours — discover the incredible produce on our doorstep.
+              Each stop on the trail offers something special: tastings, tours, farm walks and more.
             </p>
             <p className="mt-4 text-text-light leading-relaxed">
               Pick up a trail map at the festival or follow the route below. Visit all the stops to complete the trail!
@@ -92,40 +104,62 @@ export default function FoodTrailPage() {
         </div>
       </section>
 
-      {/* Interactive Map Section */}
+      {/* Google Map Section */}
       <section className="section bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Trail Map</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Follow the trail around Shaftesbury&apos;s local food producers. Click a stop for more details.
+            Our four trail stops are dotted around the beautiful North Dorset countryside surrounding Shaftesbury.
           </p>
           <div className="mt-8 mx-auto max-w-4xl">
-            <div className="relative aspect-[16/10] rounded-xl border-2 border-gray-200 bg-white overflow-hidden shadow-sm">
-              {/* Map placeholder - replace with actual embedded map */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-green-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <MapPin size={48} className="mx-auto text-primary" />
-                    <p className="mt-4 text-lg font-semibold text-text">Interactive Trail Map</p>
-                    <p className="mt-2 text-sm text-text-light">
-                      Map coming soon — explore the stops below for details on each location.
-                    </p>
-                  </div>
-                </div>
-                {/* Trail stop markers */}
-                {trailStops.map((stop, index) => (
-                  <a
-                    key={stop.name}
-                    href={`#${stop.name.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="absolute flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold shadow-lg hover:bg-accent hover:text-primary transition-colors"
-                    style={{ top: stop.mapPosition.top, left: stop.mapPosition.left }}
-                    title={stop.name}
-                  >
-                    {index + 1}
-                  </a>
-                ))}
-              </div>
+            <div className="overflow-hidden rounded-xl border-2 border-gray-200 shadow-sm">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d80000!2d-2.3!3d51.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sShaftesbury+Dorset+food+producers"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Shaftesbury Food Trail Map"
+              />
             </div>
+            <div className="mt-4 text-center">
+              <Link
+                href={GOOGLE_MAPS_TRAIL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition-colors"
+              >
+                <Navigation size={16} />
+                View Full Trail Route on Google Maps
+                <ExternalLink size={14} />
+              </Link>
+            </div>
+          </div>
+
+          {/* Stop quick-links */}
+          <div className="mt-8 mx-auto max-w-4xl grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {trailStops.map((stop, index) => (
+              <div key={stop.name} className="rounded-lg bg-white p-4 shadow-sm">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">
+                    {index + 1}
+                  </span>
+                  <h3 className="font-semibold text-text text-sm">{stop.name}</h3>
+                </div>
+                <p className="mt-2 text-xs text-text-muted">{stop.address}</p>
+                <Link
+                  href={getDirectionsUrl(stop.address)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent-dark"
+                >
+                  <Navigation size={10} />
+                  Get Directions
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -135,7 +169,7 @@ export default function FoodTrailPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Trail Stops</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Each producer is offering special activities and experiences during the festival.
+            Each producer is offering special activities and experiences on Saturday 2nd May.
           </p>
 
           <div className="mt-12 space-y-16">
@@ -163,14 +197,29 @@ export default function FoodTrailPage() {
                       </div>
                     </div>
 
-                    {/* Logo placeholder */}
-                    {stop.logo !== undefined && (
-                      <div className="mt-4 h-16 w-48 rounded-lg bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center">
-                        <span className="text-xs text-text-muted">Logo — {stop.name}</span>
-                      </div>
-                    )}
-
                     <p className="mt-4 text-text-light leading-relaxed">{stop.description}</p>
+
+                    <p className="mt-2 flex items-center gap-1 text-sm text-text-muted">
+                      <MapPin size={12} />
+                      {stop.address}
+                    </p>
+
+                    <div className="mt-2 flex flex-wrap items-center gap-3">
+                      {stop.website && (
+                        <Link href={stop.website} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent-dark font-medium text-sm">
+                          Visit website &rarr;
+                        </Link>
+                      )}
+                      <Link
+                        href={getDirectionsUrl(stop.address)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-accent-dark"
+                      >
+                        <Navigation size={12} />
+                        Get Directions
+                      </Link>
+                    </div>
 
                     <div className="mt-4">
                       <h4 className="text-sm font-bold uppercase tracking-wider text-primary">What&apos;s On</h4>
@@ -198,10 +247,10 @@ export default function FoodTrailPage() {
                       ) : (
                         <div className="absolute inset-0 border-2 border-dashed border-gray-300 flex items-center justify-center">
                           <div className="text-center p-4">
-                            {index === 0 && <Wheat size={48} className="mx-auto text-gray-300" />}
-                            {index === 1 && <Beef size={48} className="mx-auto text-gray-300" />}
-                            {index === 2 && <Wine size={48} className="mx-auto text-gray-300" />}
-                            {index === 3 && <Wheat size={48} className="mx-auto text-gray-300" />}
+                            {index === 0 && <Beef size={48} className="mx-auto text-gray-300" />}
+                            {index === 1 && <Salad size={48} className="mx-auto text-gray-300" />}
+                            {index === 2 && <IceCream size={48} className="mx-auto text-gray-300" />}
+                            {index === 3 && <Leaf size={48} className="mx-auto text-gray-300" />}
                             <p className="mt-2 text-sm text-text-muted">Image — {stop.name}</p>
                           </div>
                         </div>
@@ -272,12 +321,12 @@ export default function FoodTrailPage() {
             '@context': 'https://schema.org',
             '@type': 'TouristTrip',
             name: 'Shaftesbury Food Trail',
-            description: 'A trail around local food producers near Shaftesbury, featuring farm walks, tastings, BBQs and tours.',
+            description: 'A trail around local food producers near Shaftesbury on Saturday 2nd May, featuring farm walks, tastings and tours.',
             touristType: 'Food lovers',
             subjectOf: {
               '@type': 'Event',
               name: 'Shaftesbury Food Festival 2026',
-              startDate: '2026-05-03',
+              startDate: '2026-05-02',
             },
           }),
         }}
