@@ -41,6 +41,7 @@ const trailStops: TrailStop[] = [
     description:
       'Sorelle Dorset brings the flavours of Italy to the heart of Dorset. Discover their range of handcrafted Italian-inspired products, meet the team and enjoy tastings at this wonderful local food business.',
     activities: ['Tastings', 'Meet the team'],
+    image: '/images/Food Trail/Sorelle/ABxSorelle-95.jpg',
     website: 'https://www.sorelledorset.com/',
     mapPosition: { top: '35%', left: '40%' },
   },
