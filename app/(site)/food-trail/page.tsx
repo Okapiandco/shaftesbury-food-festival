@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MapPin, TreePine, Beef, IceCream, Salad, Leaf, ExternalLink, Navigation } from 'lucide-react'
+import { MapPin, TreePine, Beef, IceCream, Salad, Leaf, Flower2, ExternalLink, Navigation } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
 
@@ -64,10 +64,20 @@ const trailStops: TrailStop[] = [
     image: '/images/Food Trail/Primrose Organic/Primrose Organic Shop Front.jpeg',
     mapPosition: { top: '70%', left: '30%' },
   },
+  {
+    name: 'Pythouse Kitchen Garden',
+    location: 'West Hatch, Tisbury',
+    address: 'Pyt House, West Hatch, Tisbury SP3 6PA',
+    description:
+      'Tucked away just outside Tisbury, Sprigs Co\'s Pythouse Kitchen Garden is a seasonal restaurant, working kitchen garden and gathering place set in the Wiltshire countryside. Behind the walls sits a productive garden where vegetables, herbs and fruit are grown just steps from the kitchen and harvested daily for the menu. Guests can eat among the gardens, wander through the growing beds and orchard, or simply enjoy relaxed, thoughtful cooking that celebrates the seasons and the surrounding landscape. Pythouse holds both a Michelin Green Star — awarded for sustainable, environmentally responsible cooking — and a Bib Gourmand for exceptional food at good value. It is currently the only restaurant in the UK to hold both awards together.',
+    activities: ['Seasonal restaurant', 'Kitchen garden tours', 'Garden-to-plate dining', 'Michelin Green Star & Bib Gourmand'],
+    image: '/images/Food Trail/Pythouse Kitchen Garden/Outside Bar.jpg',
+    mapPosition: { top: '40%', left: '70%' },
+  },
 ]
 
 const GOOGLE_MAPS_TRAIL_URL =
-  'https://www.google.com/maps/dir/Gold+Hill+Organic+Farm,+Ridgeway+Lane,+Child+Okeford,+DT11+8HB/Brook+Farm,+Bittles+Green,+Motcombe,+SP7+9NX/Newhouse+Farm,+Cole+Street+Lane,+Gillingham,+SP8+5JQ/Lymburghs+Farm,+Marnhull,+Dorset'
+  'https://www.google.com/maps/dir/Gold+Hill+Organic+Farm,+Ridgeway+Lane,+Child+Okeford,+DT11+8HB/Brook+Farm,+Bittles+Green,+Motcombe,+SP7+9NX/Newhouse+Farm,+Cole+Street+Lane,+Gillingham,+SP8+5JQ/Lymburghs+Farm,+Marnhull,+Dorset/Pyt+House,+West+Hatch,+Tisbury+SP3+6PA'
 
 function getDirectionsUrl(address: string) {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`
@@ -109,18 +119,17 @@ export default function FoodTrailPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Trail Map</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Our four trail stops are dotted around the beautiful North Dorset countryside surrounding Shaftesbury.
+            Our five trail stops are dotted around the beautiful Dorset and Wiltshire countryside surrounding Shaftesbury.
           </p>
           <div className="mt-8 mx-auto max-w-4xl">
             <div className="overflow-hidden rounded-xl border-2 border-gray-200 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d80000!2d-2.3!3d51.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sShaftesbury+Dorset+food+producers"
+                src="https://www.google.com/maps/d/embed?mid=1ZgB7vzPkOP1-_r9YuOm-cYz3LYMsBnU&z=10"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
                 title="Shaftesbury Food Trail Map"
               />
             </div>
@@ -139,7 +148,7 @@ export default function FoodTrailPage() {
           </div>
 
           {/* Stop quick-links */}
-          <div className="mt-8 mx-auto max-w-4xl grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 mx-auto max-w-5xl grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {trailStops.map((stop, index) => (
               <div key={stop.name} className="rounded-lg bg-white p-4 shadow-sm">
                 <div className="flex items-center gap-2">
