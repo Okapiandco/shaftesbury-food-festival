@@ -103,10 +103,9 @@ export default function FoodTrailPage() {
               Discover Dorset&apos;s Finest Food Producers
             </h2>
             <p className="mt-4 text-text-light leading-relaxed">
-              On <strong>Saturday 2nd May</strong>, the Shaftesbury Food Trail takes you on a journey around the local area
-              to meet the people behind the food. From organic farms and artisan producers to family-run
-              animal parks and Italian-inspired flavours — discover the incredible produce on our doorstep.
-              Each stop on the trail offers something special: tastings, tours, farm walks and more.
+              On <strong>Saturday 2nd May</strong>, The Food Trail takes the Festival into the stunning countryside
+              around Shaftesbury. A curated selection of fabulous local producers open their doors to show
+              you what they do, where and how&hellip;
             </p>
             <p className="mt-4 text-text-light leading-relaxed">
               Pick up a trail map at the festival or follow the route below. Visit all the stops to complete the trail!
