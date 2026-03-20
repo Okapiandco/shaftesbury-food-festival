@@ -2,12 +2,12 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
-import { MapPin, Clock, Users, CalendarDays, Footprints } from 'lucide-react'
+import { MapPin, Clock, Users, CalendarDays, Footprints, HelpCircle, UtensilsCrossed } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Events | Shaftesbury Food Festival 2026',
   description:
-    'Events celebrating Shaftesbury Food Festival 2026, including The Great Food Quiz on 1st May and the Food Trail on 3rd May.',
+    'Events celebrating Shaftesbury Food Festival 2026, including The Great Food Quiz on 1st May and the Food Trail on 2nd May.',
   alternates: { canonical: '/events' },
 }
 
@@ -19,11 +19,84 @@ export default function EventsPage() {
         subtitle="Celebrating food, drink and community across the Shaftesbury area."
       />
 
+      {/* ── 3-Day Overview ── */}
+      <section className="section">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-center text-3xl font-bold text-text md:text-4xl">Three Days of Food &amp; Festivities</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-text-light">
+            From a Friday night quiz to a countryside food trail and the main festival — there&apos;s something for everyone.
+          </p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {/* Day 1 */}
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden flex flex-col">
+              <div className="bg-primary px-5 py-3 flex items-center gap-2">
+                <CalendarDays className="w-4 h-4 text-white shrink-0" />
+                <span className="text-white font-semibold text-sm">Friday 1st May</span>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <HelpCircle className="w-8 h-8 text-primary mb-3" />
+                <h3 className="text-xl font-bold text-text">The Great Food Quiz</h3>
+                <p className="mt-2 text-sm text-text-light leading-relaxed flex-1">
+                  Kick off the festival weekend with a fun food &amp; drink quiz hosted at Sorelle in Motcombe. Teams of up to 6 — prizes for the winners!
+                </p>
+                <div className="mt-4">
+                  <CTAButton href="#quiz" variant="primary" className="w-full text-center text-sm">
+                    View Details
+                  </CTAButton>
+                </div>
+              </div>
+            </div>
+
+            {/* Day 2 */}
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden flex flex-col">
+              <div className="bg-secondary px-5 py-3 flex items-center gap-2">
+                <CalendarDays className="w-4 h-4 text-white shrink-0" />
+                <span className="text-white font-semibold text-sm">Saturday 2nd May</span>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <Footprints className="w-8 h-8 text-secondary mb-3" />
+                <h3 className="text-xl font-bold text-text">The Shaftesbury Food Trail</h3>
+                <p className="mt-2 text-sm text-text-light leading-relaxed flex-1">
+                  Explore the countryside around Shaftesbury visiting brilliant local food producers — farm walks, tastings and behind-the-scenes tours.
+                </p>
+                <div className="mt-4">
+                  <CTAButton href="/food-trail" variant="secondary" className="w-full text-center text-sm">
+                    View Details
+                  </CTAButton>
+                </div>
+              </div>
+            </div>
+
+            {/* Day 3 */}
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden flex flex-col">
+              <div className="bg-accent px-5 py-3 flex items-center gap-2">
+                <CalendarDays className="w-4 h-4 text-white shrink-0" />
+                <span className="text-white font-semibold text-sm">Sunday 3rd May</span>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <UtensilsCrossed className="w-8 h-8 text-accent mb-3" />
+                <h3 className="text-xl font-bold text-text">Shaftesbury Food Festival</h3>
+                <p className="mt-2 text-sm text-text-light leading-relaxed flex-1">
+                  The main event! Local food &amp; drink producers, the Gold Hill Cheese Race, chef talks, live music and family fun on the historic high street.
+                </p>
+                <div className="mt-4">
+                  <CTAButton href="/about" variant="accent" className="w-full text-center text-sm">
+                    View Details
+                  </CTAButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Detailed Event Cards ── */}
       <section className="section">
         <div className="container mx-auto px-4 max-w-3xl space-y-10">
 
           {/* ── Event 1: Great Food Quiz ── */}
-          <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
+          <div id="quiz" className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden scroll-mt-24">
 
             <div className="bg-primary px-6 py-4 flex items-center gap-3">
               <CalendarDays className="w-5 h-5 text-white shrink-0" />
@@ -132,7 +205,7 @@ export default function EventsPage() {
 
             <div className="bg-secondary px-6 py-4 flex items-center gap-3">
               <CalendarDays className="w-5 h-5 text-white shrink-0" />
-              <span className="text-white font-semibold text-sm">Sat 3 May 2026 &nbsp;·&nbsp; Festival Day</span>
+              <span className="text-white font-semibold text-sm">Sat 2 May 2026 &nbsp;·&nbsp; Pre-festival Event</span>
             </div>
 
             <div className="p-6 md:p-8">
@@ -152,7 +225,7 @@ export default function EventsPage() {
                 <Clock className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-semibold text-text">All day</p>
-                  <p className="text-sm text-text-light">Saturday 3rd May 2026 — explore at your own pace</p>
+                  <p className="text-sm text-text-light">Saturday 2nd May 2026 — explore at your own pace</p>
                 </div>
               </div>
 

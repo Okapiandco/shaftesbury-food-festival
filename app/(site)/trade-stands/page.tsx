@@ -6,9 +6,9 @@ import VendorCard from '@/components/cards/VendorCard'
 import TradeStandForm from '@/components/forms/TradeStandForm'
 
 export const metadata: Metadata = {
-  title: 'Trade Stands | Sell at Shaftesbury Food Festival 3rd May 2026',
+  title: 'Street Market | Sell at Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Over 100 food vendors and trade stands at Shaftesbury Food Festival on 3rd May. Express your interest to become a food vendor, local producer or craft stall.',
+    'Over 100 food vendors and street market stalls at Shaftesbury Food Festival on 3rd May. Express your interest to become a food vendor, local producer or craft stall.',
   alternates: { canonical: '/trade-stands' },
 }
 
@@ -23,7 +23,7 @@ export default function TradeStandsPage() {
   return (
     <>
       <PageHeader
-        title="Trade Stands & Vendors"
+        title="Street Market"
         subtitle="Over 100 food stalls, beverage vendors and craft stands celebrating Dorset produce."
       />
 

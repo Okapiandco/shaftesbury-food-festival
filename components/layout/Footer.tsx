@@ -8,8 +8,9 @@ const footerLinks = [
   { href: '/cheese-race', label: 'Gold Hill Cheese Race' },
   { href: '/food-trail', label: 'Food Trail' },
   { href: '/ingredients-hunt', label: 'Ingredients Hunt' },
-  { href: '/trade-stands', label: 'Trade Stands' },
-  { href: '/events', label: 'Events & Timetable' },
+  { href: '/trade-stands', label: 'Street Market' },
+  { href: '/feast-for-the-eyes', label: 'A Feast for the Eyes' },
+  { href: '/events', label: 'What\'s On' },
   { href: '/sponsors', label: 'Sponsors' },
   { href: '/contact', label: 'Contact Us' },
 ]
