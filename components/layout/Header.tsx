@@ -67,19 +67,10 @@ export default function Header() {
   const headerRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    let ticking = false
-    let lastScrolled = false
     const handleScroll = () => {
-      if (ticking) return
-      ticking = true
-      requestAnimationFrame(() => {
-        const isScrolled = window.scrollY > 50
-        if (isScrolled !== lastScrolled) {
-          lastScrolled = isScrolled
-          headerRef.current?.setAttribute('data-scrolled', String(isScrolled))
-        }
-        ticking = false
-      })
+      if (window.scrollY > 50) {
+        headerRef.current?.setAttribute('data-scrolled', 'true')
+      }
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
