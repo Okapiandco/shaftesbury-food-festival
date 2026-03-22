@@ -9,6 +9,7 @@ const footerLinks = [
   { href: '/food-trail', label: 'Food Trail' },
   { href: '/ingredients-hunt', label: 'Ingredients Hunt' },
   { href: '/trade-stands', label: 'Street Market' },
+  { href: '/food-demos', label: 'Food Demos' },
   { href: '/feast-for-the-eyes', label: 'A Feast for the Eyes' },
   { href: '/events', label: 'What\'s On' },
   { href: '/sponsors', label: 'Sponsors' },
@@ -94,7 +95,11 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 border-t border-white/20 pt-6 text-center text-xs text-blue-200">
-          <p>Supported by Shaftesbury Town Council &bull; Run by Shaftesbury Chamber of Commerce</p>
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <img src="/images/SHaftesbury Chamber logo.png" alt="Shaftesbury &amp; District Chamber of Commerce" className="h-10 w-10 object-contain" />
+            <p>Organised by Shaftesbury &amp; District Chamber of Commerce</p>
+          </div>
+          <p>Supported by Shaftesbury Town Council</p>
           <p className="mt-1">
             &copy; {new Date().getFullYear()} Shaftesbury Food Festival. Built by{' '}
             <a href="https://okapiandco.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">

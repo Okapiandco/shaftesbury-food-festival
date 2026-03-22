@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
-import { MapPin, Clock, Users, CalendarDays, Footprints, HelpCircle, UtensilsCrossed } from 'lucide-react'
+import { MapPin, Clock, Users, CalendarDays, Footprints, HelpCircle, UtensilsCrossed, Palette, Search } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Events | Shaftesbury Food Festival 2026',
@@ -231,6 +231,87 @@ export default function EventsPage() {
 
               <div className="mt-8">
                 <CTAButton href="/food-trail" variant="secondary">
+                  Find Out More
+                </CTAButton>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Event 3: A Feast for the Eyes ── */}
+          <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
+            <div className="bg-secondary px-6 py-4 flex items-center gap-3">
+              <CalendarDays className="w-5 h-5 text-white shrink-0" />
+              <span className="text-white font-semibold text-sm">29 Apr – 5 May 2026 &nbsp;·&nbsp; Art Exhibition</span>
+            </div>
+
+            <div className="relative h-56 sm:h-72 w-full">
+              <Image
+                src="/Events/WhatsApp Image 2026-03-20 at 15.01.08.jpeg"
+                alt="A Feast for the Eyes — art exhibition poster"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="p-6 md:p-8">
+              <div className="flex items-start gap-4">
+                <Palette className="w-8 h-8 text-secondary shrink-0 mt-1" />
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-text">A Feast for the Eyes</h2>
+                  <p className="mt-2 text-secondary font-medium">Shaftesbury Arts Centre</p>
+                </div>
+              </div>
+
+              <p className="mt-4 text-text-light leading-relaxed">
+                An exhibition of art with food at its heart. Featuring works by Maja Barker, Alison Turner, Joanne Rutter, Kate Toms, Becca Perl, Lucy Bentley and Charlotte Lorimer. Sponsored by The Kitchen Table.
+              </p>
+
+              <div className="mt-6 flex gap-3">
+                <Clock className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-text">29th April – 5th May 2026</p>
+                  <p className="text-sm text-text-light">Open during Arts Centre hours</p>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <CTAButton href="/feast-for-the-eyes" variant="secondary">
+                  Find Out More
+                </CTAButton>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Event 4: Ingredients Hunt ── */}
+          <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
+            <div className="bg-accent px-6 py-4 flex items-center gap-3">
+              <CalendarDays className="w-5 h-5 text-white shrink-0" />
+              <span className="text-white font-semibold text-sm">Sun 3 May 2026 &nbsp;·&nbsp; Family Activity</span>
+            </div>
+
+            <div className="p-6 md:p-8">
+              <div className="flex items-start gap-4">
+                <Search className="w-8 h-8 text-accent-dark shrink-0 mt-1" />
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-text">Ingredients Hunt</h2>
+                  <p className="mt-2 text-accent-dark font-medium">Around the festival site</p>
+                </div>
+              </div>
+
+              <p className="mt-4 text-text-light leading-relaxed">
+                A fun family scavenger hunt around the festival. Collect your card from 9 AM, find all the hidden ingredients around the stalls and high street, and hand it in by 4 PM for a chance to win prizes!
+              </p>
+
+              <div className="mt-6 flex gap-3">
+                <Clock className="w-5 h-5 text-accent-dark shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-text">Sunday 3rd May 2026</p>
+                  <p className="text-sm text-text-light">9:00 AM – 4:00 PM</p>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <CTAButton href="/ingredients-hunt" variant="accent">
                   Find Out More
                 </CTAButton>
               </div>

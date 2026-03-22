@@ -3,9 +3,16 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays } from 'lucide-react'
+import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays, ChefHat } from 'lucide-react'
 
 const sideEvents = [
+  {
+    href: '/feast-for-the-eyes',
+    label: 'A Feast for the Eyes',
+    description: '29th Apr – 5th May — Art exhibition',
+    icon: Palette,
+    color: 'text-secondary',
+  },
   {
     href: '/events#quiz',
     label: 'The Great Food Quiz',
@@ -28,18 +35,18 @@ const sideEvents = [
     color: 'text-primary',
   },
   {
+    href: '/food-demos',
+    label: 'Food Demos',
+    description: 'Sunday 3rd May — MasterChef chefs live at The Guild Hall',
+    icon: ChefHat,
+    color: 'text-accent-dark',
+  },
+  {
     href: '/ingredients-hunt',
     label: 'Ingredients Hunt',
     description: 'Sunday 3rd May — Family scavenger hunt',
     icon: Search,
     color: 'text-accent-dark',
-  },
-  {
-    href: '/feast-for-the-eyes',
-    label: 'A Feast for the Eyes',
-    description: '29th Apr – 5th May — Art exhibition',
-    icon: Palette,
-    color: 'text-secondary',
   },
 ]
 
@@ -55,12 +62,25 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [megaOpen, setMegaOpen] = useState(false)
   const [mobileMegaOpen, setMobileMegaOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
   const megaButtonRef = useRef<HTMLDivElement>(null)
   const megaPanelRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
+    let ticking = false
+    let lastScrolled = false
+    const handleScroll = () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        const isScrolled = window.scrollY > 50
+        if (isScrolled !== lastScrolled) {
+          lastScrolled = isScrolled
+          headerRef.current?.setAttribute('data-scrolled', String(isScrolled))
+        }
+        ticking = false
+      })
+    }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
@@ -81,18 +101,20 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className={`container mx-auto flex items-center justify-between px-4 transition-[padding] duration-300 ${scrolled ? 'py-1' : 'py-3'}`}>
+    <header ref={headerRef} data-scrolled="false" className="sticky top-0 z-50 bg-white shadow-sm group/header">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3 group-data-[scrolled=true]/header:py-1 transition-[padding] duration-300 ease-in-out">
         {/* Logo */}
-        <Link href="/">
-          <Image
-            src="/Shaftesbury food festival Logo.svg"
-            alt="Shaftesbury Food Festival 2026"
-            width={192}
-            height={192}
-            className={`transition-[height,width] duration-300 ${scrolled ? 'h-16 w-16' : 'h-48 w-48'}`}
-            priority
-          />
+        <Link href="/" className="shrink-0 block">
+          <div className="h-48 w-48 group-data-[scrolled=true]/header:h-16 group-data-[scrolled=true]/header:w-16 transition-[height,width] duration-300 ease-in-out">
+            <Image
+              src="/Shaftesbury food festival Logo.svg"
+              alt="Shaftesbury Food Festival 2026"
+              width={192}
+              height={192}
+              className="h-full w-full"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav */}

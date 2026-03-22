@@ -33,8 +33,28 @@ export default function SponsorsPage() {
             Thank you to the following organisations for their generous support.
           </p>
 
-          {/* Cheese Race Category */}
+          {/* Headline Sponsor */}
           <div className="mt-12">
+            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Headline Sponsor</h3>
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              <a href="https://www.countrycarsshaftesbury.co.uk/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                <img src="/Sponsors/COuntry Cars.avif" alt="Country Cars" className="h-28 w-auto object-contain" />
+              </a>
+            </div>
+          </div>
+
+          {/* Cornerstone Sponsor */}
+          <div className="mt-14">
+            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Cornerstone Sponsor — Park &amp; Ride</h3>
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              <a href="https://www.themitredorset.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre" className="h-24 w-auto object-contain" />
+              </a>
+            </div>
+          </div>
+
+          {/* Cheese Race Category */}
+          <div className="mt-14">
             <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Gold Hill Cheese Race — Category Sponsors</h3>
             <div className="flex flex-wrap items-center justify-center gap-10">
               <a href="https://www.worldcheeseawards.com" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
@@ -43,6 +63,9 @@ export default function SponsorsPage() {
               <a href="https://www.truckletruck.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
                 <img src="/Sponsors/TT_Brandmark_FULL_Col_B.avif" alt="The Truckle Truck" className="h-24 w-auto object-contain" />
               </a>
+              <div className="transition-opacity hover:opacity-80">
+                <img src="/images/SHaftesbury Chamber logo.png" alt="Shaftesbury &amp; District Chamber of Commerce" className="h-24 w-auto object-contain" />
+              </div>
             </div>
           </div>
 

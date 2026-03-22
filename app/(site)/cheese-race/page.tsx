@@ -56,7 +56,7 @@ export default function CheeseRacePage() {
             <div className="rounded-xl bg-white p-6 text-center shadow-sm">
               <Calendar size={28} className="mx-auto text-primary" />
               <h3 className="mt-3 font-bold text-text">Date &amp; Time</h3>
-              <p className="mt-1 text-sm text-text-light">3rd May 2026<br />11:00 AM onwards</p>
+              <p className="mt-1 text-sm text-text-light">3rd May 2026<br />10:00 AM – 3:00 PM</p>
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-sm">
               <MapPin size={28} className="mx-auto text-primary" />
@@ -159,8 +159,8 @@ export default function CheeseRacePage() {
             '@context': 'https://schema.org',
             '@type': 'Event',
             name: 'Gold Hill Cheese Race',
-            startDate: '2026-05-03T11:00:00+01:00',
-            endDate: '2026-05-03T13:00:00+01:00',
+            startDate: '2026-05-03T10:00:00+01:00',
+            endDate: '2026-05-03T15:00:00+01:00',
             location: { '@type': 'Place', name: 'Gold Hill, Shaftesbury', address: { '@type': 'PostalAddress', addressLocality: 'Shaftesbury', addressRegion: 'Dorset', addressCountry: 'GB' } },
             description: 'The world-famous Gold Hill Cheese Race. Contestants carry a 23kg cheese up iconic Gold Hill.',
             superEvent: { '@type': 'Event', name: 'Shaftesbury Food Festival 2026' },

@@ -1,14 +1,14 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { MapPin, TreePine, Beef, IceCream, Salad, Leaf, Flower2, ExternalLink, Navigation } from 'lucide-react'
+import { MapPin, TreePine, Beef, IceCream, Salad, Leaf, ExternalLink, Navigation } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
 
 export const metadata: Metadata = {
   title: 'Food Trail | Shaftesbury Food Festival 2nd May 2026',
   description:
-    'Follow the Shaftesbury Food Trail on Saturday 2nd May around local food producers including Gold Hill Organic Farm, Sorelle Dorset, Madjeston Animal Park and Primrose Organic Produce.',
+    'Follow the Shaftesbury Food Trail on Saturday 2nd May around local food producers including Gold Hill Organic Farm, Sorelle Dorset, Compton McRae, Madjeston Animal Park and Primrose Organic Produce.',
   alternates: { canonical: '/food-trail' },
 }
 
@@ -29,7 +29,7 @@ const trailStops: TrailStop[] = [
     location: 'Child Okeford',
     address: 'Ridgeway Lane, Child Okeford, Blandford, Dorset DT11 8HB',
     description:
-      'Gold Hill Farm Kitchen is a small but perfectly formed café positioned on Gold Hill Organic Farm in Child Okeford. Everything is cooked from scratch — bread, pastries, smoothies, pickles, fermentations and cordials — with the aim of being the only process on your food\'s journey from field to plate. With the help of Wogan Coffee in Bristol, they also deliver an unrivalled cup of coffee. Do you know where your next meal is coming from? Come and find out on Saturday 2nd May.',
+      'Do you know where your next meal is coming from? Maybe it\'s time you found out. Come to Gold Hill Organic Farm on Saturday 2nd May and learn about your shortest food chain. Farm walks with growers at 11am and 2pm. Gold Hill Farm Kitchen is a small but perfectly formed café positioned on Gold Hill Organic Farm in Child Okeford. Everything is cooked from scratch — bread, pastries, smoothies, pickles, fermentations and cordials — with the aim of being the only process on your food\'s journey from field to plate. With the help of Wogan Coffee in Bristol, they also deliver an unrivalled cup of coffee.',
     activities: ['Farm walk with growers — 11am', 'Farm walk with growers — 2pm', 'Farm Kitchen café', 'Coffee by Wogan Coffee'],
     image: '/Events/Gold hill organic farm.jpg',
     mapPosition: { top: '20%', left: '60%' },
@@ -44,6 +44,17 @@ const trailStops: TrailStop[] = [
     image: '/images/Food Trail/Sorelle/ABxSorelle-95.jpg',
     website: 'https://www.sorelledorset.com/',
     mapPosition: { top: '35%', left: '40%' },
+  },
+  {
+    name: 'Compton McRae',
+    location: 'Semley, Shaftesbury',
+    address: 'Semley, Shaftesbury, Dorset SP7 9AP',
+    description:
+      'Compton McRae is a café and deli in Semley, celebrating seasonal food, great coffee and artisan produce. Known for its relaxed atmosphere and community feel, Compton McRae serves simple, delicious dishes alongside a deli with a cheese room, stocked with carefully sourced ingredients, wines and provisions from local and independent producers.',
+    activities: ['Café & seasonal dishes', 'Deli & cheese room', 'Artisan produce & wines', 'Great coffee'],
+    image: '/images/Food Trail/Compton macrae/Shelves.jpg',
+    website: 'https://www.comptonmcrae.co.uk',
+    mapPosition: { top: '30%', left: '50%' },
   },
   {
     name: 'Madjeston Animal Park',
@@ -78,7 +89,7 @@ const trailStops: TrailStop[] = [
 ]
 
 const GOOGLE_MAPS_TRAIL_URL =
-  'https://www.google.com/maps/dir/Gold+Hill+Organic+Farm,+Ridgeway+Lane,+Child+Okeford,+DT11+8HB/Brook+Farm,+Bittles+Green,+Motcombe,+SP7+9NX/Newhouse+Farm,+Cole+Street+Lane,+Gillingham,+SP8+5JQ/Lymburghs+Farm,+Marnhull,+Dorset/Pyt+House,+West+Hatch,+Tisbury+SP3+6PA'
+  'https://www.google.com/maps/dir/Gold+Hill+Organic+Farm,+Ridgeway+Lane,+Child+Okeford,+DT11+8HB/Brook+Farm,+Bittles+Green,+Motcombe,+SP7+9NX/Compton+McRae,+Semley,+Shaftesbury+SP7+9AP/Newhouse+Farm,+Cole+Street+Lane,+Gillingham,+SP8+5JQ/Lymburghs+Farm,+Marnhull,+Dorset/Pyt+House,+West+Hatch,+Tisbury+SP3+6PA'
 
 function getDirectionsUrl(address: string) {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`
@@ -119,7 +130,7 @@ export default function FoodTrailPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Trail Map</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Our five trail stops are dotted around the beautiful Dorset and Wiltshire countryside surrounding Shaftesbury.
+            Our six trail stops are dotted around the beautiful Dorset and Wiltshire countryside surrounding Shaftesbury.
           </p>
           <div className="mt-8 mx-auto max-w-4xl">
             <div className="overflow-hidden rounded-xl border-2 border-gray-200 shadow-sm">
@@ -130,8 +141,12 @@ export default function FoodTrailPage() {
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
                 title="Shaftesbury Food Trail Map"
               />
+              <noscript>
+                <p className="p-4 text-center text-sm text-text-muted">Please enable JavaScript to view the trail map.</p>
+              </noscript>
             </div>
             <div className="mt-4 text-center">
               <Link
@@ -148,7 +163,7 @@ export default function FoodTrailPage() {
           </div>
 
           {/* Stop quick-links */}
-          <div className="mt-8 mx-auto max-w-5xl grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-8 mx-auto max-w-6xl grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {trailStops.map((stop, index) => (
               <div key={stop.name} className="rounded-lg bg-white p-4 shadow-sm">
                 <div className="flex items-center gap-2">

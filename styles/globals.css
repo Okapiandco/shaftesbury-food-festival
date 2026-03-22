@@ -23,6 +23,27 @@
   }
 }
 
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-scroll {
+      animation: none;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @layer components {
   .skip-to-main {
     @apply absolute -top-10 left-4 z-50 rounded bg-primary px-4 py-2 text-white transition-all focus:top-4;

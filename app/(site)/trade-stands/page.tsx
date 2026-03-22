@@ -45,10 +45,18 @@ export default function TradeStandsPage() {
             More vendors are being confirmed regularly. Check back soon for updates.
           </p>
 
-          <div className="mt-8 flex justify-center">
-            <div className="w-full max-w-sm">
-              <VendorCard name="Truckle Truck" category="food-vendor" description="Delicious grilled cheese sandwiches and artisan truckles — a festival favourite." image="/images/truckle-truck.jpg" />
-            </div>
+          <div className="mt-8 grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <VendorCard name="Truckle Truck" category="food-vendor" description="Award-winning cheeses and accompaniments." image="/images/truckle-truck.jpg" />
+            <VendorCard name="Book and Bucket Cheese" category="food-vendor" image="/images/TRade Stands/Book and Bucket Cheese.jpg" />
+            <VendorCard name="Catherine Potter Crafts" category="craft" image="/images/TRade Stands/Catherine Potter crafts.jpg" />
+            <VendorCard name="Compton Candle Co" category="craft" image="/images/TRade Stands/Compton Candle Co.jpg" />
+            <VendorCard name="Crepe Salut" category="food-vendor" image="/images/TRade Stands/Crepe Salut.png" />
+            <VendorCard name="Farmgirl Sausages" category="food-vendor" image="/images/TRade Stands/Farmgirl Sausages.jpg" />
+            <VendorCard name="Hettie Hen Scotch Eggs" category="food-vendor" image="/images/TRade Stands/Hettie Hen Scotch Eggs.jpg" />
+            <VendorCard name="Oxfords Bakery" category="food-vendor" image="/images/TRade Stands/Oxfords bakery.png" />
+            <VendorCard name="Pretty Little Unicorn" category="craft" image="/images/TRade Stands/Pretty Little Unicorn.png" />
+            <VendorCard name="South Paddocks" category="food-vendor" image="/images/TRade Stands/South Paddocks.png" />
+            <VendorCard name="The Olive Pit" category="food-vendor" image="/images/TRade Stands/The Olive Pit.png" />
           </div>
         </div>
       </section>
