@@ -303,7 +303,7 @@ export default function HomePage() {
         </div>
         <div className="relative">
           <div className="flex animate-scroll gap-16 w-max">
-            {[...Array(2)].map((_, i) => (
+            {[...Array(4)].map((_, i) => (
               <div key={i} className="flex items-center gap-16 shrink-0">
                 <a href="https://www.countrycarsshaftesbury.co.uk/" target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity hover:opacity-70">
                   <img src="/Sponsors/COuntry Cars.avif" alt="Country Cars" className="h-16 w-auto object-contain" />
