@@ -78,6 +78,7 @@ export default function HomePage() {
           <a href="https://www.countrycarsshaftesbury.co.uk/" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block transition-opacity hover:opacity-80">
             <img src="/Sponsors/COuntry Cars.avif" alt="Country Cars — Headline Sponsor" className="h-20 w-auto object-contain mx-auto" />
           </a>
+          <p className="mt-2 text-sm text-text-light max-w-md mx-auto">For comfortable, reliable and trusted taxi services covering Shaftesbury, Dorset and beyond...plus airport taxi services too!</p>
         </div>
       </section>
 

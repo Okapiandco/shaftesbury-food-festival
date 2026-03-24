@@ -37,8 +37,9 @@ export default function SponsorsPage() {
           <div className="mt-12">
             <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Headline Sponsor</h3>
             <div className="flex flex-wrap items-center justify-center gap-10">
-              <a href="https://www.countrycarsshaftesbury.co.uk/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+              <a href="https://www.countrycarsshaftesbury.co.uk/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80 text-center">
                 <img src="/Sponsors/COuntry Cars.avif" alt="Country Cars" className="h-28 w-auto object-contain" />
+                <p className="mt-2 text-sm text-text-light max-w-md mx-auto">For comfortable, reliable and trusted taxi services covering Shaftesbury, Dorset and beyond...plus airport taxi services too!</p>
               </a>
             </div>
           </div>
