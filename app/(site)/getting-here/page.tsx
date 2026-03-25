@@ -8,6 +8,19 @@ export const metadata: Metadata = {
   description:
     'Plan your journey to the Shaftesbury Food Festival on 3rd May 2026. Park & Ride from Port Regis School, train, bus, and driving directions from all directions.',
   alternates: { canonical: '/getting-here' },
+  openGraph: {
+    title: 'Getting Here | Shaftesbury Food Festival 3rd May 2026',
+    description:
+      'Plan your journey to the Shaftesbury Food Festival. Park & Ride from Port Regis School, train, bus, and driving directions from all directions.',
+    images: [{ url: '/Shaftesbury food festival Logo.png', alt: 'Shaftesbury Food Festival 2026 Logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Getting Here | Shaftesbury Food Festival 3rd May 2026',
+    description:
+      'Plan your journey to the Shaftesbury Food Festival. Park & Ride from Port Regis School, train, bus, and driving directions.',
+    images: ['/Shaftesbury food festival Logo.png'],
+  },
 }
 
 export default function GettingHerePage() {
