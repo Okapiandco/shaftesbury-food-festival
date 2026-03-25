@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays, ChefHat } from 'lucide-react'
+import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays, ChefHat, Facebook, Instagram } from 'lucide-react'
 
 const sideEvents = [
   {
@@ -134,13 +134,21 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <Link
-          href="/cheese-race"
-          className="hidden lg:inline-flex rounded-md bg-accent px-4 py-2 text-sm font-bold text-primary hover:bg-accent-dark transition-colors"
-        >
-          Enter Cheese Race
-        </Link>
+        {/* Desktop social icons + CTA */}
+        <div className="hidden lg:flex items-center gap-2">
+          <a href="https://www.facebook.com/ShaftesburyFoodFestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-md p-2 text-text hover:bg-gray-100 hover:text-primary transition-colors">
+            <Facebook size={18} />
+          </a>
+          <a href="https://www.instagram.com/shaftesburyfoodfestival" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-md p-2 text-text hover:bg-gray-100 hover:text-primary transition-colors">
+            <Instagram size={18} />
+          </a>
+          <Link
+            href="/cheese-race"
+            className="ml-1 rounded-md bg-accent px-4 py-2 text-sm font-bold text-primary hover:bg-accent-dark transition-colors"
+          >
+            Enter Cheese Race
+          </Link>
+        </div>
 
         {/* Mobile menu button */}
         <button
@@ -274,6 +282,14 @@ export default function Header() {
           >
             Enter Cheese Race
           </Link>
+          <div className="mt-4 flex gap-3 px-3">
+            <a href="https://www.facebook.com/ShaftesburyFoodFestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full bg-gray-100 p-2 text-text hover:bg-gray-200 transition-colors">
+              <Facebook size={18} />
+            </a>
+            <a href="https://www.instagram.com/shaftesburyfoodfestival" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-full bg-gray-100 p-2 text-text hover:bg-gray-200 transition-colors">
+              <Instagram size={18} />
+            </a>
+          </div>
         </nav>
       )}
     </header>

@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import { Clock, MapPin, Heart, BookOpen, ChefHat, Utensils } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
-import CTAButton from '@/components/shared/CTAButton'
 
 export const metadata: Metadata = {
   title: 'Food Demos | Shaftesbury Food Festival 3rd May 2026',
@@ -16,16 +15,25 @@ const chefs = [
     name: 'Ping Coombes',
     time: '11:30 AM',
     bio: 'Ping is a celebrated Malaysian-British chef, restaurateur and author. Her infectious energy and innovative approach to Southeast Asian cooking have made her a beloved figure on British television. At Shaftesbury Food Festival, Ping will demonstrate recipes from her latest book, sharing the bold flavours and cultural heritage of Malaysian cuisine. Her session promises vibrant cooking, storytelling, and insight into a culinary tradition rich in history and family tradition.',
+    images: ['/images/Food Demos/Ping Coombes Credit Sam Folan.jpg'],
+    imageAlts: ['Ping Coombes – credit Sam Folan'],
+    ticketUrl: 'https://www.eventbrite.co.uk/e/ping-coombes-tickets-1985447778753?aff=oddtdtcreator',
   },
   {
     name: 'Anurag Aggarwal',
     time: '1:00 PM',
     bio: 'Anurag is an acclaimed Indian chef and cookbook author whose passion for authentic Indian cuisine has earned him widespread recognition. His demonstrations showcase the complexity, regional diversity and soul-warming character of Indian cooking. Anurag will bring recipes from his latest book to life, offering audiences a masterclass in spice, technique and the cultural significance of Indian food traditions.',
+    images: ['/images/Food Demos/AA MChef.JPG', '/images/Food Demos/IMG_6058.jpg'],
+    imageAlts: ['Anurag Aggarwal', 'Anurag Aggarwal cooking'],
+    ticketUrl: 'https://www.eventbrite.co.uk/e/anurag-aggarwal-tickets-1985448002422?aff=oddtdtcreator',
   },
   {
     name: 'Shelina Permaloo',
     time: '2:30 PM',
     bio: 'Shelina is a Mauritian chef, author and television personality known for her warm, inclusive approach to food. Her cooking celebrates the multicultural heritage of Mauritian cuisine \u2014 a beautiful fusion of African, Indian, Chinese and French influences. Shelina\u2019s session will highlight the stories behind her recipes and the diverse culinary traditions that define her island\u2019s food culture.',
+    images: ['/images/Food Demos/Shelina Headshots_240_DW.jpg', '/images/Food Demos/Shelina Headshots_303_DW.jpg'],
+    imageAlts: ['Shelina Permaloo', 'Shelina Permaloo portrait'],
+    ticketUrl: 'https://www.eventbrite.co.uk/e/shelina-permaloo-tickets-1985448117767?aff=oddtdtcreator',
   },
 ]
 
@@ -125,8 +133,32 @@ export default function FoodDemosPage() {
                     {chef.time}
                   </span>
                 </div>
-                <div className="p-6">
-                  <p className="text-text-light leading-relaxed">{chef.bio}</p>
+                <div className="md:flex">
+                  <div className={`flex shrink-0 ${chef.images.length > 1 ? 'md:w-80' : 'md:w-56'}`}>
+                    {chef.images.map((src, i) => (
+                      <div key={src} className={`relative ${chef.images.length > 1 ? 'w-1/2' : 'w-full'} aspect-square md:aspect-auto md:h-full min-h-48`}>
+                        <Image
+                          src={src}
+                          alt={chef.imageAlts[i]}
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="p-6 flex flex-col justify-between gap-4">
+                    <p className="text-text-light leading-relaxed">{chef.bio}</p>
+                    <div>
+                      <a
+                        href={chef.ticketUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
+                      >
+                        Book Tickets
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -183,10 +215,18 @@ export default function FoodDemosPage() {
                 <li className="flex gap-2"><span className="font-semibold text-text">Donation:</span> Attendees are asked to donate to Vale Family Hub</li>
                 <li className="flex gap-2"><span className="font-semibold text-text">Includes:</span> Live demo, samples, meet &amp; greet, book signing opportunity</li>
               </ul>
-              <div className="mt-6">
-                <CTAButton href="/contact" variant="primary">
-                  Enquire About Tickets
-                </CTAButton>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {chefs.map((chef) => (
+                  <a
+                    key={chef.name}
+                    href={chef.ticketUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
+                  >
+                    {chef.name}
+                  </a>
+                ))}
               </div>
             </div>
 

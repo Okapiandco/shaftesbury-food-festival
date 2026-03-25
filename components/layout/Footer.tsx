@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
+import { Facebook, Instagram } from 'lucide-react'
 import NewsletterForm from '@/components/shared/NewsletterForm'
 
 const footerLinks = [
@@ -17,10 +17,8 @@ const footerLinks = [
 ]
 
 const socialLinks = [
-  { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
+  { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/ShaftesburyFoodFestival' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/shaftesburyfoodfestival' },
 ]
 
 export default function Footer() {
