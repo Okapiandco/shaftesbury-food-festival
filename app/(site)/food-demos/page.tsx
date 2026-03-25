@@ -6,7 +6,7 @@ import PageHeader from '@/components/shared/PageHeader'
 export const metadata: Metadata = {
   title: 'Food Demos | Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Live cookery demonstrations at the Shaftesbury Food Festival featuring former MasterChef winners and finalists. Hosted by The Kitchen Table at The Guild Hall.',
+    'Live cookery demonstrations at the Shaftesbury Food Festival featuring former MasterChef winners and finalists. Hosted by The Kitchen Table at The Town Hall.',
   alternates: { canonical: '/food-demos' },
 }
 
@@ -107,7 +107,7 @@ export default function FoodDemosPage() {
               <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold text-text">Venue</p>
-                <p className="text-sm text-text-light">The Guild Hall</p>
+                <p className="text-sm text-text-light">The Town Hall</p>
                 <p className="text-sm text-text-light">Shaftesbury, Dorset</p>
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function FoodDemosPage() {
                   <span className="text-white font-bold text-lg">{chef.name}</span>
                   <span className="flex items-center gap-2 text-blue-200 text-sm font-semibold">
                     <Clock className="w-4 h-4" />
-                    {chef.time}
+                    {chef.time} &mdash; 45 mins
                   </span>
                 </div>
                 <div className="md:flex">
@@ -214,6 +214,7 @@ export default function FoodDemosPage() {
                 <li className="flex gap-2"><span className="font-semibold text-text">Format:</span> Ticketed sessions (limited capacity)</li>
                 <li className="flex gap-2"><span className="font-semibold text-text">Donation:</span> Attendees are asked to donate to Vale Family Hub</li>
                 <li className="flex gap-2"><span className="font-semibold text-text">Includes:</span> Live demo, samples, meet &amp; greet, book signing opportunity</li>
+                <li className="flex gap-2"><span className="font-semibold text-text">No Refunds:</span> As your ticket is a donation to charity, we are unable to offer refunds</li>
               </ul>
               <div className="mt-6 flex flex-wrap gap-3">
                 {chefs.map((chef) => (
