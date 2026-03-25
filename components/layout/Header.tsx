@@ -53,6 +53,7 @@ const sideEvents = [
 const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/trade-stands', label: 'Street Market' },
+  { href: '/getting-here', label: 'Getting Here' },
   { href: '/sponsors', label: 'Sponsors' },
   { href: '/volunteers', label: 'Volunteers' },
   { href: '/contact', label: 'Contact' },

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ChefHat, Store, Trophy, Heart } from 'lucide-react'
+import { ChefHat, Store, Trophy, Heart, Car, Bus } from 'lucide-react'
 import CTAButton from '@/components/shared/CTAButton'
 import VendorCard from '@/components/cards/VendorCard'
 
@@ -271,6 +271,48 @@ export default function HomePage() {
           <div className="text-center text-white px-4">
             <h2 className="text-3xl font-bold md:text-4xl">Join Us on the Bank Holiday</h2>
             <p className="mt-3 text-lg text-blue-200">Eat and drink your way around Dorset</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Getting Here */}
+      <section className="section bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-center text-3xl font-bold text-text md:text-4xl">Getting Here</h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
+            Parking in Shaftesbury will be limited — plan ahead and use our Park &amp; Ride.
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="rounded-xl bg-white border border-gray-200 p-5 shadow-sm">
+              <div className="flex items-center gap-2 mb-3">
+                <Bus className="w-5 h-5 text-primary" />
+                <h3 className="font-bold text-text">Park &amp; Ride</h3>
+              </div>
+              <p className="text-sm text-text-light leading-relaxed">Buses every 30 minutes from <span className="font-semibold text-text">Port Regis School</span>. £5 cash per person — all proceeds to the Chamber of Commerce.</p>
+              <div className="mt-3 pt-3 border-t border-gray-100">
+                <p className="text-xs text-text-muted">Sponsored by</p>
+                <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre Inn Dorset" className="mt-1 h-8 w-auto object-contain" />
+              </div>
+            </div>
+            <div className="rounded-xl bg-white border border-gray-200 p-5 shadow-sm">
+              <div className="flex items-center gap-2 mb-3">
+                <Car className="w-5 h-5 text-primary" />
+                <h3 className="font-bold text-text">By Car</h3>
+              </div>
+              <p className="text-sm text-text-light leading-relaxed">Use <span className="font-semibold text-text">SP7 8JY</span> for the High Street. Please car share wherever possible — we&apos;re expecting a large number of visitors and town parking will be very limited.</p>
+            </div>
+            <div className="rounded-xl bg-white border border-gray-200 p-5 shadow-sm">
+              <div className="flex items-center gap-2 mb-3">
+                <Bus className="w-5 h-5 text-primary" />
+                <h3 className="font-bold text-text">Train &amp; Bus</h3>
+              </div>
+              <p className="text-sm text-text-light leading-relaxed">Nearest stations are <span className="font-semibold text-text">Gillingham (8 miles)</span> and <span className="font-semibold text-text">Tisbury (10 miles)</span>. Local bus services also run into town from across the region.</p>
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/getting-here" className="inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary/90 transition-colors">
+              Full Journey Planner
+            </Link>
           </div>
         </div>
       </section>

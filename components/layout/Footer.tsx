@@ -13,6 +13,7 @@ const footerLinks = [
   { href: '/feast-for-the-eyes', label: 'A Feast for the Eyes' },
   { href: '/events', label: 'What\'s On' },
   { href: '/sponsors', label: 'Sponsors' },
+  { href: '/getting-here', label: 'Getting Here' },
   { href: '/contact', label: 'Contact Us' },
 ]
 
