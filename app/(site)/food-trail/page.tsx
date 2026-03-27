@@ -8,7 +8,7 @@ import CTAButton from '@/components/shared/CTAButton'
 export const metadata: Metadata = {
   title: 'Food Trail | Shaftesbury Food Festival 2nd May 2026',
   description:
-    'Follow the Shaftesbury Food Trail on Saturday 2nd May around local food producers including Gold Hill Organic Farm, Sorelle Dorset, Compton McRae, Madjeston Animal Park and Primrose Organic Produce.',
+    'Follow the Shaftesbury Food Trail on Saturday 2nd May around local food producers including Gold Hill Organic Farm, Sorelle Dorset, Compton McRae, Madjeston Animal Park, Primrose Organic Produce, Pythouse Kitchen Garden, Dorset Blue Vinny, Olives et Al, Breezy Ridge and Cann Mills.',
   alternates: { canonical: '/food-trail' },
 }
 
@@ -52,7 +52,7 @@ const trailStops: TrailStop[] = [
     description:
       'Compton McRae is a café and deli in Semley, celebrating seasonal food, great coffee and artisan produce. Known for its relaxed atmosphere and community feel, Compton McRae serves simple, delicious dishes alongside a deli with a cheese room, stocked with carefully sourced ingredients, wines and provisions from local and independent producers.',
     activities: ['Café & seasonal dishes', 'Deli & cheese room', 'Artisan produce & wines', 'Great coffee'],
-    image: '/images/Food Trail/Compton macrae/Shelves.jpg',
+    image: '/images/Food Trail/COmpton Macrae/Shelves.jpg',
     website: 'https://www.comptonmcrae.co.uk',
     mapPosition: { top: '30%', left: '50%' },
   },
@@ -85,6 +85,34 @@ const trailStops: TrailStop[] = [
     activities: ['Seasonal restaurant', 'Kitchen garden tours', 'Garden-to-plate dining', 'Michelin Green Star & Bib Gourmand'],
     image: '/images/Food Trail/Pythouse Kitchen Garden/Outside Bar.jpg',
     mapPosition: { top: '40%', left: '70%' },
+  },
+  {
+    name: 'Dorset Blue Vinny',
+    address: 'TBC',
+    description: 'Details coming soon.',
+    activities: [],
+    mapPosition: { top: '50%', left: '55%' },
+  },
+  {
+    name: 'Olives et Al',
+    address: 'TBC',
+    description: 'Details coming soon.',
+    activities: [],
+    mapPosition: { top: '45%', left: '60%' },
+  },
+  {
+    name: 'Breezy Ridge',
+    address: 'TBC',
+    description: 'Details coming soon.',
+    activities: [],
+    mapPosition: { top: '60%', left: '50%' },
+  },
+  {
+    name: 'Cann Mills',
+    address: 'TBC',
+    description: 'Details coming soon.',
+    activities: [],
+    mapPosition: { top: '65%', left: '40%' },
   },
 ]
 
@@ -130,7 +158,7 @@ export default function FoodTrailPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Trail Map</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Our six trail stops are dotted around the beautiful Dorset and Wiltshire countryside surrounding Shaftesbury.
+            Our ten trail stops are dotted around the beautiful Dorset and Wiltshire countryside surrounding Shaftesbury.
           </p>
           <div className="mt-8 mx-auto max-w-4xl">
             <div className="overflow-hidden rounded-xl border-2 border-gray-200 shadow-sm">
