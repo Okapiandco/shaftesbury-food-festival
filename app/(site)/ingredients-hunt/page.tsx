@@ -6,7 +6,7 @@ import CTAButton from '@/components/shared/CTAButton'
 export const metadata: Metadata = {
   title: 'Ingredients Hunt | Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Join the Shaftesbury Ingredients Hunt — a treasure hunt through the town\'s shops. Find hidden ingredients, work out the mystery recipe and win prizes at the Food Festival on 3rd May.',
+    'Join the Shaftesbury Ingredients Hunt — a treasure hunt through the town\'s shops. Find hidden ingredients, work out the mystery recipe and win prizes at the Food Festival on 3rd May. 10am–4pm.',
   alternates: { canonical: '/ingredients-hunt' },
 }
 
@@ -133,7 +133,7 @@ export default function IngredientsHuntPage() {
               <div className="rounded-xl bg-white p-6 shadow-sm">
                 <h3 className="font-bold text-text">When does it run?</h3>
                 <p className="mt-1 text-sm text-text-light">
-                  The hunt runs throughout festival day on 3rd May 2026. Collect your card from 9 AM and hand it in by 4 PM.
+                  The hunt runs throughout festival day on 3rd May 2026. Collect your card from 10 AM and hand it in by 4 PM.
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 shadow-sm">
@@ -176,7 +176,7 @@ export default function IngredientsHuntPage() {
             '@type': 'Event',
             name: 'Shaftesbury Ingredients Hunt',
             description: 'A treasure hunt through Shaftesbury shops. Find hidden ingredients, work out the mystery recipe and win prizes.',
-            startDate: '2026-05-03T09:00:00+01:00',
+            startDate: '2026-05-03T10:00:00+01:00',
             endDate: '2026-05-03T16:00:00+01:00',
             location: {
               '@type': 'Place',

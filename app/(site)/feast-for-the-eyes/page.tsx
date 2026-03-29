@@ -56,6 +56,7 @@ export default function FeastForTheEyesPage() {
                   <div>
                     <p className="text-sm font-semibold text-text">Dates</p>
                     <p className="text-sm text-text-light">29th April &ndash; 5th May 2026</p>
+                    <p className="text-sm text-text-light">10am–4pm daily</p>
                   </div>
                 </div>
                 <div className="flex gap-3">

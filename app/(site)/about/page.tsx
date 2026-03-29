@@ -114,8 +114,8 @@ export default function AboutPage() {
             '@context': 'https://schema.org',
             '@type': 'Event',
             name: 'Shaftesbury Food Festival 2026',
-            startDate: '2026-05-03T09:00:00+01:00',
-            endDate: '2026-05-03T18:00:00+01:00',
+            startDate: '2026-05-03T10:00:00+01:00',
+            endDate: '2026-05-03T16:00:00+01:00',
             location: {
               '@type': 'Place',
               name: 'Shaftesbury High Street & Park Walk',

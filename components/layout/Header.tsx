@@ -9,21 +9,21 @@ const sideEvents = [
   {
     href: '/feast-for-the-eyes',
     label: 'A Feast for the Eyes',
-    description: '29th Apr – 5th May — Art exhibition',
+    description: '29th Apr – 5th May — Art exhibition, 10am–4pm daily',
     icon: Palette,
     color: 'text-secondary',
   },
   {
     href: '/events#quiz',
     label: 'The Great Food Quiz',
-    description: 'Friday 1st May — Quiz night at Sorelle',
+    description: 'Friday 1st May — Quiz night at Sorelle, 6pm–10pm',
     icon: HelpCircle,
     color: 'text-primary',
   },
   {
     href: '/food-trail',
     label: 'Food Trail',
-    description: 'Saturday 2nd May — Explore local producers',
+    description: 'Saturday 2nd May — Explore local producers, 10am–4pm',
     icon: Footprints,
     color: 'text-secondary',
   },
@@ -37,7 +37,7 @@ const sideEvents = [
   {
     href: '/food-demos',
     label: 'Food Demos',
-    description: 'Sunday 3rd May — MasterChef chefs live at The Guild Hall',
+    description: 'Sunday 3rd May — MasterChef Demos at The Town Hall',
     icon: ChefHat,
     color: 'text-accent-dark',
   },
@@ -50,12 +50,17 @@ const sideEvents = [
   },
 ]
 
+const aboutLinks = [
+  { href: '/about', label: 'About the Festival' },
+  { href: '/volunteers', label: 'Volunteers' },
+]
+
 const navLinks = [
-  { href: '/about', label: 'About' },
+  { href: '/cheese-race', label: 'Cheese Race' },
+  { href: '/food-demos', label: 'Food Demos' },
   { href: '/trade-stands', label: 'Street Market' },
   { href: '/getting-here', label: 'Getting Here' },
   { href: '/sponsors', label: 'Sponsors' },
-  { href: '/volunteers', label: 'Volunteers' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -63,6 +68,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [megaOpen, setMegaOpen] = useState(false)
   const [mobileMegaOpen, setMobileMegaOpen] = useState(false)
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
   const megaButtonRef = useRef<HTMLDivElement>(null)
   const megaPanelRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLElement>(null)
@@ -122,6 +128,27 @@ export default function Header() {
               What&apos;s On
               <ChevronDown className={`w-4 h-4 transition-transform ${megaOpen ? 'rotate-180' : ''}`} />
             </button>
+          </div>
+
+          {/* About dropdown */}
+          <div className="relative group/about">
+            <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-text hover:bg-gray-100 hover:text-primary transition-colors">
+              About
+              <ChevronDown className="w-4 h-4" />
+            </button>
+            <div className="absolute left-0 top-full hidden group-hover/about:block pt-1 z-50">
+              <div className="rounded-lg bg-white shadow-lg border border-gray-100 py-1 min-w-[180px]">
+                {aboutLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2 text-sm text-text hover:bg-gray-50 hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           {navLinks.map((link) => (
@@ -263,6 +290,29 @@ export default function Header() {
               >
                 View all events &rarr;
               </Link>
+            </div>
+          )}
+
+          {/* About accordion */}
+          <button
+            onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+            className="flex w-full items-center justify-between rounded-md px-3 py-3 text-sm font-medium text-text hover:bg-gray-100 hover:text-primary"
+          >
+            About
+            <ChevronDown className={`w-4 h-4 transition-transform ${mobileAboutOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {mobileAboutOpen && (
+            <div className="ml-4 mb-2 space-y-1">
+              {aboutLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => { setMobileOpen(false); setMobileAboutOpen(false) }}
+                  className="block rounded-md px-3 py-2 text-sm font-medium text-text hover:bg-gray-50"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           )}
 

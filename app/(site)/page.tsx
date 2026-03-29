@@ -45,8 +45,8 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/gold-hill.jpg"
-          alt="Gold Hill, Shaftesbury — home of the famous cheese race"
+          src="/images/Food Demos.jpg"
+          alt="Live food demonstrations at the Shaftesbury Food Festival"
           fill
           className="object-cover"
           priority
@@ -106,7 +106,7 @@ export default function HomePage() {
               <div className="p-4 text-center">
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-secondary">29th Apr – 5th May</p>
                 <h3 className="mt-1 text-sm font-bold text-text group-hover:text-primary transition-colors">A Feast for the Eyes</h3>
-                <p className="mt-1 text-xs text-text-light">Art exhibition at Shaftesbury Arts Centre.</p>
+                <p className="mt-1 text-xs text-text-light">Art exhibition — 10am–4pm daily at Shaftesbury Arts Centre.</p>
               </div>
             </Link>
 
@@ -379,8 +379,8 @@ export default function HomePage() {
             '@context': 'https://schema.org',
             '@type': 'Event',
             name: 'Shaftesbury Food Festival 2026',
-            startDate: '2026-05-03T09:00:00+01:00',
-            endDate: '2026-05-03T18:00:00+01:00',
+            startDate: '2026-05-03T10:00:00+01:00',
+            endDate: '2026-05-03T16:00:00+01:00',
             eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
             eventStatus: 'https://schema.org/EventScheduled',
             location: {
@@ -401,7 +401,7 @@ export default function HomePage() {
               name: 'Shaftesbury Chamber of Commerce',
               url: 'https://shaftesbury-food-festival.co.uk',
             },
-            image: 'https://shaftesbury-food-festival.co.uk/images/gold-hill.jpg',
+            image: 'https://shaftesbury-food-festival.co.uk/images/Food Demos.jpg',
           }),
         }}
       />

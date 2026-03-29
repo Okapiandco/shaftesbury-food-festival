@@ -2,12 +2,12 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
-import { MapPin, Clock, Users, CalendarDays, Footprints, HelpCircle, UtensilsCrossed, Palette, Search } from 'lucide-react'
+import { MapPin, Clock, Users, CalendarDays, Footprints, HelpCircle, UtensilsCrossed, Palette, Search, Trophy, ChefHat, Store, Brush } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Events | Shaftesbury Food Festival 2026',
   description:
-    'Events celebrating Shaftesbury Food Festival 2026, including The Great Food Quiz on 1st May and the Food Trail on 2nd May.',
+    'Full schedule for Shaftesbury Food Festival 2026. Art exhibition from 29th April, Food Quiz on 1st May, Food Trail on 2nd May, and the main festival day on 3rd May with Cheese Race, MasterChef Demos, Street Market and more.',
   alternates: { canonical: '/events' },
 }
 
@@ -19,74 +19,167 @@ export default function EventsPage() {
         subtitle="Celebrating food, drink and community across the Shaftesbury area."
       />
 
-      {/* ── 3-Day Overview ── */}
+      {/* ── What's On When ── */}
       <section className="section">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-center text-3xl font-bold text-text md:text-4xl">Three Days of Food &amp; Festivities</h2>
+          <h2 className="text-center text-3xl font-bold text-text md:text-4xl">What&apos;s On When</h2>
           <p className="mx-auto mt-3 max-w-2xl text-center text-text-light">
-            From a Friday night quiz to a countryside food trail and the main festival — there&apos;s something for everyone.
+            From an art exhibition and Friday night quiz to a countryside food trail and the main festival — here&apos;s the full schedule.
           </p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {/* Day 1 */}
-            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden flex flex-col">
+          <div className="mt-10 space-y-8">
+
+            {/* 29th April – 5th May */}
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
+              <div className="bg-secondary px-5 py-3 flex items-center gap-2">
+                <CalendarDays className="w-4 h-4 text-white shrink-0" />
+                <span className="text-white font-semibold text-sm">29th April – 5th May (ongoing)</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-start gap-3">
+                  <Palette className="w-6 h-6 text-secondary shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-lg font-bold text-text">A Feast For The Eyes</h3>
+                    <p className="text-sm text-text-light">Art exhibition — 10am–4pm daily</p>
+                    <p className="mt-1 text-sm text-text-light">Shaftesbury Arts Centre</p>
+                    <div className="mt-3">
+                      <CTAButton href="/feast-for-the-eyes" variant="secondary" className="text-sm">
+                        Find Out More
+                      </CTAButton>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Friday 1st May */}
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
               <div className="bg-primary px-5 py-3 flex items-center gap-2">
                 <CalendarDays className="w-4 h-4 text-white shrink-0" />
                 <span className="text-white font-semibold text-sm">Friday 1st May</span>
               </div>
-              <div className="p-6 flex flex-col flex-1">
-                <HelpCircle className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-xl font-bold text-text">The Great Food Quiz</h3>
-                <p className="mt-2 text-sm text-text-light leading-relaxed flex-1">
-                  Kick off the festival weekend with a fun food &amp; drink quiz hosted at Sorelle in Motcombe. Teams of up to 6 — prizes for the winners!
-                </p>
-                <div className="mt-4">
-                  <CTAButton href="#quiz" variant="primary" className="w-full text-center text-sm">
-                    View Details
-                  </CTAButton>
+              <div className="p-6">
+                <div className="flex items-start gap-3">
+                  <HelpCircle className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-lg font-bold text-text">The Great Food Quiz</h3>
+                    <p className="text-sm text-text-light">6pm–10pm at Sorelle, Motcombe</p>
+                    <p className="mt-1 text-sm text-text-light">Fun food &amp; drink quiz — teams of up to 6. Prizes for the winners!</p>
+                    <div className="mt-3">
+                      <CTAButton href="#quiz" variant="primary" className="text-sm">
+                        View Details
+                      </CTAButton>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Day 2 */}
-            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden flex flex-col">
+            {/* Saturday 2nd May */}
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
               <div className="bg-secondary px-5 py-3 flex items-center gap-2">
                 <CalendarDays className="w-4 h-4 text-white shrink-0" />
                 <span className="text-white font-semibold text-sm">Saturday 2nd May</span>
               </div>
-              <div className="p-6 flex flex-col flex-1">
-                <Footprints className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="text-xl font-bold text-text">The Shaftesbury Food Trail</h3>
-                <p className="mt-2 text-sm text-text-light leading-relaxed flex-1">
-                  Explore the countryside around Shaftesbury visiting brilliant local food producers — farm walks, tastings and behind-the-scenes tours.
-                </p>
-                <div className="mt-4">
-                  <CTAButton href="/food-trail" variant="secondary" className="w-full text-center text-sm">
-                    View Details
-                  </CTAButton>
+              <div className="p-6">
+                <div className="flex items-start gap-3">
+                  <Footprints className="w-6 h-6 text-secondary shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="text-lg font-bold text-text">Food Trail</h3>
+                    <p className="text-sm text-text-light">10am–4pm — Explore local producers around Shaftesbury</p>
+                    <p className="mt-1 text-sm text-text-light">Farm walks, tastings and behind-the-scenes tours.</p>
+                    <div className="mt-3">
+                      <CTAButton href="/food-trail" variant="secondary" className="text-sm">
+                        View Details
+                      </CTAButton>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Day 3 */}
-            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden flex flex-col">
+            {/* Sunday 3rd May */}
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
               <div className="bg-accent px-5 py-3 flex items-center gap-2">
                 <CalendarDays className="w-4 h-4 text-white shrink-0" />
-                <span className="text-white font-semibold text-sm">Sunday 3rd May</span>
+                <span className="text-white font-semibold text-sm">Sunday 3rd May — Main Festival Day</span>
               </div>
-              <div className="p-6 flex flex-col flex-1">
-                <UtensilsCrossed className="w-8 h-8 text-accent mb-3" />
-                <h3 className="text-xl font-bold text-text">Shaftesbury Food Festival</h3>
-                <p className="mt-2 text-sm text-text-light leading-relaxed flex-1">
-                  The main event! Local food &amp; drink producers, the Gold Hill Cheese Race, chef talks, live music and family fun on the historic high street.
-                </p>
-                <div className="mt-4">
-                  <CTAButton href="/about" variant="accent" className="w-full text-center text-sm">
-                    View Details
-                  </CTAButton>
+              <div className="p-6 space-y-6">
+                {/* Headline Events */}
+                <div>
+                  <h3 className="text-lg font-bold text-text mb-4">Headline Events</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <Trophy className="w-6 h-6 text-accent-dark shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-bold text-text">Cheese Race</h4>
+                        <p className="text-sm text-text-light">10am–3pm — The famous Gold Hill race</p>
+                        <div className="mt-2">
+                          <CTAButton href="/cheese-race" variant="accent" className="text-sm">
+                            Enter Now
+                          </CTAButton>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <ChefHat className="w-6 h-6 text-accent-dark shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-bold text-text">MasterChef Demos</h4>
+                        <p className="text-sm text-text-light">11:30am, 1pm &amp; 2:30pm — Live cookery at The Town Hall</p>
+                        <div className="mt-2">
+                          <CTAButton href="/food-demos" variant="accent" className="text-sm">
+                            Book Tickets
+                          </CTAButton>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Footprints className="w-6 h-6 text-accent-dark shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-bold text-text">Byzantine Walk</h4>
+                        <p className="text-sm text-text-light">2pm</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* All-day activities */}
+                <div className="border-t border-gray-100 pt-6">
+                  <h3 className="text-lg font-bold text-text mb-4">All-Day Activities</h3>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="flex items-start gap-3">
+                      <Store className="w-5 h-5 text-text-muted shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-semibold text-text text-sm">Street Market</h4>
+                        <p className="text-xs text-text-light">10am–4pm</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Search className="w-5 h-5 text-text-muted shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-semibold text-text text-sm">Ingredients Hunt</h4>
+                        <p className="text-xs text-text-light">10am–4pm</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Palette className="w-5 h-5 text-text-muted shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-semibold text-text text-sm">A Feast For The Eyes</h4>
+                        <p className="text-xs text-text-light">Art exhibition — 10am–4pm</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Brush className="w-5 h-5 text-text-muted shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-semibold text-text text-sm">Children&apos;s Art Competition</h4>
+                        <p className="text-xs text-text-light">10am–3pm</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -224,7 +317,7 @@ export default function EventsPage() {
               <div className="mt-6 flex gap-3">
                 <Clock className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-semibold text-text">All day</p>
+                  <p className="text-sm font-semibold text-text">10am–4pm</p>
                   <p className="text-sm text-text-light">Saturday 2nd May 2026 — explore at your own pace</p>
                 </div>
               </div>
@@ -270,7 +363,7 @@ export default function EventsPage() {
                 <Clock className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-semibold text-text">29th April – 5th May 2026</p>
-                  <p className="text-sm text-text-light">Open during Arts Centre hours</p>
+                  <p className="text-sm text-text-light">10am–4pm daily</p>
                 </div>
               </div>
 
@@ -299,14 +392,14 @@ export default function EventsPage() {
               </div>
 
               <p className="mt-4 text-text-light leading-relaxed">
-                A fun family scavenger hunt around the festival. Collect your card from 9 AM, find all the hidden ingredients around the stalls and high street, and hand it in by 4 PM for a chance to win prizes!
+                A fun family scavenger hunt around the festival. Collect your card from 10 AM, find all the hidden ingredients around the stalls and high street, and hand it in by 4 PM for a chance to win prizes!
               </p>
 
               <div className="mt-6 flex gap-3">
                 <Clock className="w-5 h-5 text-accent-dark shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-semibold text-text">Sunday 3rd May 2026</p>
-                  <p className="text-sm text-text-light">9:00 AM – 4:00 PM</p>
+                  <p className="text-sm text-text-light">10:00 AM – 4:00 PM</p>
                 </div>
               </div>
 
