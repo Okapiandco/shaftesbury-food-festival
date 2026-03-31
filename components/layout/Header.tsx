@@ -53,14 +53,12 @@ const sideEvents = [
 const aboutLinks = [
   { href: '/about', label: 'About the Festival' },
   { href: '/volunteers', label: 'Volunteers' },
-  { href: '/getting-here', label: 'Getting Here' },
 ]
 
 const navLinks = [
   { href: '/cheese-race', label: 'Cheese Race' },
   { href: '/food-demos', label: 'Food Demos' },
   { href: '/trade-stands', label: 'Street Market' },
-  { href: '/sponsors', label: 'Sponsors' },
   { href: '/contact', label: 'Contact' },
 ]
 
