@@ -57,6 +57,7 @@ export default function TradeStandsPage() {
             <VendorCard name="Pretty Little Unicorn" category="craft" image="/images/TRade Stands/Pretty Little Unicorn.png" />
             <VendorCard name="South Paddocks" category="food-vendor" image="/images/TRade Stands/South Paddocks.png" />
             <VendorCard name="The Olive Pit" category="food-vendor" image="/images/TRade Stands/The Olive Pit.png" />
+            <VendorCard name="Compton McRae" category="food-vendor" description="Artisan deli and fine food specialists." website="https://www.comptonmcrae.com/" image="/images/Food Trail/COmpton Macrae/Shelves.jpg" />
           </div>
         </div>
       </section>

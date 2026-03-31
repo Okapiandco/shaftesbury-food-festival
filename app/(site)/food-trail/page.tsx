@@ -8,7 +8,7 @@ import CTAButton from '@/components/shared/CTAButton'
 export const metadata: Metadata = {
   title: 'Food Trail | Shaftesbury Food Festival 2nd May 2026',
   description:
-    'Follow the Shaftesbury Food Trail on Saturday 2nd May around local food producers including Gold Hill Organic Farm, Sorelle Dorset, Compton McRae, Madjeston Animal Park, Primrose Organic Produce, Pythouse Kitchen Garden, Dorset Blue Vinny, Olives et Al, Breezy Ridge and Cann Mills.',
+    'Follow the Shaftesbury Food Trail on Saturday 2nd May around local food producers including Gold Hill Organic Farm, Sorelle Dorset, Compton McRae, Madjeston Animal Park, Primrose Organic Produce, Pythouse Kitchen Garden, Dorset Blue Vinny, Olives Et Al, Breezy Ridge and Cann Mills.',
   alternates: { canonical: '/food-trail' },
 }
 
@@ -94,10 +94,19 @@ const trailStops: TrailStop[] = [
     mapPosition: { top: '50%', left: '55%' },
   },
   {
-    name: 'Olives et Al',
-    address: 'TBC',
-    description: 'Details coming soon.',
-    activities: [],
+    name: 'Olives Et Al',
+    location: 'Sturminster Newton, Dorset',
+    address: 'Sturminster Newton, Dorset',
+    description:
+      'Nestling happily just outside Sturminster Newton, Dorset is the Olives Et Al HQ Deli which sits alongside their Production Kitchen where they make well over 260 individual products stocked in other deli\u2019s and farm shops from the Scilly Isles to the Orkneys and all points in between. The HQ Deli is a great showcase of what they make and have sourced from various trips to warmer climes. Headed up by Olena with Sarah, Maddie and Sadie, they make, bake, and prepare a host of fresh dishes every day ranging from fresh sourdough to some seriously super salads, cakes, sandwiches, tarts and traybakes all with their particular Mediterranean twist. They say: \u2018Call in for fresh Coffee, delightful service and interesting chats \u2014 we\u2019re always happy to see you!\u2019',
+    activities: [
+      'Fabulous Olive Bar \u2014 Great Olive Oils',
+      'Nuts to die for \u2013 Dressings & Sauces to drool about',
+      'Fresh bread \u2013 Wonderful baps',
+      'Spicy People \u2014 Organic Wines',
+    ],
+    image: '/images/Food Trail/Olives Et Al/OLIVES ET AL - DELI HOLDING IMAGE.jpg',
+    website: 'https://www.olivesetal.co.uk',
     mapPosition: { top: '45%', left: '60%' },
   },
   {

@@ -144,6 +144,13 @@ export default function CheeseRacePage() {
                 className="h-20 w-auto object-contain"
               />
             </a>
+            <a href="https://www.comptonmcrae.com/" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+              <img
+                src="/images/Food Trail/COmpton Macrae/LOGO- Maroon.jpeg"
+                alt="Compton McRae"
+                className="h-20 w-auto object-contain"
+              />
+            </a>
           </div>
           <div className="mt-8">
             <CTAButton href="/sponsors" variant="primary">Learn About Sponsorship</CTAButton>

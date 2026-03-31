@@ -14,20 +14,23 @@ export async function POST(request: Request) {
     }
 
     // Store in Sanity
-    if (process.env.SANITY_API_WRITE_TOKEN) {
-      const { writeClient } = await import('@/lib/sanity')
-      await writeClient.create({
-        _type: 'tradeStandEnquiry',
-        businessName,
-        contactName,
-        email,
-        phone: phone || '',
-        category,
-        description,
-        specialRequirements: specialRequirements || '',
-        submittedAt: new Date().toISOString(),
-      })
+    if (!process.env.SANITY_API_WRITE_TOKEN) {
+      console.error('SANITY_API_WRITE_TOKEN is not configured')
+      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
     }
+
+    const { writeClient } = await import('@/lib/sanity')
+    await writeClient.create({
+      _type: 'tradeStandEnquiry',
+      businessName,
+      contactName,
+      email,
+      phone: phone || '',
+      category,
+      description,
+      specialRequirements: specialRequirements || '',
+      submittedAt: new Date().toISOString(),
+    })
 
     // Send notification email
     if (resend) {
