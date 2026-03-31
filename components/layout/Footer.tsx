@@ -101,7 +101,7 @@ export default function Footer() {
           <p>Supported by Shaftesbury Town Council</p>
           <p className="mt-1">
             &copy; {new Date().getFullYear()} Shaftesbury Food Festival. Built by{' '}
-            <a href="https://okapiandco.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
+            <a href="https://okapiandco.co.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
               Okapi &amp; Co
             </a>
           </p>
