@@ -1,0 +1,96 @@
+import { Metadata } from 'next'
+import Image from 'next/image'
+import { Download } from 'lucide-react'
+import PageHeader from '@/components/shared/PageHeader'
+
+export const metadata: Metadata = {
+  title: 'Media | Shaftesbury Food Festival 2026',
+  description:
+    'Press resources and downloadable images for the Shaftesbury Food Festival 2026. High-resolution photos available for media use.',
+  alternates: { canonical: '/media' },
+}
+
+const pressImages = [
+  {
+    src: '/Shaftesbury food festival Logo.svg',
+    alt: 'Shaftesbury Food Festival Logo',
+    description: 'Official Shaftesbury Food Festival logo',
+  },
+  {
+    src: '/images/Food Demos/Ping Coombes Credit Sam Folan.jpg',
+    alt: 'Ping Coombes — Master Chefs Live',
+    description: 'Ping Coombes — Master Chefs Live chef portrait (credit: Sam Folan)',
+  },
+  {
+    src: '/images/Food Demos/AA MChef.JPG',
+    alt: 'Anurag Aggarwal — Master Chefs Live',
+    description: 'Anurag Aggarwal — Master Chefs Live chef portrait',
+  },
+  {
+    src: '/images/Food Demos/Shelina Headshots_240_DW.jpg',
+    alt: 'Shelina Permaloo — Master Chefs Live',
+    description: 'Shelina Permaloo — Master Chefs Live chef portrait',
+  },
+  {
+    src: '/images/Cheese Race Image.jpg',
+    alt: 'Gold Hill Cheese Race',
+    description: 'The famous Gold Hill Cheese Race',
+  },
+]
+
+export default function MediaPage() {
+  return (
+    <>
+      <PageHeader
+        title="Media"
+        subtitle="Press resources and downloadable images for the Shaftesbury Food Festival."
+      />
+
+      {/* Introduction */}
+      <section className="section">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <p className="text-text-light leading-relaxed">
+            [INTRO_TEXT_TO_COME]
+          </p>
+        </div>
+      </section>
+
+      {/* Press Downloads */}
+      <section className="section bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Press Downloads</h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
+            High-resolution images available for press use. Click to download.
+          </p>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {pressImages.map((image) => (
+              <div key={image.src} className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
+                <div className="relative aspect-[4/3] bg-gray-100">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-contain p-4"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="text-sm font-semibold text-text">{image.alt}</p>
+                  <p className="mt-1 text-xs text-text-light">{image.description}</p>
+                  <a
+                    href={image.src}
+                    download
+                    className="mt-3 inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-xs font-semibold text-white hover:bg-primary/90 transition-colors"
+                  >
+                    <Download size={14} />
+                    Download
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

@@ -3,18 +3,19 @@ import { Facebook, Instagram } from 'lucide-react'
 import NewsletterForm from '@/components/shared/NewsletterForm'
 
 const footerLinks = [
+  { href: '/events', label: 'What\'s On' },
+  { href: '/cheese-race', label: 'Gold Hill Cheese Race' },
+  { href: '/food-demos', label: 'Master Chefs Live' },
+  { href: '/trade-stands', label: 'Street Market' },
+  { href: '/food-trail', label: 'Food Trail' },
+  { href: '/feast-for-the-eyes', label: 'Foodie Art' },
+  { href: '/contact', label: 'Contact Us' },
   { href: '/about', label: 'About the Festival' },
   { href: '/volunteers', label: 'Volunteers' },
-  { href: '/cheese-race', label: 'Gold Hill Cheese Race' },
-  { href: '/food-trail', label: 'Food Trail' },
   { href: '/ingredients-hunt', label: 'Ingredients Hunt' },
-  { href: '/trade-stands', label: 'Street Market' },
-  { href: '/food-demos', label: 'Food Demos' },
-  { href: '/feast-for-the-eyes', label: 'A Feast for the Eyes' },
-  { href: '/events', label: 'What\'s On' },
   { href: '/sponsors', label: 'Sponsors' },
   { href: '/getting-here', label: 'Getting Here' },
-  { href: '/contact', label: 'Contact Us' },
+  { href: '/media', label: 'Media' },
 ]
 
 const socialLinks = [

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { TrendingUp, Users, Megaphone, MapPin } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import VendorCard from '@/components/cards/VendorCard'
+import VendorCarousel from '@/components/shared/VendorCarousel'
 import TradeStandForm from '@/components/forms/TradeStandForm'
 
 export const metadata: Metadata = {
@@ -37,27 +38,29 @@ export default function TradeStandsPage() {
         />
       </section>
 
-      {/* Confirmed Vendor */}
+      {/* Confirmed Vendors Carousel */}
       <section className="section">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Confirmed Vendors</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            More vendors are being confirmed regularly. Check back soon for updates.
+            Here is a sample of the traders joining us this year. More vendors are being confirmed regularly — check back soon for updates.
           </p>
 
-          <div className="mt-8 grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <VendorCard name="Truckle Truck" category="food-vendor" description="Award-winning cheeses and accompaniments." image="/images/truckle-truck.jpg" />
-            <VendorCard name="Book and Bucket Cheese" category="food-vendor" image="/images/TRade Stands/Book and Bucket Cheese.jpg" />
-            <VendorCard name="Catherine Potter Crafts" category="craft" image="/images/TRade Stands/Catherine Potter crafts.jpg" />
-            <VendorCard name="Compton Candle Co" category="craft" image="/images/TRade Stands/Compton Candle Co.jpg" />
-            <VendorCard name="Crepe Salut" category="food-vendor" image="/images/TRade Stands/Crepe Salut.png" />
-            <VendorCard name="Farmgirl Sausages" category="food-vendor" image="/images/TRade Stands/Farmgirl Sausages.jpg" />
-            <VendorCard name="Hettie Hen Scotch Eggs" category="food-vendor" image="/images/TRade Stands/Hettie Hen Scotch Eggs.jpg" />
-            <VendorCard name="Oxfords Bakery" category="food-vendor" image="/images/TRade Stands/Oxfords bakery.png" />
-            <VendorCard name="Pretty Little Unicorn" category="craft" image="/images/TRade Stands/Pretty Little Unicorn.png" />
-            <VendorCard name="South Paddocks" category="food-vendor" image="/images/TRade Stands/South Paddocks.png" />
-            <VendorCard name="The Olive Pit" category="food-vendor" image="/images/TRade Stands/The Olive Pit.png" />
-            <VendorCard name="Compton McRae" category="food-vendor" description="Artisan deli and fine food specialists." website="https://www.comptonmcrae.com/" image="/images/Food Trail/COmpton Macrae/Shelves.jpg" />
+          <div className="mt-8">
+            <VendorCarousel>
+              <VendorCard name="Truckle Truck" category="food-vendor" description="Award-winning cheeses and accompaniments." image="/images/truckle-truck.jpg" />
+              <VendorCard name="Book and Bucket Cheese" category="food-vendor" image="/images/TRade Stands/Book and Bucket Cheese.jpg" />
+              <VendorCard name="Catherine Potter Crafts" category="craft" image="/images/TRade Stands/Catherine Potter crafts.jpg" />
+              <VendorCard name="Compton Candle Co" category="craft" image="/images/TRade Stands/Compton Candle Co.jpg" />
+              <VendorCard name="Crepe Salut" category="food-vendor" image="/images/TRade Stands/Crepe Salut.png" />
+              <VendorCard name="Farmgirl Sausages" category="food-vendor" image="/images/TRade Stands/Farmgirl Sausages.jpg" />
+              <VendorCard name="Hettie Hen Scotch Eggs" category="food-vendor" image="/images/TRade Stands/Hettie Hen Scotch Eggs.jpg" />
+              <VendorCard name="Oxfords Bakery" category="food-vendor" image="/images/TRade Stands/Oxfords bakery.png" />
+              <VendorCard name="Pretty Little Unicorn" category="craft" image="/images/TRade Stands/Pretty Little Unicorn.png" />
+              <VendorCard name="South Paddocks" category="food-vendor" image="/images/TRade Stands/South Paddocks.png" />
+              <VendorCard name="The Olive Pit" category="food-vendor" image="/images/TRade Stands/The Olive Pit.png" />
+              <VendorCard name="Compton McRae" category="food-vendor" description="Artisan deli and fine food specialists." website="https://www.comptonmcrae.com/" image="/images/Food Trail/COmpton Macrae/Shelves.jpg" />
+            </VendorCarousel>
           </div>
         </div>
       </section>

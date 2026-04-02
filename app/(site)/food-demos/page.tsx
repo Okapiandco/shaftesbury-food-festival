@@ -4,9 +4,9 @@ import { Clock, MapPin, Heart, BookOpen, ChefHat, Utensils } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 
 export const metadata: Metadata = {
-  title: 'Food Demos | Shaftesbury Food Festival 3rd May 2026',
+  title: 'Master Chefs Live | Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Live cookery demonstrations at the Shaftesbury Food Festival featuring former MasterChef winners and finalists. Hosted by The Kitchen Table at The Town Hall.',
+    'Master Chefs Live at the Shaftesbury Food Festival featuring former MasterChef winners and finalists. Hosted by The Kitchen Table at The Town Hall.',
   alternates: { canonical: '/food-demos' },
 }
 
@@ -40,7 +40,7 @@ const chefs = [
 const whatToExpect = [
   {
     icon: ChefHat,
-    title: 'Live Cookery Demonstrations',
+    title: 'Live Cookery',
     description: 'Each chef will prepare signature recipes from their latest book, explaining techniques, ingredients, and the stories behind the dishes.',
   },
   {
@@ -51,7 +51,7 @@ const whatToExpect = [
   {
     icon: Heart,
     title: 'Meet & Greet',
-    description: 'Following each demonstration, there will be an opportunity to meet the chefs, ask questions, and have books signed.',
+    description: 'Following each session, there will be an opportunity to meet the chefs, ask questions, and have books signed.',
   },
   {
     icon: BookOpen,
@@ -64,15 +64,15 @@ export default function FoodDemosPage() {
   return (
     <>
       <PageHeader
-        title="Food Demonstrations"
-        subtitle="Live cookery demos from former MasterChef winners and finalists, hosted by The Kitchen Table."
+        title="Master Chefs Live"
+        subtitle="Live cookery from former MasterChef winners and finalists, hosted by The Kitchen Table."
       />
 
       {/* Hero image */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
           src="/images/Food Demos.jpg"
-          alt="Live food demonstration at the Shaftesbury Food Festival"
+          alt="Master Chefs Live at the Shaftesbury Food Festival"
           fill
           className="object-cover"
         />
@@ -84,13 +84,27 @@ export default function FoodDemosPage() {
         </div>
       </section>
 
+      {/* Chef Promo Bar */}
+      <section className="bg-accent">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-center">
+            <span className="text-sm font-bold text-primary uppercase tracking-wider">Featuring:</span>
+            {chefs.map((chef, index) => (
+              <span key={chef.name} className="text-sm font-semibold text-primary">
+                {chef.name}{index < chefs.length - 1 && <span className="ml-3 text-primary/40">|</span>}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Overview */}
       <section className="section">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-text md:text-3xl">About the Demonstrations</h2>
+            <h2 className="text-2xl font-bold text-text md:text-3xl">About Master Chefs Live</h2>
             <p className="mt-4 text-text-light leading-relaxed">
-              The Kitchen Table is hosting three exclusive cookery demonstrations featuring former MasterChef winners and finalists at the Shaftesbury Food Festival. Visitors will watch celebrated chefs prepare recipes from their latest books, gain insight into their culinary journeys, and enjoy the rare opportunity to meet television personalities and secure signed copies of their work.
+              The Kitchen Table is hosting three exclusive Master Chefs Live sessions featuring former MasterChef winners and finalists at the Shaftesbury Food Festival. Visitors will watch celebrated chefs prepare recipes from their latest books, gain insight into their culinary journeys, and enjoy the rare opportunity to meet television personalities and secure signed copies of their work.
             </p>
           </div>
 
@@ -213,7 +227,7 @@ export default function FoodDemosPage() {
                 <li className="flex gap-2"><span className="font-semibold text-text">How to Book:</span> Via Eventbrite</li>
                 <li className="flex gap-2"><span className="font-semibold text-text">Format:</span> Ticketed sessions (limited capacity)</li>
                 <li className="flex gap-2"><span className="font-semibold text-text">Donation:</span> Attendees are asked to donate to Vale Family Hub</li>
-                <li className="flex gap-2"><span className="font-semibold text-text">Includes:</span> Live demo, samples, meet &amp; greet, book signing opportunity</li>
+                <li className="flex gap-2"><span className="font-semibold text-text">Includes:</span> Live session, samples, meet &amp; greet, book signing opportunity</li>
                 <li className="flex gap-2"><span className="font-semibold text-text">No Refunds:</span> As your ticket is a donation to charity, we are unable to offer refunds</li>
               </ul>
               <div className="mt-6 flex flex-wrap gap-3">

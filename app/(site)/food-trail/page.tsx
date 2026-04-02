@@ -39,8 +39,8 @@ const trailStops: TrailStop[] = [
     location: 'Motcombe, Shaftesbury',
     address: 'Brook Farm, Bittles Green, Motcombe, Shaftesbury SP7 9NX',
     description:
-      'Sorelle Dorset brings the flavours of Italy to the heart of Dorset. Discover their range of handcrafted Italian-inspired products, meet the team and enjoy tastings at this wonderful local food business.',
-    activities: ['Tastings', 'Meet the team'],
+      'Sorelle is home to a popular cafe, glamping site and wellness space. The heart of our business lies in the Dorset countryside and we are determined to always source fresh, local ingredients for use in our kitchen. We are also passionate about coffee and proudly serve specialty coffee, sourced exclusively from women producers and roasted just outside Warminster. Our cafe specialises in seasonal brunch and always has a great range of locally made cakes and pastries alongside our daily menu. Opening hours: 9am-3pm, Wednesday-Sunday. Brunch served until 2.30pm. We open late on Fridays throughout the summer for pizza and live music or a quiz. We do not take reservations, unless your group is larger than 7 guests.',
+    activities: ['Seasonal brunch', 'Specialty coffee', 'Locally made cakes & pastries', 'Friday pizza & live music'],
     image: '/images/Food Trail/Sorelle/ABxSorelle-95.jpg',
     website: 'https://www.sorelledorset.com/',
     mapPosition: { top: '35%', left: '40%' },
@@ -110,17 +110,22 @@ const trailStops: TrailStop[] = [
     mapPosition: { top: '45%', left: '60%' },
   },
   {
-    name: 'Breezy Ridge',
+    name: 'Breezy Ridge Vineyard',
     address: 'TBC',
-    description: 'Details coming soon.',
-    activities: [],
+    description:
+      'Breezy Ridge Vineyard is a haven of food and wine located in the rolling hills of North Dorset. Known for its idyllic setting, chic and contemporary identity, it is the perfect place to come and relax for an afternoon. Specializing in the production of English Sparkling wine, guests can enjoy wine flights, cheese tastings and signature grazing boards, all carefully curated with handpicked products from selected independent suppliers.',
+    activities: ['English Sparkling Wine', 'Wine flights', 'Cheese tastings', 'Signature Cheese & Charcuterie Boards', 'Live music'],
+    image: '/images/Food Trail/Breezy Ridge/Breezy Ridge.jpg',
+    website: 'https://breezyridgevineyard.com/',
     mapPosition: { top: '60%', left: '50%' },
   },
   {
-    name: 'Cann Mills',
+    name: 'Cann Mills — Stoate & Sons',
     address: 'TBC',
-    description: 'Details coming soon.',
-    activities: [],
+    description:
+      'Stoate & Sons is a family-run flour milling business with roots dating back to 1832, when brothers William and Thomas Stoate began trading in Somerset. The company expanded steadily, moving to Bristol in 1912 to meet growing demand, and later becoming part of Spillers while still maintaining strong family involvement. In 1947, the business returned to independent roots at Cann Mills, a historic site recorded in the Domesday Book, where it initially focused on supplying animal feed to local farms. In 1970, Stoate & Sons revived traditional stoneground milling, reconnecting with its heritage techniques using French Burr millstones. Now in its Sixth generation, the company continues to balance tradition with modern demand, supplying both home bakers and the wider baking trade. With the next generation joining the business, Stoate & Sons remains committed to preserving its legacy while continuing to grow into its third century.',
+    activities: ['Traditional stoneground flour milling', 'Heritage French Burr millstones'],
+    image: '/images/Food Trail/Cann mills/BoxLogoGreen.jpg',
     mapPosition: { top: '65%', left: '40%' },
   },
 ]
@@ -156,7 +161,7 @@ export default function FoodTrailPage() {
               you what they do, where and how&hellip;
             </p>
             <p className="mt-4 text-text-light leading-relaxed">
-              Pick up a trail map at the festival or follow the route below. Visit all the stops to complete the trail!
+              Follow the route below and visit all the stops to complete the trail!
             </p>
           </div>
         </div>
@@ -321,42 +326,6 @@ export default function FoodTrailPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How to Follow the Trail */}
-      <section className="section bg-accent/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold text-text md:text-3xl">How to Follow the Trail</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3 mx-auto max-w-3xl">
-            <div className="rounded-xl bg-white p-6 shadow-sm">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white font-bold text-lg">
-                1
-              </div>
-              <h3 className="mt-3 font-bold text-text">Pick Up a Map</h3>
-              <p className="mt-1 text-sm text-text-light">
-                Grab your trail map at the festival information point on the High Street.
-              </p>
-            </div>
-            <div className="rounded-xl bg-white p-6 shadow-sm">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white font-bold text-lg">
-                2
-              </div>
-              <h3 className="mt-3 font-bold text-text">Visit the Producers</h3>
-              <p className="mt-1 text-sm text-text-light">
-                Follow the trail to each location. Enjoy tours, tastings, farm walks and more.
-              </p>
-            </div>
-            <div className="rounded-xl bg-white p-6 shadow-sm">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white font-bold text-lg">
-                3
-              </div>
-              <h3 className="mt-3 font-bold text-text">Complete the Trail</h3>
-              <p className="mt-1 text-sm text-text-light">
-                Get your map stamped at each stop and return it for a special reward!
-              </p>
-            </div>
           </div>
         </div>
       </section>

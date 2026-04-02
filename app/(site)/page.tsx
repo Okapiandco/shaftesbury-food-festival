@@ -30,8 +30,8 @@ const highlights = [
   },
   {
     icon: ChefHat,
-    title: 'Chef Talks & Demos',
-    description: 'Enjoy talks and demonstrations from famous chefs, organised by The Kitchen Table. Learn tips and techniques.',
+    title: 'Master Chefs Live',
+    description: 'Live cookery from former MasterChef winners and finalists, hosted by The Kitchen Table.',
     href: '/events',
     color: 'bg-primary/10 text-primary',
     image: '/images/Food Demos.jpg',
@@ -46,7 +46,7 @@ export default function HomePage() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/images/Food Demos.jpg"
-          alt="Live food demonstrations at the Shaftesbury Food Festival"
+          alt="Master Chefs Live at the Shaftesbury Food Festival"
           fill
           className="object-cover"
           priority
@@ -166,7 +166,7 @@ export default function HomePage() {
               <div className="p-4 text-center">
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-accent-dark">Sunday 3rd May</p>
                 <h3 className="mt-1 text-sm font-bold text-text group-hover:text-primary transition-colors">Food Festival Day</h3>
-                <p className="mt-1 text-xs text-text-light">Street Market, Cheese Race, demos &amp; live music.</p>
+                <p className="mt-1 text-xs text-text-light">Street Market, Cheese Race, Master Chefs Live &amp; live music.</p>
               </div>
             </Link>
           </div>
@@ -255,22 +255,6 @@ export default function HomePage() {
           </div>
           <div className="mt-8 text-center">
             <CTAButton href="/trade-stands" variant="secondary">View All Vendors</CTAButton>
-          </div>
-        </div>
-      </section>
-
-      {/* Festival Atmosphere */}
-      <section className="relative h-80 md:h-96 overflow-hidden">
-        <Image
-          src="/images/high-street-festival.jpg"
-          alt="Shaftesbury Food Festival on the high street"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-primary/50 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <h2 className="text-3xl font-bold md:text-4xl">Join Us on the Bank Holiday</h2>
-            <p className="mt-3 text-lg text-blue-200">Eat and drink your way around Dorset</p>
           </div>
         </div>
       </section>

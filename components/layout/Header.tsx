@@ -36,8 +36,8 @@ const sideEvents = [
   },
   {
     href: '/food-demos',
-    label: 'Food Demos',
-    description: 'Sunday 3rd May — MasterChef Demos at The Town Hall',
+    label: 'Master Chefs Live',
+    description: 'Sunday 3rd May — Master Chefs Live at The Town Hall',
     icon: ChefHat,
     color: 'text-accent-dark',
   },
@@ -50,23 +50,16 @@ const sideEvents = [
   },
 ]
 
-const aboutLinks = [
-  { href: '/about', label: 'About the Festival' },
-  { href: '/volunteers', label: 'Volunteers' },
-]
-
 const navLinks = [
   { href: '/cheese-race', label: 'Cheese Race' },
-  { href: '/food-demos', label: 'Food Demos' },
+  { href: '/food-demos', label: 'Master Chefs Live' },
   { href: '/trade-stands', label: 'Street Market' },
-  { href: '/contact', label: 'Contact' },
 ]
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [megaOpen, setMegaOpen] = useState(false)
   const [mobileMegaOpen, setMobileMegaOpen] = useState(false)
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false)
   const megaButtonRef = useRef<HTMLDivElement>(null)
   const megaPanelRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLElement>(null)
@@ -128,27 +121,6 @@ export default function Header() {
             </button>
           </div>
 
-          {/* About dropdown */}
-          <div className="relative group/about">
-            <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-text hover:bg-gray-100 hover:text-primary transition-colors">
-              About
-              <ChevronDown className="w-4 h-4" />
-            </button>
-            <div className="absolute left-0 top-full hidden group-hover/about:block pt-1 z-50">
-              <div className="rounded-lg bg-white shadow-lg border border-gray-100 py-1 min-w-[180px]">
-                {aboutLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block px-4 py-2 text-sm text-text hover:bg-gray-50 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -168,12 +140,6 @@ export default function Header() {
           <a href="https://www.instagram.com/shaftesburyfoodfestival" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-md p-2 text-text hover:bg-gray-100 hover:text-primary transition-colors">
             <Instagram size={18} />
           </a>
-          <Link
-            href="/cheese-race"
-            className="ml-1 rounded-md bg-accent px-4 py-2 text-sm font-bold text-primary hover:bg-accent-dark transition-colors"
-          >
-            Enter Cheese Race
-          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -205,7 +171,7 @@ export default function Header() {
                   Sunday 3rd May 2026 — Bank Holiday
                 </p>
                 <p className="mt-3 text-sm text-blue-100 leading-relaxed">
-                  The high street comes alive with 100+ food &amp; drink stalls, the Gold Hill Cheese Race, chef demos, live music and family fun.
+                  The high street comes alive with 100+ food &amp; drink stalls, the Gold Hill Cheese Race, Master Chefs Live, live music and family fun.
                 </p>
                 <span className="mt-4 inline-block text-sm font-semibold text-accent group-hover:underline">
                   Find out more &rarr;
@@ -291,29 +257,6 @@ export default function Header() {
             </div>
           )}
 
-          {/* About accordion */}
-          <button
-            onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-            className="flex w-full items-center justify-between rounded-md px-3 py-3 text-sm font-medium text-text hover:bg-gray-100 hover:text-primary"
-          >
-            About
-            <ChevronDown className={`w-4 h-4 transition-transform ${mobileAboutOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {mobileAboutOpen && (
-            <div className="ml-4 mb-2 space-y-1">
-              {aboutLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => { setMobileOpen(false); setMobileAboutOpen(false) }}
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-text hover:bg-gray-50"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          )}
-
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -324,13 +267,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/cheese-race"
-            onClick={() => setMobileOpen(false)}
-            className="mt-2 block rounded-md bg-accent px-4 py-3 text-center text-sm font-bold text-primary"
-          >
-            Enter Cheese Race
-          </Link>
           <div className="mt-4 flex gap-3 px-3">
             <a href="https://www.facebook.com/ShaftesburyFoodFestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full bg-gray-100 p-2 text-text hover:bg-gray-200 transition-colors">
               <Facebook size={18} />
