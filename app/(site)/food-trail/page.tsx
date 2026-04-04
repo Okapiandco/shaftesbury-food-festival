@@ -125,7 +125,7 @@ const trailStops: TrailStop[] = [
     description:
       'Stoate & Sons is a family-run flour milling business with roots dating back to 1832, when brothers William and Thomas Stoate began trading in Somerset. The company expanded steadily, moving to Bristol in 1912 to meet growing demand, and later becoming part of Spillers while still maintaining strong family involvement. In 1947, the business returned to independent roots at Cann Mills, a historic site recorded in the Domesday Book, where it initially focused on supplying animal feed to local farms. In 1970, Stoate & Sons revived traditional stoneground milling, reconnecting with its heritage techniques using French Burr millstones. Now in its Sixth generation, the company continues to balance tradition with modern demand, supplying both home bakers and the wider baking trade. With the next generation joining the business, Stoate & Sons remains committed to preserving its legacy while continuing to grow into its third century.',
     activities: ['Traditional stoneground flour milling', 'Heritage French Burr millstones'],
-    image: '/images/Food Trail/Cann mills/BoxLogoGreen.jpg',
+    image: '/images/Food Trail/Cann mills/Cann mills.png',
     mapPosition: { top: '65%', left: '40%' },
   },
 ]
