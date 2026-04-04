@@ -126,6 +126,7 @@ export default function HomePage() {
               <div className="p-4 text-center">
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-primary">Friday 1st May</p>
                 <h3 className="mt-1 text-sm font-bold text-text group-hover:text-primary transition-colors">The Great Food Quiz</h3>
+                <span className="inline-block mt-1 rounded bg-red-600 px-2 py-0.5 text-[10px] font-bold uppercase text-white">Sold Out</span>
                 <p className="mt-1 text-xs text-text-light">Fun quiz night at Sorelle, Motcombe.</p>
               </div>
             </Link>

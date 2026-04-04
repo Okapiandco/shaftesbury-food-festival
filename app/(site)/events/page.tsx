@@ -62,7 +62,7 @@ export default function EventsPage() {
                 <div className="flex items-start gap-3">
                   <HelpCircle className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="text-lg font-bold text-text">The Great Food Quiz</h3>
+                    <h3 className="text-lg font-bold text-text">The Great Food Quiz <span className="inline-block ml-2 rounded bg-red-600 px-2 py-0.5 text-xs font-bold uppercase text-white">Sold Out</span></h3>
                     <p className="text-sm text-text-light">6pm–10pm at Sorelle, Motcombe</p>
                     <p className="mt-1 text-sm text-text-light">Fun food &amp; drink quiz — teams of up to 6. Prizes for the winners!</p>
                     <div className="mt-3">
@@ -207,7 +207,7 @@ export default function EventsPage() {
             </div>
 
             <div className="p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-text">The Great Food Quiz</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-text">The Great Food Quiz <span className="inline-block ml-2 align-middle rounded bg-red-600 px-3 py-1 text-sm font-bold uppercase text-white">Sold Out</span></h2>
               <p className="mt-2 text-primary font-medium">Hosted at Sorelle, Motcombe</p>
 
               <p className="mt-4 text-text-light leading-relaxed">
@@ -272,13 +272,9 @@ export default function EventsPage() {
               </div>
 
               <div className="mt-8">
-                <CTAButton
-                  href="https://www.sorelledorset.com/event-details/the-great-food-quiz-3"
-                  variant="primary"
-                  external
-                >
-                  Buy Tickets at Sorelle
-                </CTAButton>
+                <span className="inline-block rounded-lg bg-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-500 cursor-not-allowed">
+                  Sold Out
+                </span>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ const sideEvents = [
   },
   {
     href: '/events#quiz',
-    label: 'The Great Food Quiz',
+    label: 'The Great Food Quiz — SOLD OUT',
     description: 'Friday 1st May — Quiz night at Sorelle, 6pm–10pm',
     icon: HelpCircle,
     color: 'text-primary',
@@ -54,6 +54,8 @@ const navLinks = [
   { href: '/cheese-race', label: 'Cheese Race' },
   { href: '/food-demos', label: 'Master Chefs Live' },
   { href: '/trade-stands', label: 'Street Market' },
+  { href: '/food-trail', label: 'Food Trail' },
+  { href: '/feast-for-the-eyes', label: 'Foodie Art' },
 ]
 
 export default function Header() {
