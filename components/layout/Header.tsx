@@ -92,7 +92,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header ref={headerRef} data-scrolled="false" className="sticky top-0 z-50 bg-white shadow-sm group/header">
+    <header ref={headerRef} data-scrolled="false" className="bg-white shadow-sm group/header">
       <div className="container mx-auto flex items-center justify-between px-4 py-3 group-data-[scrolled=true]/header:py-1 transition-[padding] duration-300 ease-in-out">
         {/* Logo */}
         <Link href="/" className="shrink-0 block">

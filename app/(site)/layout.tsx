@@ -8,8 +8,10 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <a href="#main-content" className="skip-to-main">
         Skip to main content
       </a>
-      <CountdownTicker />
-      <Header />
+      <div className="sticky top-0 z-50">
+        <CountdownTicker />
+        <Header />
+      </div>
       <main id="main-content">{children}</main>
       <Footer />
     </>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Sparkles } from 'lucide-react'
+import { Sparkles, Palette, Footprints, UtensilsCrossed, Trophy } from 'lucide-react'
 
 const TARGET_DATE = new Date('2026-05-03T00:00:00')
 
@@ -31,28 +31,67 @@ function Unit({ value, label }: { value: number; label: string }) {
   )
 }
 
+const newsItems = [
+  {
+    icon: Palette,
+    headline: 'A Feast for the Eyes',
+    detail: 'Art exhibition from 29th April',
+  },
+  {
+    icon: Footprints,
+    headline: 'Food Trail',
+    detail: 'Saturday 2nd May',
+  },
+  {
+    icon: UtensilsCrossed,
+    headline: 'Shaftesbury Food Festival',
+    detail: 'Sunday 3rd May — a free day out for the family',
+  },
+  {
+    icon: Trophy,
+    headline: 'Gold Hill Cheese Race',
+    detail: 'Sunday 3rd May',
+  },
+]
+
+function Separator() {
+  return <span className="px-4 text-primary/50">◆</span>
+}
+
 function TickerContent({ time, mounted }: { time: ReturnType<typeof getTimeLeft>; mounted: boolean }) {
   return (
-    <div className="flex shrink-0 items-center gap-4 px-6">
-      <Sparkles
-        className="h-4 w-4 text-primary md:h-5 md:w-5"
-        style={{ animation: 'sff-ticker-pulse 2s ease-in-out infinite' }}
-      />
-      <span className="text-xs font-bold uppercase tracking-wide text-primary md:text-sm">
-        A free day out for the family
+    <div className="flex shrink-0 items-center whitespace-nowrap">
+      <span className="flex items-center gap-2 px-6">
+        <Sparkles
+          className="h-4 w-4 text-primary md:h-5 md:w-5"
+          style={{ animation: 'sff-ticker-pulse 2s ease-in-out infinite' }}
+        />
+        <span className="rounded-sm bg-primary px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-widest text-white md:text-xs">
+          What&apos;s On
+        </span>
       </span>
-      <span className="text-primary/50">•</span>
-      <span className="text-xs font-bold uppercase tracking-wide text-white drop-shadow-sm md:text-sm">
-        Sunday 3rd May 2026
-      </span>
-      <span className="text-primary/50">•</span>
-      <span className="flex items-center gap-2 md:gap-3">
+      {newsItems.map((item, i) => (
+        <span key={i} className="flex items-center">
+          <item.icon className="mr-2 h-4 w-4 text-primary md:h-5 md:w-5" />
+          <span className="text-xs font-bold uppercase tracking-wide text-primary md:text-sm">
+            {item.headline}
+          </span>
+          <span className="ml-2 text-xs font-medium text-white drop-shadow-sm md:text-sm">
+            {item.detail}
+          </span>
+          <Separator />
+        </span>
+      ))}
+      <span className="flex items-center gap-2 pr-6">
+        <span className="text-xs font-bold uppercase tracking-wide text-primary md:text-sm">
+          Festival starts in
+        </span>
         <Unit value={time.days} label="Days" />
         <Unit value={time.hours} label="Hrs" />
         <Unit value={time.minutes} label="Min" />
         <Unit value={mounted ? time.seconds : 0} label="Sec" />
       </span>
-      <span className="text-primary/50">•</span>
+      <Separator />
     </div>
   )
 }
@@ -97,20 +136,16 @@ export default function CountdownTicker() {
       <div className="relative flex py-2">
         <div
           className="flex shrink-0 items-center whitespace-nowrap"
-          style={{ animation: 'sff-ticker-marquee 35s linear infinite' }}
+          style={{ animation: 'sff-ticker-marquee 60s linear infinite' }}
         >
-          <TickerContent time={time} mounted={mounted} />
-          <TickerContent time={time} mounted={mounted} />
           <TickerContent time={time} mounted={mounted} />
           <TickerContent time={time} mounted={mounted} />
         </div>
         <div
           className="flex shrink-0 items-center whitespace-nowrap"
           aria-hidden="true"
-          style={{ animation: 'sff-ticker-marquee 35s linear infinite' }}
+          style={{ animation: 'sff-ticker-marquee 60s linear infinite' }}
         >
-          <TickerContent time={time} mounted={mounted} />
-          <TickerContent time={time} mounted={mounted} />
           <TickerContent time={time} mounted={mounted} />
           <TickerContent time={time} mounted={mounted} />
         </div>
