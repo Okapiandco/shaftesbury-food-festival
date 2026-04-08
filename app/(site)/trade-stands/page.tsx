@@ -41,7 +41,7 @@ export default function TradeStandsPage() {
       {/* Confirmed Vendors Carousel */}
       <section className="section">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Confirmed Vendors</h2>
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">A Sample of Our Vendors at the Street Market</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
             Here is a sample of the traders joining us this year. More vendors are being confirmed regularly — check back soon for updates.
           </p>
