@@ -71,7 +71,7 @@ export default function GettingHerePage() {
                 <li className="flex items-start gap-3">
                   <PoundSterling className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-white">£5 per person — cash only</p>
+                    <p className="font-semibold text-white">£5 per car — cash only</p>
                     <p className="text-sm text-blue-200">All proceeds support the Shaftesbury &amp; District Chamber of Commerce</p>
                   </div>
                 </li>
