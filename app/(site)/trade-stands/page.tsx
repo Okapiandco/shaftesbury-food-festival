@@ -65,6 +65,71 @@ export default function TradeStandsPage() {
         </div>
       </section>
 
+      {/* Trade Stand Gallery */}
+      <section className="section bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Our Traders</h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
+            Here are some of the fantastic traders joining us this year — and more are signing up every day!
+          </p>
+          <div className="mt-8 columns-2 sm:columns-3 md:columns-4 gap-4 space-y-4">
+            {[
+              { src: '001_barbers.png', alt: 'Barbers' },
+              { src: '002_Brushes.png', alt: 'Brushes' },
+              { src: '003_Bougee.png', alt: 'Bougee' },
+              { src: '004_Bramble.png', alt: 'Bramble' },
+              { src: '005_Carslake.png', alt: 'Carslake' },
+              { src: '006_Cream.png', alt: 'Cream' },
+              { src: '007_Cygnet.jpeg', alt: 'Cygnet' },
+              { src: '009_DoughF.png', alt: 'DoughF' },
+              { src: '010_Fergus.png', alt: 'Fergus' },
+              { src: '011_Ferrario.png', alt: 'Ferrario' },
+              { src: '012_Flo.png', alt: 'Flo' },
+              { src: '013_Flower.png', alt: 'Flower' },
+              { src: '014_Grace.png', alt: 'Grace' },
+              { src: '015_Hidden.png', alt: 'Hidden' },
+              { src: '016_Indy.jpg', alt: 'Indy' },
+              { src: '017_Isobel.jpg', alt: 'Isobel' },
+              { src: '018_Lustful.png', alt: 'Lustful' },
+              { src: '019_Orchard.jpg', alt: 'Orchard' },
+              { src: '020_Ping.jpg', alt: 'Ping' },
+              { src: '021_Shanty.png', alt: 'Shanty' },
+              { src: '022_Shelley.png', alt: 'Shelley' },
+              { src: '025_Falafel.jpg', alt: 'Falafel' },
+              { src: '026_Still.png', alt: 'Still' },
+              { src: '027_srilicious.jpg', alt: 'Srilicious' },
+              { src: '028_fudge.png', alt: 'Fudge' },
+              { src: '029_maccaroom.png', alt: 'Maccaroom' },
+              { src: '030_wax melt.png', alt: 'Wax Melt' },
+              { src: '031_veil.jpg', alt: 'Veil' },
+              { src: '032_wessex.png', alt: 'Wessex' },
+              { src: '033_weymouth.png', alt: 'Weymouth' },
+              { src: '034_whimsical.png', alt: 'Whimsical' },
+              { src: '035_waffles.jpg', alt: 'Waffles' },
+              { src: 'Book and Bucket Cheese.jpg', alt: 'Book and Bucket Cheese' },
+              { src: 'Catherine Potter crafts.jpg', alt: 'Catherine Potter Crafts' },
+              { src: 'Compton Candle Co.jpg', alt: 'Compton Candle Co' },
+              { src: 'Crepe Salut.png', alt: 'Crepe Salut' },
+              { src: 'Farmgirl Sausages.jpg', alt: 'Farmgirl Sausages' },
+              { src: 'Hettie Hen Scotch Eggs.jpg', alt: 'Hettie Hen Scotch Eggs' },
+              { src: 'Oxfords bakery.png', alt: 'Oxfords Bakery' },
+              { src: 'Pretty Little Unicorn.png', alt: 'Pretty Little Unicorn' },
+              { src: 'South Paddocks.png', alt: 'South Paddocks' },
+              { src: 'The Olive Pit.png', alt: 'The Olive Pit' },
+            ].map((img) => (
+              <div key={img.src} className="break-inside-avoid">
+                <img
+                  src={`/images/TRade Stands/${img.src}`}
+                  alt={img.alt}
+                  className="w-full rounded-lg shadow-sm"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trade stands atmosphere */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
