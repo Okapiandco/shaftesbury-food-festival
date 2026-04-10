@@ -64,8 +64,15 @@ export default function GettingHerePage() {
                 <li className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-white">Every 30 minutes</p>
-                    <p className="text-sm text-blue-200">Buses depart throughout the day</p>
+                    <p className="font-semibold text-white">10:00 – 16:30</p>
+                    <p className="text-sm text-blue-200">First coach departs Port Regis School roundabout at 10:00. Final return bus leaves Shaftesbury Post Office at 16:30.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-white">Return capacity</p>
+                    <p className="text-sm text-blue-200">If the return coach is full, the driver will take you back to Port Regis School so you can collect your passengers by driving back into Shaftesbury.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -76,6 +83,15 @@ export default function GettingHerePage() {
                   </div>
                 </li>
               </ul>
+              <a
+                href="https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block rounded-lg bg-accent px-6 py-3 font-semibold text-primary hover:bg-accent/90 transition-colors"
+              >
+                Book on Eventbrite
+              </a>
+              <p className="mt-2 text-xs text-blue-300">No refunds.</p>
             </div>
             <div className="rounded-2xl bg-white/10 p-6">
               <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-4">Sponsored by</p>
