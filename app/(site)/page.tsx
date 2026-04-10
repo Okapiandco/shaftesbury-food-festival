@@ -273,7 +273,7 @@ export default function HomePage() {
                 <Bus className="w-5 h-5 text-primary" />
                 <h3 className="font-bold text-text">Park &amp; Ride</h3>
               </div>
-              <p className="text-sm text-text-light leading-relaxed">Buses every 30 minutes from <span className="font-semibold text-text">Port Regis School</span>. £5 cash per person — all proceeds to the Chamber of Commerce.</p>
+              <p className="text-sm text-text-light leading-relaxed">Buses every 30 minutes from <span className="font-semibold text-text">Port Regis School</span>. £5 cash per car — all proceeds to the Chamber of Commerce.</p>
               <div className="mt-3 pt-3 border-t border-gray-100">
                 <p className="text-xs text-text-muted">Sponsored by</p>
                 <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre Inn Dorset" className="mt-1 h-8 w-auto object-contain" />
