@@ -88,9 +88,12 @@ const trailStops: TrailStop[] = [
   },
   {
     name: 'Dorset Blue Vinny',
-    address: 'TBC',
-    description: 'Details coming soon.',
-    activities: [],
+    location: 'Woodbridge Farm, Dorset',
+    address: 'Woodbridge Farm, Dorset',
+    description:
+      'Woodbridge Farm is where Michael Davies resurrected the 300 year old recipe for Dorset Blue Vinny cheese back in 1980. Mike took over the farm kitchen until he had perfected the recipe. Dorset Blue Vinny is still made on the same farm today, albeit no longer in the kitchen!\n\nDorset Blue Vinny takes over 24 hours to make. Each morning, the Davies\u2019 use fresh milk from their herd of 270 Friesian cows. Once it\u2019s been pasteurised, hand-skimmed and the starter culture, rennet and penicillin mould added, it\u2019s ready to be made into cheese.\n\nOnce the milk coagulates it is cut into small pieces before being left overnight. Next morning, once curds and whey have formed, the whey is drained off leaving the curd to be ground, salted and put into moulds where it stays for a few days, before being moved to the maturing room.\n\nThe cheeses need to be turned by hand every day for the first few weeks and then once a week after that. The cheeses are spiked with long narrow pins to allow air into the cheese which helps the mould grow and flavour to develop. It can take up to 20 weeks for the cheese to mature into Dorset Blue Vinny.\n\nIn 1998, Woodbridge Farm were the first food producer to be awarded PGI (Protected Geographical Indication) status and are the only producers of Dorset Blue Vinny.',
+    activities: ['300 year old recipe', 'Made from 270 Friesian cows', 'Up to 20 weeks maturing', 'PGI Protected status since 1998'],
+    image: '/images/Food Trail/Blue Vinny/Michael Davies- Dorset Blue Vinny.avif',
     mapPosition: { top: '50%', left: '55%' },
   },
   {
@@ -263,7 +266,7 @@ export default function FoodTrailPage() {
                       </div>
                     </div>
 
-                    <p className="mt-4 text-text-light leading-relaxed">{stop.description}</p>
+                    <p className="mt-4 text-text-light leading-relaxed whitespace-pre-line">{stop.description}</p>
 
                     <p className="mt-2 flex items-center gap-1 text-sm text-text-muted">
                       <MapPin size={12} />
