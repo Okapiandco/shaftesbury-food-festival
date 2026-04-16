@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#1a1a1a"/>
+  <rect x="8" y="8" width="184" height="184" fill="none" stroke="#c9a961" stroke-width="2"/>
+  <text x="100" y="85" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="400" fill="#f5f1e8" letter-spacing="2">Grassby</text>
+  <line x1="50" y1="100" x2="150" y2="100" stroke="#c9a961" stroke-width="1"/>
+  <text x="100" y="125" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="300" fill="#f5f1e8" letter-spacing="3">FUNERAL</text>
+  <text x="100" y="145" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="300" fill="#f5f1e8" letter-spacing="3">SERVICES</text>
+</svg>

@@ -294,8 +294,12 @@ export default function HomePage() {
               <p className="text-sm text-text-light leading-relaxed">Buses every 30 minutes from <span className="font-semibold text-text">Port Regis School</span>. £5 cash per car — all proceeds to the Chamber of Commerce.</p>
               <p className="mt-2 text-xs font-semibold text-primary">Book on Eventbrite →</p>
               <div className="mt-3 pt-3 border-t border-gray-100">
-                <p className="text-xs text-text-muted">Sponsored by</p>
-                <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre Inn Dorset" className="mt-1 h-8 w-auto object-contain" />
+                <p className="text-xs text-text-muted">In partnership with</p>
+                <div className="mt-1 flex items-center gap-3">
+                  <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre Inn Dorset" className="h-8 w-auto object-contain" />
+                  <img src="/Sponsors/Port regis.png" alt="Port Regis School" className="h-8 w-auto object-contain" />
+                </div>
+                <p className="mt-2 text-xs text-text-muted leading-relaxed">Huge thanks to <span className="font-semibold text-text">Port Regis School</span> for offering their car park, and to <span className="font-semibold text-text">The Mitre</span> for sponsoring the service.</p>
               </div>
             </a>
             <div className="rounded-xl bg-white border border-gray-200 p-5 shadow-sm">
@@ -366,6 +370,12 @@ export default function HomePage() {
                 <a href="https://www.gff.co.uk" target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity hover:opacity-70">
                   <img src="/Sponsors/gff-logo.svg" alt="Guild of Fine Food" className="h-16 w-auto object-contain" />
                 </a>
+                <a href="https://www.portregis.com" target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity hover:opacity-70">
+                  <img src="/Sponsors/Port regis.png" alt="Port Regis School" className="h-16 w-auto object-contain" />
+                </a>
+                <div className="shrink-0">
+                  <img src="/Sponsors/Grassby Funeral Services.svg" alt="Grassby Funeral Services" className="h-16 w-auto object-contain" />
+                </div>
                 <div className="shrink-0">
                   <img src="/images/SHaftesbury Chamber logo.png" alt="Shaftesbury &amp; District Chamber of Commerce" className="h-16 w-auto object-contain" />
                 </div>
