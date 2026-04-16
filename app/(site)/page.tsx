@@ -30,7 +30,7 @@ const highlights = [
   },
   {
     icon: ChefHat,
-    title: 'Master Chefs Live',
+    title: 'MasterChefs Live',
     description: 'Live cookery from former MasterChef winners and finalists, hosted by The Kitchen Table.',
     href: '/events',
     color: 'bg-primary/10 text-primary',
@@ -46,12 +46,25 @@ export default function HomePage() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/images/Food Demos.jpg"
-          alt="Master Chefs Live at the Shaftesbury Food Festival"
+          alt="MasterChefs Live at the Shaftesbury Food Festival"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-primary/70" />
+        <a
+          href="https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:flex absolute top-8 right-8 z-20 h-36 w-36 lg:h-44 lg:w-44 rotate-12 items-center justify-center rounded-full border-4 border-accent bg-accent text-primary shadow-xl hover:scale-105 transition-transform"
+        >
+          <div className="text-center px-2">
+            <p className="text-[10px] lg:text-xs font-bold uppercase tracking-wider">Park &amp; Ride</p>
+            <p className="text-2xl lg:text-3xl font-extrabold leading-none mt-1">£5</p>
+            <p className="text-[10px] lg:text-xs font-semibold mt-1">per car</p>
+            <p className="text-[9px] lg:text-[10px] mt-1 leading-tight">from Port Regis<br />— Book Now —</p>
+          </div>
+        </a>
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white md:py-32">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">3rd May 2026 — Bank Holiday</p>
           <h1 className="mt-4 text-4xl font-bold md:text-6xl lg:text-7xl">
@@ -167,7 +180,7 @@ export default function HomePage() {
               <div className="p-4 text-center">
                 <p className="text-[10px] font-semibold uppercase tracking-wider text-accent-dark">Sunday 3rd May</p>
                 <h3 className="mt-1 text-sm font-bold text-text group-hover:text-primary transition-colors">Food Festival Day</h3>
-                <p className="mt-1 text-xs text-text-light">Street Market, Cheese Race, Master Chefs Live &amp; live music.</p>
+                <p className="mt-1 text-xs text-text-light">Street Market, Cheese Race, MasterChefs Live &amp; live music.</p>
               </div>
             </Link>
           </div>
@@ -268,17 +281,23 @@ export default function HomePage() {
             Parking in Shaftesbury will be limited — plan ahead and use our Park &amp; Ride.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-xl bg-white border border-gray-200 p-5 shadow-sm">
+            <a
+              href="https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-xl bg-white border border-gray-200 p-5 shadow-sm hover:shadow-md hover:border-primary/40 transition-all"
+            >
               <div className="flex items-center gap-2 mb-3">
                 <Bus className="w-5 h-5 text-primary" />
                 <h3 className="font-bold text-text">Park &amp; Ride</h3>
               </div>
               <p className="text-sm text-text-light leading-relaxed">Buses every 30 minutes from <span className="font-semibold text-text">Port Regis School</span>. £5 cash per car — all proceeds to the Chamber of Commerce.</p>
+              <p className="mt-2 text-xs font-semibold text-primary">Book on Eventbrite →</p>
               <div className="mt-3 pt-3 border-t border-gray-100">
                 <p className="text-xs text-text-muted">Sponsored by</p>
                 <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre Inn Dorset" className="mt-1 h-8 w-auto object-contain" />
               </div>
-            </div>
+            </a>
             <div className="rounded-xl bg-white border border-gray-200 p-5 shadow-sm">
               <div className="flex items-center gap-2 mb-3">
                 <Car className="w-5 h-5 text-primary" />
