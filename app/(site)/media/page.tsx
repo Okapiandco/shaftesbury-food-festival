@@ -18,18 +18,18 @@ const pressImages = [
   },
   {
     src: '/images/Food Demos/Ping Coombes Credit Sam Folan.jpg',
-    alt: 'Ping Coombes — Master Chefs Live',
-    description: 'Ping Coombes — Master Chefs Live chef portrait (credit: Sam Folan)',
+    alt: 'Ping Coombes — MasterChefs Live',
+    description: 'Ping Coombes — MasterChefs Live chef portrait (credit: Sam Folan)',
   },
   {
     src: '/images/Food Demos/AA MChef.JPG',
-    alt: 'Anurag Aggarwal — Master Chefs Live',
-    description: 'Anurag Aggarwal — Master Chefs Live chef portrait',
+    alt: 'Anurag Aggarwal — MasterChefs Live',
+    description: 'Anurag Aggarwal — MasterChefs Live chef portrait',
   },
   {
     src: '/images/Food Demos/Shelina Headshots_240_DW.jpg',
-    alt: 'Shelina Permaloo — Master Chefs Live',
-    description: 'Shelina Permaloo — Master Chefs Live chef portrait',
+    alt: 'Shelina Permaloo — MasterChefs Live',
+    description: 'Shelina Permaloo — MasterChefs Live chef portrait',
   },
   {
     src: '/images/Cheese Race Image.jpg',

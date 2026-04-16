@@ -5,7 +5,7 @@ import NewsletterForm from '@/components/shared/NewsletterForm'
 const footerLinks = [
   { href: '/events', label: 'What\'s On' },
   { href: '/cheese-race', label: 'Gold Hill Cheese Race' },
-  { href: '/food-demos', label: 'Master Chefs Live' },
+  { href: '/food-demos', label: 'MasterChefs Live' },
   { href: '/trade-stands', label: 'Street Market' },
   { href: '/food-trail', label: 'Food Trail' },
   { href: '/feast-for-the-eyes', label: 'Foodie Art' },

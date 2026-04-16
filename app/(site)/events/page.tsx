@@ -7,7 +7,7 @@ import { MapPin, Clock, Users, CalendarDays, Footprints, HelpCircle, UtensilsCro
 export const metadata: Metadata = {
   title: 'Events | Shaftesbury Food Festival 2026',
   description:
-    'Full schedule for Shaftesbury Food Festival 2026. Art exhibition from 29th April, Food Quiz on 1st May, Food Trail on 2nd May, and the main festival day on 3rd May with Cheese Race, Master Chefs Live, Street Market and more.',
+    'Full schedule for Shaftesbury Food Festival 2026. Art exhibition from 29th April, Food Quiz on 1st May, Food Trail on 2nd May, and the main festival day on 3rd May with Cheese Race, MasterChefs Live, Street Market and more.',
   alternates: { canonical: '/events' },
 }
 
@@ -124,7 +124,7 @@ export default function EventsPage() {
                     <div className="flex items-start gap-3">
                       <ChefHat className="w-6 h-6 text-accent-dark shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-bold text-text">Master Chefs Live</h4>
+                        <h4 className="font-bold text-text">MasterChefs Live</h4>
                         <p className="text-sm text-text-light">11:30am, 1pm &amp; 2:30pm — Live cookery at The Town Hall</p>
                         <div className="mt-2">
                           <CTAButton href="/food-demos" variant="accent" className="text-sm">

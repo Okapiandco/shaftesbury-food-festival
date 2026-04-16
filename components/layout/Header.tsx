@@ -36,8 +36,8 @@ const sideEvents = [
   },
   {
     href: '/food-demos',
-    label: 'Master Chefs Live',
-    description: 'Sunday 3rd May — Master Chefs Live at The Town Hall',
+    label: 'MasterChefs Live',
+    description: 'Sunday 3rd May — MasterChefs Live at The Town Hall',
     icon: ChefHat,
     color: 'text-accent-dark',
   },
@@ -52,7 +52,7 @@ const sideEvents = [
 
 const navLinks = [
   { href: '/cheese-race', label: 'Cheese Race' },
-  { href: '/food-demos', label: 'Master Chefs Live' },
+  { href: '/food-demos', label: 'MasterChefs Live' },
   { href: '/trade-stands', label: 'Street Market' },
   { href: '/food-trail', label: 'Food Trail' },
   { href: '/feast-for-the-eyes', label: 'Foodie Art' },
@@ -173,7 +173,7 @@ export default function Header() {
                   Sunday 3rd May 2026 — Bank Holiday
                 </p>
                 <p className="mt-3 text-sm text-blue-100 leading-relaxed">
-                  The high street comes alive with 100+ food &amp; drink stalls, the Gold Hill Cheese Race, Master Chefs Live, live music and family fun.
+                  The high street comes alive with 100+ food &amp; drink stalls, the Gold Hill Cheese Race, MasterChefs Live, live music and family fun.
                 </p>
                 <span className="mt-4 inline-block text-sm font-semibold text-accent group-hover:underline">
                   Find out more &rarr;

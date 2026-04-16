@@ -4,15 +4,16 @@ import { Clock, MapPin, Heart, BookOpen, ChefHat, Utensils } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 
 export const metadata: Metadata = {
-  title: 'Master Chefs Live | Shaftesbury Food Festival 3rd May 2026',
+  title: 'MasterChefs Live | Shaftesbury Food Festival 3rd May 2026',
   description:
-    'Master Chefs Live at the Shaftesbury Food Festival featuring former MasterChef winners and finalists. Hosted by The Kitchen Table at The Town Hall.',
+    'MasterChefs Live at the Shaftesbury Food Festival featuring former MasterChef winners and finalists. Hosted by The Kitchen Table at The Town Hall.',
   alternates: { canonical: '/food-demos' },
 }
 
 const chefs = [
   {
     name: 'Ping Coombes',
+    title: 'MasterChef UK 2014 Winner & Champion of Champions 2018',
     time: '11:30 AM',
     bio: 'Ping is a celebrated Malaysian-British chef, restaurateur and author. Her infectious energy and innovative approach to Southeast Asian cooking have made her a beloved figure on British television. At Shaftesbury Food Festival, Ping will demonstrate recipes from her latest book, sharing the bold flavours and cultural heritage of Malaysian cuisine. Her session promises vibrant cooking, storytelling, and insight into a culinary tradition rich in history and family tradition.',
     images: ['/images/Food Demos/Ping Coombes Credit Sam Folan.jpg'],
@@ -21,6 +22,7 @@ const chefs = [
   },
   {
     name: 'Anurag Aggarwal',
+    title: 'MasterChef UK 2023 Finalist',
     time: '1:00 PM',
     bio: 'Anurag is an acclaimed Indian chef and cookbook author whose passion for authentic Indian cuisine has earned him widespread recognition. His demonstrations showcase the complexity, regional diversity and soul-warming character of Indian cooking. Anurag will bring recipes from his latest book to life, offering audiences a masterclass in spice, technique and the cultural significance of Indian food traditions.',
     images: ['/images/Food Demos/AA MChef.JPG', '/images/Food Demos/IMG_6058.jpg'],
@@ -29,6 +31,7 @@ const chefs = [
   },
   {
     name: 'Shelina Permaloo',
+    title: 'MasterChef UK 2012 Winner',
     time: '2:30 PM',
     bio: 'Shelina is a Mauritian chef, author and television personality known for her warm, inclusive approach to food. Her cooking celebrates the multicultural heritage of Mauritian cuisine \u2014 a beautiful fusion of African, Indian, Chinese and French influences. Shelina\u2019s session will highlight the stories behind her recipes and the diverse culinary traditions that define her island\u2019s food culture.',
     images: ['/images/Food Demos/Shelina Headshots_240_DW.jpg', '/images/Food Demos/Shelina Headshots_303_DW.jpg'],
@@ -64,7 +67,7 @@ export default function FoodDemosPage() {
   return (
     <>
       <PageHeader
-        title="Master Chefs Live"
+        title="MasterChefs Live"
         subtitle="Live cookery from former MasterChef winners and finalists, hosted by The Kitchen Table."
       />
 
@@ -72,7 +75,7 @@ export default function FoodDemosPage() {
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
           src="/images/Food Demos.jpg"
-          alt="Master Chefs Live at the Shaftesbury Food Festival"
+          alt="MasterChefs Live at the Shaftesbury Food Festival"
           fill
           className="object-cover"
         />
@@ -102,9 +105,9 @@ export default function FoodDemosPage() {
       <section className="section">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-text md:text-3xl">About Master Chefs Live</h2>
+            <h2 className="text-2xl font-bold text-text md:text-3xl">About MasterChefs Live</h2>
             <p className="mt-4 text-text-light leading-relaxed">
-              The Kitchen Table is hosting three exclusive Master Chefs Live sessions featuring former MasterChef winners and finalists at the Shaftesbury Food Festival. Visitors will watch celebrated chefs prepare recipes from their latest books, gain insight into their culinary journeys, and enjoy the rare opportunity to meet television personalities and secure signed copies of their work.
+              The Kitchen Table is hosting three exclusive MasterChefs Live sessions featuring former MasterChef winners and finalists at the Shaftesbury Food Festival. Visitors will watch celebrated chefs prepare recipes from their latest books, gain insight into their culinary journeys, and enjoy the rare opportunity to meet television personalities and secure signed copies of their work.
             </p>
           </div>
 
@@ -140,9 +143,12 @@ export default function FoodDemosPage() {
           <div className="mt-10 space-y-8">
             {chefs.map((chef) => (
               <div key={chef.name} className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
-                <div className="bg-primary px-6 py-4 flex items-center justify-between">
-                  <span className="text-white font-bold text-lg">{chef.name}</span>
-                  <span className="flex items-center gap-2 text-blue-200 text-sm font-semibold">
+                <div className="bg-primary px-6 py-4 flex items-center justify-between gap-4">
+                  <div>
+                    <span className="text-white font-bold text-lg block">{chef.name}</span>
+                    <span className="text-accent text-xs font-semibold uppercase tracking-wider">{chef.title}</span>
+                  </div>
+                  <span className="flex items-center gap-2 text-blue-200 text-sm font-semibold shrink-0">
                     <Clock className="w-4 h-4" />
                     {chef.time} &mdash; 45 mins
                   </span>

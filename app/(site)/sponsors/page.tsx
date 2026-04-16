@@ -70,9 +70,9 @@ export default function SponsorsPage() {
             </div>
           </div>
 
-          {/* Master Chefs Live */}
+          {/* MasterChefs Live */}
           <div className="mt-14">
-            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Master Chefs Live — Sponsor</h3>
+            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">MasterChefs Live — Sponsor</h3>
             <div className="flex flex-wrap items-center justify-center gap-10">
               <a href="https://www.gff.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
                 <img src="/Sponsors/gff-logo.svg" alt="Guild of Fine Food" className="h-24 w-auto object-contain" />
