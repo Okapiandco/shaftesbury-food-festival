@@ -94,16 +94,25 @@ export default function GettingHerePage() {
               <p className="mt-2 text-xs text-blue-300">No refunds.</p>
             </div>
             <div className="rounded-2xl bg-white/10 p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-4">Sponsored by</p>
-              <a href="https://www.themitredorset.co.uk" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
-                <img
-                  src="/Sponsors/The Mitre Inn Dorset.jpeg"
-                  alt="The Mitre Inn Dorset — Park & Ride Sponsor"
-                  className="h-20 w-auto object-contain rounded-lg"
-                />
-              </a>
+              <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-4">In partnership with</p>
+              <div className="flex items-center gap-4 flex-wrap">
+                <a href="https://www.themitredorset.co.uk" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
+                  <img
+                    src="/Sponsors/The Mitre Inn Dorset.jpeg"
+                    alt="The Mitre Inn Dorset — Park & Ride Sponsor"
+                    className="h-20 w-auto object-contain rounded-lg bg-white p-1"
+                  />
+                </a>
+                <a href="https://www.portregis.com" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
+                  <img
+                    src="/Sponsors/Port regis.png"
+                    alt="Port Regis School — Park & Ride Partner"
+                    className="h-20 w-auto object-contain rounded-lg bg-white p-1"
+                  />
+                </a>
+              </div>
               <p className="mt-4 text-sm text-blue-200 leading-relaxed">
-                The Park &amp; Ride service is kindly sponsored by <span className="text-white font-semibold">The Mitre</span>, a beloved local pub in Shaftesbury.
+                The Park &amp; Ride service is kindly sponsored by <span className="text-white font-semibold">The Mitre</span>, a beloved local pub in Shaftesbury. Huge thanks to <span className="text-white font-semibold">Port Regis School</span> for generously offering their car park — together they make this excellent service between the school and the festival possible.
               </p>
             </div>
           </div>
