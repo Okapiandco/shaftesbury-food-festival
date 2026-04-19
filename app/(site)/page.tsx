@@ -44,7 +44,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden animate-fade-in">
         <Image
           src="/images/Food Demos.jpg"
           alt="MasterChefs Live at the Shaftesbury Food Festival"

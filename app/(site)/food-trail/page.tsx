@@ -172,7 +172,11 @@ function getDirectionsUrl(address: string) {
 export default function FoodTrailPage() {
   return (
     <>
-      <PageHeader title="The Shaftesbury Food Trail" />
+      <PageHeader
+        title="The Shaftesbury Food Trail"
+        backgroundImage="/images/Food Trail/Blue Vinny/Michael Davies- Dorset Blue Vinny.avif"
+        backgroundAlt="Michael Davies at Woodbridge Farm making Dorset Blue Vinny cheese"
+      />
 
       {/* Introduction */}
       <section className="section">
