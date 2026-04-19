@@ -56,6 +56,7 @@ const navLinks = [
   { href: '/trade-stands', label: 'Street Market' },
   { href: '/food-trail', label: 'Food Trail' },
   { href: '/feast-for-the-eyes', label: 'Foodie Art' },
+  { href: '/faqs', label: 'FAQs' },
 ]
 
 export default function Header() {

@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { MapPin, TreePine, Beef, IceCream, Salad, Leaf, ExternalLink, Navigation } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
   title: 'Food Trail | Shaftesbury Food Festival 2nd May 2026',
@@ -16,6 +18,7 @@ interface TrailStop {
   name: string
   location?: string
   address: string
+  shortDescription: string
   description: string
   activities: string[]
   image?: string
@@ -28,78 +31,99 @@ const trailStops: TrailStop[] = [
     name: 'Gold Hill Organic Farm',
     location: 'Child Okeford',
     address: 'Ridgeway Lane, Child Okeford, Blandford, Dorset DT11 8HB',
+    shortDescription:
+      'A grounding farm stop with guided walks exploring soil, seasonality and provenance.',
     description:
       'Do you know where your next meal is coming from? Maybe it\'s time you found out. Come to Gold Hill Organic Farm on Saturday 2nd May and learn about your shortest food chain. Farm walks with growers at 11am and 2pm. Gold Hill Farm Kitchen is a small but perfectly formed café positioned on Gold Hill Organic Farm in Child Okeford. Everything is cooked from scratch — bread, pastries, smoothies, pickles, fermentations and cordials — with the aim of being the only process on your food\'s journey from field to plate. With the help of Wogan Coffee in Bristol, they also deliver an unrivalled cup of coffee.',
     activities: ['Farm walk with growers — 11am', 'Farm walk with growers — 2pm', 'Farm Kitchen café', 'Coffee by Wogan Coffee'],
     image: '/Events/Gold hill organic farm.jpg',
+    website: 'https://www.goldhillorganicfarm.co.uk',
     mapPosition: { top: '20%', left: '60%' },
   },
   {
     name: 'Sorelle Dorset',
     location: 'Motcombe, Shaftesbury',
     address: 'Brook Farm, Bittles Green, Motcombe, Shaftesbury SP7 9NX',
+    shortDescription:
+      'A floral café experience with calm, countryside energy — the perfect place to ease into the day.',
     description:
       'Sorelle is home to a popular cafe, glamping site and wellness space. The heart of our business lies in the Dorset countryside and we are determined to always source fresh, local ingredients for use in our kitchen. We are also passionate about coffee and proudly serve specialty coffee, sourced exclusively from women producers and roasted just outside Warminster. Our cafe specialises in seasonal brunch and always has a great range of locally made cakes and pastries alongside our daily menu. Opening hours: 9am-3pm, Wednesday-Sunday. Brunch served until 2.30pm. We open late on Fridays throughout the summer for pizza and live music or a quiz. We do not take reservations, unless your group is larger than 7 guests.',
     activities: ['Seasonal brunch', 'Specialty coffee', 'Locally made cakes & pastries', 'Friday pizza & live music'],
     image: '/images/Food Trail/Sorelle/ABxSorelle-95.jpg',
-    website: 'https://www.sorelledorset.com/',
+    website: 'https://www.sorelledorset.com',
     mapPosition: { top: '35%', left: '40%' },
   },
   {
     name: 'Compton McRae',
     location: 'Semley, Shaftesbury',
     address: 'Semley, Shaftesbury, Dorset SP7 9AP',
+    shortDescription:
+      'A beautifully curated delicatessen celebrating artisan produce and ingredient-led craft.',
     description:
       'Compton McRae is a café and deli in Semley, celebrating seasonal food, great coffee and artisan produce. Known for its relaxed atmosphere and community feel, Compton McRae serves simple, delicious dishes alongside a deli with a cheese room, stocked with carefully sourced ingredients, wines and provisions from local and independent producers.',
     activities: ['Café & seasonal dishes', 'Deli & cheese room', 'Artisan produce & wines', 'Great coffee'],
     image: '/images/Food Trail/COmpton Macrae/Shelves.jpg',
-    website: 'https://www.comptonmcrae.co.uk',
+    website: 'http://www.comptonmcrae.com/',
     mapPosition: { top: '30%', left: '50%' },
   },
   {
-    name: 'Madjeston Animal Park',
+    name: 'Madjeston Milk Station & Animal Park',
     location: 'Gillingham, Dorset',
     address: 'Newhouse Farm, Cole Street Lane, Gillingham, Dorset SP8 5JQ',
+    shortDescription:
+      'A hands-on farm experience with fresh milk, homemade ice cream, café food and animal encounters for all ages.',
     description:
       'Madjeston Animal Park is a family-run farm set in the heart of the Dorset countryside. They proudly produce fresh Ayrshire cow\'s milk and delicious homemade ice cream right on site, available anytime from their 24/7 self-service Milk Station alongside a range of locally sourced produce. As well as being a working farm, Madjeston has grown into a welcoming destination for families, with an animal park, café and play area. From a scoop of their ice cream to locally made treats and pulled pork from their own home-reared pigs, they\'re passionate about creating a true farm-to-table experience.',
     activities: ['Fresh milk & homemade ice cream', 'Meet the animals', 'Café & farm produce', 'Family-friendly activities'],
     image: '/images/Food Trail/Madjeston Milk Station/IMG_4106.jpeg',
+    website: 'https://www.madjestonanimalpark.co.uk',
     mapPosition: { top: '55%', left: '45%' },
   },
   {
     name: 'Primrose Organic Produce',
     location: 'Lymburghs Farm, Marnhull',
     address: 'Lymburghs Farm, Marnhull, Sturminster Newton, Dorset',
+    shortDescription:
+      'A regenerative farm hosting an organic beef BBQ (12–3pm), bringing fire, flavour and a strong sense of community.',
     description:
       'Primrose Organic Produce is a family-run organic farm, shop and café at Lymburghs Farm near Marnhull. For 60 years, three generations of the Primrose family have farmed here. Around 20 years ago, Jim and Gilla returned to convert the farm to organic, beginning with 100% pasture-fed Red Devon cattle. Sheep for mutton followed, and in recent years they\'ve introduced free-range eggs alongside a thriving market garden. Their farm is alive with restored hedgerows, ponds, wildflower meadows and winter flood meadows, all maintained using regenerative, ecological farming techniques. The shop and café offer organic artisan coffee, specialty drinks, homemade cakes and a simple, seasonal lunch menu.',
     activities: ['Farm shop & café', 'Organic produce', 'Seasonal fruit & vegetables', '100% pasture-fed beef'],
     image: '/images/Food Trail/Primrose Organic/Primrose Organic Shop Front.jpeg',
+    website: 'https://www.primroseorganic.co.uk',
     mapPosition: { top: '70%', left: '30%' },
   },
   {
     name: 'Pythouse Kitchen Garden',
     location: 'West Hatch, Tisbury',
     address: 'Pyt House, West Hatch, Tisbury SP3 6PA',
+    shortDescription:
+      'Seasonal garden-to-table dining, set within a working kitchen garden with Michelin Green Star and Bib Gourmand recognition.',
     description:
       'Tucked away just outside Tisbury, Sprigs Co\'s Pythouse Kitchen Garden is a seasonal restaurant, working kitchen garden and gathering place set in the Wiltshire countryside. Behind the walls sits a productive garden where vegetables, herbs and fruit are grown just steps from the kitchen and harvested daily for the menu. Guests can eat among the gardens, wander through the growing beds and orchard, or simply enjoy relaxed, thoughtful cooking that celebrates the seasons and the surrounding landscape. Pythouse holds both a Michelin Green Star — awarded for sustainable, environmentally responsible cooking — and a Bib Gourmand for exceptional food at good value. It is currently the only restaurant in the UK to hold both awards together.',
     activities: ['Seasonal restaurant', 'Kitchen garden tours', 'Garden-to-plate dining', 'Michelin Green Star & Bib Gourmand'],
     image: '/images/Food Trail/Pythouse Kitchen Garden/Outside Bar.jpg',
+    website: 'https://www.pythousekitchengarden.co.uk',
     mapPosition: { top: '40%', left: '70%' },
   },
   {
     name: 'Dorset Blue Vinny',
     location: 'Woodbridge Farm, Dorset',
     address: 'Woodbridge Farm, Dorset',
+    shortDescription:
+      'Heritage cheese tastings with chutneys, showcasing one of Dorset\u2019s most distinctive traditional cheeses.',
     description:
       'Woodbridge Farm is where Michael Davies resurrected the 300 year old recipe for Dorset Blue Vinny cheese back in 1980. Mike took over the farm kitchen until he had perfected the recipe. Dorset Blue Vinny is still made on the same farm today, albeit no longer in the kitchen!\n\nDorset Blue Vinny takes over 24 hours to make. Each morning, the Davies\u2019 use fresh milk from their herd of 270 Friesian cows. Once it\u2019s been pasteurised, hand-skimmed and the starter culture, rennet and penicillin mould added, it\u2019s ready to be made into cheese.\n\nOnce the milk coagulates it is cut into small pieces before being left overnight. Next morning, once curds and whey have formed, the whey is drained off leaving the curd to be ground, salted and put into moulds where it stays for a few days, before being moved to the maturing room.\n\nThe cheeses need to be turned by hand every day for the first few weeks and then once a week after that. The cheeses are spiked with long narrow pins to allow air into the cheese which helps the mould grow and flavour to develop. It can take up to 20 weeks for the cheese to mature into Dorset Blue Vinny.\n\nIn 1998, Woodbridge Farm were the first food producer to be awarded PGI (Protected Geographical Indication) status and are the only producers of Dorset Blue Vinny.',
     activities: ['300 year old recipe', 'Made from 270 Friesian cows', 'Up to 20 weeks maturing', 'PGI Protected status since 1998'],
     image: '/images/Food Trail/Blue Vinny/Michael Davies- Dorset Blue Vinny.avif',
+    website: 'https://www.dorsetblue.com',
     mapPosition: { top: '50%', left: '55%' },
   },
   {
     name: 'Olives Et Al',
     location: 'Sturminster Newton, Dorset',
     address: 'Sturminster Newton, Dorset',
+    shortDescription:
+      'Behind-the-scenes tours and tastings bringing global pantry flavours into the Dorset food landscape.',
     description:
       'Nestling happily just outside Sturminster Newton, Dorset is the Olives Et Al HQ Deli which sits alongside their Production Kitchen where they make well over 260 individual products stocked in other deli\u2019s and farm shops from the Scilly Isles to the Orkneys and all points in between. The HQ Deli is a great showcase of what they make and have sourced from various trips to warmer climes. Headed up by Olena with Sarah, Maddie and Sadie, they make, bake, and prepare a host of fresh dishes every day ranging from fresh sourdough to some seriously super salads, cakes, sandwiches, tarts and traybakes all with their particular Mediterranean twist. They say: \u2018Call in for fresh Coffee, delightful service and interesting chats \u2014 we\u2019re always happy to see you!\u2019',
     activities: [
@@ -115,20 +139,25 @@ const trailStops: TrailStop[] = [
   {
     name: 'Breezy Ridge Vineyard',
     address: 'TBC',
+    shortDescription:
+      'A celebratory vineyard stop with sparkling wine tastings, sweeping views and a relaxed disco atmosphere.',
     description:
       'Breezy Ridge Vineyard is a haven of food and wine located in the rolling hills of North Dorset. Known for its idyllic setting, chic and contemporary identity, it is the perfect place to come and relax for an afternoon. Specializing in the production of English Sparkling wine, guests can enjoy wine flights, cheese tastings and signature grazing boards, all carefully curated with handpicked products from selected independent suppliers.',
     activities: ['English Sparkling Wine', 'Wine flights', 'Cheese tastings', 'Signature Cheese & Charcuterie Boards', 'Live music'],
     image: '/images/Food Trail/Breezy Ridge/Breezy Ridge.jpg',
-    website: 'https://breezyridgevineyard.com/',
+    website: 'https://breezyridgevineyard.com',
     mapPosition: { top: '60%', left: '50%' },
   },
   {
     name: 'Cann Mills — Stoate & Sons',
     address: 'TBC',
+    shortDescription:
+      'A historic working mill exploring traditional stone milling and generational grain-to-flour craftsmanship.',
     description:
       'Stoate & Sons is a family-run flour milling business with roots dating back to 1832, when brothers William and Thomas Stoate began trading in Somerset. The company expanded steadily, moving to Bristol in 1912 to meet growing demand, and later becoming part of Spillers while still maintaining strong family involvement. In 1947, the business returned to independent roots at Cann Mills, a historic site recorded in the Domesday Book, where it initially focused on supplying animal feed to local farms. In 1970, Stoate & Sons revived traditional stoneground milling, reconnecting with its heritage techniques using French Burr millstones. Now in its Sixth generation, the company continues to balance tradition with modern demand, supplying both home bakers and the wider baking trade. With the next generation joining the business, Stoate & Sons remains committed to preserving its legacy while continuing to grow into its third century.',
     activities: ['Traditional stoneground flour milling', 'Heritage French Burr millstones'],
     image: '/images/Food Trail/Cann mills/Cann mills.png',
+    website: 'https://stoatesflour.co.uk',
     mapPosition: { top: '65%', left: '40%' },
   },
 ]
@@ -143,10 +172,7 @@ function getDirectionsUrl(address: string) {
 export default function FoodTrailPage() {
   return (
     <>
-      <PageHeader
-        title="The Shaftesbury Food Trail"
-        subtitle="Saturday 2nd May 2026 — Explore the local food producers around Shaftesbury with farm walks, tastings and behind-the-scenes tours."
-      />
+      <PageHeader title="The Shaftesbury Food Trail" />
 
       {/* Introduction */}
       <section className="section">
@@ -164,7 +190,9 @@ export default function FoodTrailPage() {
               you what they do, where and how&hellip;
             </p>
             <p className="mt-4 text-text-light leading-relaxed">
-              Follow the route below and visit all the stops to complete the trail!
+              Select your destinations from the map below. Will it be a farm walk followed by cheese tasting?
+              Organic beef from the BBQ and a tour of a historic mill? Fabulous ice creams and walled kitchen gardens?
+              The choice is yours!
             </p>
           </div>
         </div>
@@ -208,21 +236,32 @@ export default function FoodTrailPage() {
           </div>
 
           {/* Stop quick-links */}
-          <div className="mt-8 mx-auto max-w-6xl grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          <div className="mt-8 mx-auto max-w-6xl grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {trailStops.map((stop, index) => (
-              <div key={stop.name} className="rounded-lg bg-white p-4 shadow-sm">
-                <div className="flex items-center gap-2">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">
+              <div key={stop.name} className="flex flex-col rounded-lg bg-white p-4 shadow-sm">
+                <div className="flex items-start gap-2">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">
                     {index + 1}
                   </span>
-                  <h3 className="font-semibold text-text text-sm">{stop.name}</h3>
+                  <h3 className="font-semibold text-text text-sm leading-tight">{stop.name}</h3>
                 </div>
-                <p className="mt-2 text-xs text-text-muted">{stop.address}</p>
+                {stop.website && (
+                  <Link
+                    href={stop.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent-dark break-all"
+                  >
+                    <ExternalLink size={10} />
+                    Visit website
+                  </Link>
+                )}
+                <p className="mt-2 text-xs text-text-light leading-relaxed">{stop.shortDescription}</p>
                 <Link
                   href={getDirectionsUrl(stop.address)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent-dark"
+                  className="mt-auto pt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-accent-dark"
                 >
                   <Navigation size={10} />
                   Get Directions
@@ -268,12 +307,7 @@ export default function FoodTrailPage() {
 
                     <p className="mt-4 text-text-light leading-relaxed whitespace-pre-line">{stop.description}</p>
 
-                    <p className="mt-2 flex items-center gap-1 text-sm text-text-muted">
-                      <MapPin size={12} />
-                      {stop.address}
-                    </p>
-
-                    <div className="mt-2 flex flex-wrap items-center gap-3">
+                    <div className="mt-4 flex flex-wrap items-center gap-3">
                       {stop.website && (
                         <Link href={stop.website} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent-dark font-medium text-sm">
                           Visit website &rarr;
@@ -345,6 +379,13 @@ export default function FoodTrailPage() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion
+        title="Food Trail FAQs"
+        subtitle="Planning your Saturday? Here’s what to know."
+        items={getFaqs(['foodTrail', 'foodTrailChildren', 'dogs'])}
+        className="bg-gray-50"
+      />
 
       {/* JSON-LD */}
       <script

@@ -1,7 +1,9 @@
 import { Metadata } from 'next'
-import { Search, ShoppingBag, UtensilsCrossed, Award, MapPin, ClipboardList } from 'lucide-react'
+import { Search, Download, UtensilsCrossed, Award, MapPin, ClipboardList } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
   title: 'Ingredients Hunt | Shaftesbury Food Festival 3rd May 2026',
@@ -56,13 +58,11 @@ export default function IngredientsHuntPage() {
               Can You Crack the Mystery Recipe?
             </h2>
             <p className="mt-4 text-text-light leading-relaxed">
-              The Ingredients Hunt is a treasure hunt with a twist. Shops across Shaftesbury will each have a
-              mystery ingredient on display. Your challenge is to visit the participating shops, spot the
-              ingredients, and work out what recipe they all combine to make.
-            </p>
-            <p className="mt-4 text-text-light leading-relaxed">
-              It&apos;s a great way to explore the town, discover local shops and have fun with family and
-              friends — all while the festival is in full swing. Open to all ages!
+              The Ingredients Hunt is a treasure hunt with a Dorset twist. 10 shops across Shaftesbury will
+              have an ingredient on display. Your challenge is to hunt down the shops, identify the
+              ingredient in each and, once you have the 10, work out what iconic local food you&apos;d make
+              from them. Hand your entrance form in at the Festival HQ or the Arts Centre to enter the
+              prize draw.
             </p>
           </div>
         </div>
@@ -89,23 +89,31 @@ export default function IngredientsHuntPage() {
         </div>
       </section>
 
-      {/* Participating Shops */}
+      {/* Printable Entrance Form */}
       <section className="section">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Participating Shops</h2>
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Download Your Entrance Form</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Shops across Shaftesbury are joining the hunt. The full list of participating shops will be
-            announced closer to festival day.
+            Prefer to get a head start? Print your entrance form at home, fill it in as you hunt, then hand it
+            in at the Festival HQ or the Arts Centre to enter the prize draw.
           </p>
           <div className="mt-10 mx-auto max-w-2xl">
-            <div className="rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 p-10 text-center">
-              <ShoppingBag size={48} className="mx-auto text-gray-300" />
-              <p className="mt-4 text-lg font-semibold text-text">Shops Coming Soon</p>
+            <div className="rounded-xl bg-white p-8 shadow-sm text-center">
+              <Download size={40} className="mx-auto text-primary" />
+              <p className="mt-4 text-lg font-semibold text-text">Ingredients Hunt Entrance Form</p>
               <p className="mt-2 text-sm text-text-light">
-                Are you a Shaftesbury shop owner who&apos;d like to take part? Get in touch!
+                A4, ready to print. Forms will also be available to pick up on festival day.
               </p>
               <div className="mt-6">
-                <CTAButton href="/contact" variant="primary">Register Your Shop</CTAButton>
+                <a
+                  href="/downloads/ingredients-hunt-entrance-form.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition-colors"
+                >
+                  <Download size={16} />
+                  Download Entrance Form (PDF)
+                </a>
               </div>
             </div>
           </div>
@@ -166,6 +174,13 @@ export default function IngredientsHuntPage() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion
+        title="Family FAQs"
+        subtitle="Bringing the kids? Here’s what’s on and how to get involved."
+        items={getFaqs(['family', 'free', 'finish'])}
+        className="bg-gray-50"
+      />
 
       {/* JSON-LD */}
       <script

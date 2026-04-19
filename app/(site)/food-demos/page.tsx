@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import { Clock, MapPin, Heart, BookOpen, ChefHat, Utensils } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
   title: 'MasterChefs Live | Shaftesbury Food Festival 3rd May 2026',
@@ -271,6 +273,12 @@ export default function FoodDemosPage() {
           </p>
         </div>
       </section>
+
+      <FAQAccordion
+        title="MasterChefs Live FAQs"
+        subtitle="Booking, timings and what to expect on the day."
+        items={getFaqs(['masterChefs', 'booking', 'finish'])}
+      />
     </>
   )
 }

@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import { Train, Bus, Car, MapPin, Clock, PoundSterling, AlertTriangle, Users } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
   title: 'Getting Here | Shaftesbury Food Festival 3rd May 2026',
@@ -257,6 +259,13 @@ export default function GettingHerePage() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion
+        title="Getting Here FAQs"
+        subtitle="Postcodes, Park & Ride, parking and dogs."
+        items={getFaqs(['postcodes', 'gettingThere', 'parking', 'dogs'])}
+        className="bg-gray-50"
+      />
     </>
   )
 }

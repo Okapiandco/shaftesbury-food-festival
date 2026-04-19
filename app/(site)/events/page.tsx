@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 import { MapPin, Clock, Users, CalendarDays, Footprints, HelpCircle, UtensilsCrossed, Palette, Search, Trophy, ChefHat, Store, Brush } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -413,6 +415,13 @@ export default function EventsPage() {
 
         </div>
       </section>
+
+      <FAQAccordion
+        title="Festival FAQs"
+        subtitle="Dates, highlights, tickets and timings across the weekend."
+        items={getFaqs(['when', 'where', 'highlights', 'free', 'booking', 'finish', 'rain'])}
+        className="bg-gray-50"
+      />
     </>
   )
 }

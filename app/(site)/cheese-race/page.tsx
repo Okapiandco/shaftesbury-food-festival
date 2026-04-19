@@ -4,6 +4,8 @@ import { AlertTriangle, Calendar, MapPin, Trophy, Users, Droplets } from 'lucide
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
 import CheeseRaceForm from '@/components/forms/CheeseRaceForm'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
   title: 'Gold Hill Cheese Race | Shaftesbury Food Festival 3rd May 2026',
@@ -157,6 +159,13 @@ export default function CheeseRacePage() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion
+        title="Cheese Race FAQs"
+        subtitle="Everything you need to know about taking part or watching the Gold Hill Cheese Race."
+        items={getFaqs(['cheeseRace', 'booking', 'accessibility'])}
+        className="bg-gray-50"
+      />
 
       {/* JSON-LD */}
       <script

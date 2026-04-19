@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { CalendarDays, MapPin, Palette } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
   title: 'Feast for the Eyes | Art Exhibition | Shaftesbury Food Festival 2026',
@@ -96,6 +98,13 @@ export default function FeastForTheEyesPage() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion
+        title="A Feast For The Eyes FAQs"
+        subtitle="A quick guide to the exhibition at Shaftesbury Arts Centre."
+        items={getFaqs(['artExhibition', 'free'])}
+        className="bg-gray-50"
+      />
     </>
   )
 }

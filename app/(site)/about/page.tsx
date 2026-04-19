@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { MapPin, Users, Store, Award } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
   title: 'About | Shaftesbury Food Festival 3rd May 2026',
@@ -31,15 +33,18 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="text-2xl font-bold text-text md:text-3xl">A Celebration of Food &amp; Community</h2>
+              <h2 className="text-2xl font-bold text-text md:text-3xl">A Celebration of Food, Place and Community</h2>
               <p className="mt-4 text-text-light leading-relaxed">
-                The Shaftesbury Food Festival is a day packed full of fun food and festivities, held on 3rd May 2026 — the bank holiday. Set in the stunning historic hilltop town of Shaftesbury, the festival brings together local food producers, regional Dorset cuisine, and a vibrant community celebration.
+                From the steep cobbles of Gold Hill to the lively sweep of the High Street and Park Walk, the Shaftesbury Food Festival transforms this historic hilltop town into a vibrant celebration of flavour, craft and community.
               </p>
               <p className="mt-4 text-text-light leading-relaxed">
-                Stretching across the high street, Park Walk and surrounding areas, the festival features over 100 trade stands and food outlets, the world-famous Gold Hill Cheese Race, chef talks organised by The Kitchen Table, live entertainment and much more.
+                Taking place on the May Bank Holiday, Sunday 3rd May 2026, the festival brings together over 100 producers, makers and street food traders, showcasing the very best of Dorset alongside flavours from further afield. It is a place to taste, discover and connect, where local provenance meets global inspiration.
               </p>
               <p className="mt-4 text-text-light leading-relaxed">
-                The festival is run entirely by volunteers from the Shaftesbury Chamber of Commerce and proudly supported by Shaftesbury Town Council. It celebrates the best of what this historic hilltop town has to offer — from vibrant shops, bars and restaurants to the unique character of one of England&apos;s most beautiful small towns.
+                At its heart sits the iconic Gold Hill Cheese Race, a test of strength and spirit on one of England&apos;s most recognisable streets, alongside MasterChefs demonstrations curated by Great Taste Awards and The Kitchen Table, live entertainment and a full programme of activity that unfolds across the town.
+              </p>
+              <p className="mt-4 text-text-light leading-relaxed">
+                Run entirely by volunteers from the Shaftesbury Chamber of Commerce and supported by Shaftesbury Town Council, the festival is a true community effort. It celebrates not just food and drink, but the independent spirit, creativity and character that define Shaftesbury, one of England&apos;s most iconic market towns.
               </p>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
@@ -105,6 +110,12 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion
+        title="About the Festival — FAQs"
+        subtitle="The essentials about who runs the festival, where it takes place and how it runs."
+        items={getFaqs(['organisers', 'where', 'when', 'free', 'accessibility'])}
+      />
 
       {/* JSON-LD */}
       <script

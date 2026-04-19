@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { TrendingUp, Users, Megaphone, MapPin } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import TradeStandForm from '@/components/forms/TradeStandForm'
+import FAQAccordion from '@/components/shared/FAQAccordion'
+import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
   title: 'Street Market | Sell at Shaftesbury Food Festival 3rd May 2026',
@@ -23,14 +25,14 @@ export default function TradeStandsPage() {
     <>
       <PageHeader
         title="Street Market"
-        subtitle="Over 100 food stalls, beverage vendors and craft stands celebrating Dorset produce."
+        subtitle="Come and taste, try, eat and buy at over 100 stalls celebrating food, ingredients, drinks and local artisans."
       />
 
       {/* Food stalls image banner */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
-          src="/images/Food festvial crowds.jpg"
-          alt="Crowds enjoying the food stalls at Shaftesbury Food Festival"
+          src="/images/high-street-festival.jpg"
+          alt="Shaftesbury High Street alive with festival-goers and stalls"
           fill
           className="object-cover"
         />
@@ -39,9 +41,9 @@ export default function TradeStandsPage() {
       {/* Trade Stand Gallery */}
       <section className="section bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Our Traders</h2>
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Explore the Market</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Here are some of the fantastic traders joining us this year — and more are signing up every day!
+            Here&apos;s a taster of what&apos;s on offer at the Shaftesbury Food Festival.
           </p>
           <div className="mt-8 columns-2 sm:columns-3 md:columns-4 gap-4 space-y-4">
             {[
@@ -133,6 +135,13 @@ export default function TradeStandsPage() {
           </div>
         </div>
       </section>
+
+      <FAQAccordion
+        title="Street Market FAQs"
+        subtitle="Visiting the market or applying as a trader — here are the essentials."
+        items={getFaqs(['streetMarket', 'traders'])}
+        className="bg-gray-50"
+      />
     </>
   )
 }
