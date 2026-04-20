@@ -17,6 +17,11 @@ const pressImages = [
     description: 'Official Shaftesbury Food Festival logo',
   },
   {
+    src: '/images/Media/Food Fectival logo Shaftesbury.jpeg',
+    alt: 'Shaftesbury Food Festival Logo (JPEG)',
+    description: 'Shaftesbury Food Festival logo — JPEG version for print and press use',
+  },
+  {
     src: '/images/Food Demos/Ping Coombes Credit Sam Folan.jpg',
     alt: 'Ping Coombes — MasterChefs Live',
     description: 'Ping Coombes — MasterChefs Live chef portrait (credit: Sam Folan)',
@@ -50,7 +55,7 @@ export default function MediaPage() {
       <section className="section">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <p className="text-text-light leading-relaxed">
-            [INTRO_TEXT_TO_COME]
+            From the steep cobbles of Gold Hill to bustling market streets filled with Dorset&rsquo;s finest producers, the Shaftesbury Food Festival offers a rich visual and editorial story. From the iconic Gold Hill Cheese Race to vibrant street scenes and chef demonstrations, this media hub provides access to photography, press information and resources that bring the festival&rsquo;s flavour, energy and community spirit to life.
           </p>
         </div>
       </section>

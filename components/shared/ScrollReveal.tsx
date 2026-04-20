@@ -14,6 +14,8 @@ export default function ScrollReveal() {
   useEffect(() => {
     if (typeof window === 'undefined') return
 
+    if (pathname === '/food-trail') return
+
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const main = document.querySelector('main')
     if (!main) return
