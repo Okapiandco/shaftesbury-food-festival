@@ -22,6 +22,26 @@ const pressImages = [
     description: 'Shaftesbury Food Festival logo — JPEG version for print and press use',
   },
   {
+    src: '/images/Media/DSC_0232 (1).jpg',
+    alt: 'Shaftesbury Food Festival — festival scene',
+    description: 'Festival atmosphere on the streets of Shaftesbury (high-resolution)',
+  },
+  {
+    src: '/images/Media/DSC_0276 (1).jpg',
+    alt: 'Shaftesbury Food Festival — festival scene',
+    description: 'Crowds enjoying the Shaftesbury Food Festival (high-resolution)',
+  },
+  {
+    src: '/images/Media/DSC_3204.jpg',
+    alt: 'Shaftesbury Food Festival — festival scene',
+    description: 'Shaftesbury Food Festival in full swing (high-resolution)',
+  },
+  {
+    src: '/images/Media/DSC_3865 (1).jpg',
+    alt: 'Shaftesbury Food Festival — festival scene',
+    description: 'Producers and visitors at the Shaftesbury Food Festival (high-resolution)',
+  },
+  {
     src: '/images/Food Demos/Ping Coombes Credit Sam Folan.jpg',
     alt: 'Ping Coombes — MasterChefs Live',
     description: 'Ping Coombes — MasterChefs Live chef portrait (credit: Sam Folan)',
