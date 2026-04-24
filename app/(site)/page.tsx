@@ -80,7 +80,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <CTAButton href="/cheese-race" variant="accent">Register for Cheese Race</CTAButton>
             <CTAButton href="/trade-stands" variant="secondary">Register as Trade Stand</CTAButton>
-            <CTAButton href="/volunteers" variant="primary" className="border-2 border-white/30 bg-transparent hover:bg-white/10">Become a Volunteer</CTAButton>
+            <CTAButton href="https://www.eventbrite.com/e/ping-coombes-tickets-1985447778753" external variant="primary" className="border-2 border-white/30 bg-transparent hover:bg-white/10">Book a Food Demo</CTAButton>
           </div>
         </div>
       </section>

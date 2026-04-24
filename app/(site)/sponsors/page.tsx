@@ -51,6 +51,9 @@ export default function SponsorsPage() {
               <a href="https://www.themitredorset.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
                 <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre" className="h-24 w-auto object-contain" />
               </a>
+              <a href="https://www.portregis.com" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                <img src="/Sponsors/Port regis.png" alt="Port Regis School" className="h-24 w-auto object-contain" />
+              </a>
             </div>
           </div>
 
@@ -77,6 +80,16 @@ export default function SponsorsPage() {
               <a href="https://www.gff.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
                 <img src="/Sponsors/gff-logo.svg" alt="Guild of Fine Food" className="h-24 w-auto object-contain" />
               </a>
+            </div>
+          </div>
+
+          {/* Community Supporters */}
+          <div className="mt-14">
+            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Community Supporters</h3>
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              <div className="transition-opacity hover:opacity-80">
+                <img src="/Sponsors/Grassby Funeral Services.svg" alt="Grassby Funeral Services" className="h-24 w-auto object-contain" />
+              </div>
             </div>
           </div>
 

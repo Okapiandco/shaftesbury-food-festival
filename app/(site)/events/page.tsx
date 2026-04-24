@@ -138,7 +138,7 @@ export default function EventsPage() {
                     <div className="flex items-start gap-3">
                       <Footprints className="w-6 h-6 text-accent-dark shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-bold text-text">Byzantine Walk</h4>
+                        <h4 className="font-bold text-text">Byzant Walk</h4>
                         <p className="text-sm text-text-light">2pm</p>
                       </div>
                     </div>

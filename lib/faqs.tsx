@@ -97,7 +97,7 @@ export const faqs: Record<FAQKey, FAQItem> = {
           <li>MasterChefs LIVE Demos</li>
           <li>100+ trader Street Market</li>
           <li>Live music and entertainment</li>
-          <li>Traditional Byzantine Walk</li>
+          <li>Traditional Byzant Walk</li>
           <li>Food-inspired art exhibition: A Feast For The Eyes</li>
           <li>Family activities and trails: Ingredient&rsquo;s Hunt &amp; Children&rsquo;s Art Competition</li>
         </ul>
@@ -154,7 +154,7 @@ export const faqs: Record<FAQKey, FAQItem> = {
     ),
   },
   byzantineWalk: {
-    question: 'What is the Byzantine Walk?',
+    question: 'What is the Byzant Walk?',
     answer: (
       <>
         <p>A traditional heritage procession departing from the Town Hall at 2:00pm, travelling through the town centre to the natural spring in Enmore Green.</p>

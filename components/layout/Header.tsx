@@ -99,11 +99,11 @@ export default function Header() {
         <Link href="/" className="shrink-0 block">
           <div className="h-48 w-48 group-data-[scrolled=true]/header:h-16 group-data-[scrolled=true]/header:w-16 transition-[height,width] duration-300 ease-in-out">
             <Image
-              src="/Shaftesbury food festival Logo.svg"
+              src="/images/SHaftesbury food festival Logo new.jpeg"
               alt="Shaftesbury Food Festival 2026"
               width={192}
               height={192}
-              className="h-full w-full"
+              className="h-full w-full object-contain"
               priority
             />
           </div>
