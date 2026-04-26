@@ -142,7 +142,7 @@ const trailStops: TrailStop[] = [
     shortDescription:
       'A celebratory vineyard stop with sparkling wine tastings, sweeping views and a relaxed disco atmosphere.',
     description:
-      'Breezy Ridge Vineyard is a haven of food and wine located in the rolling hills of North Dorset. Known for its idyllic setting, chic and contemporary identity, it is the perfect place to come and relax for an afternoon. Specializing in the production of English Sparkling wine, guests can enjoy wine flights, cheese tastings and signature grazing boards, all carefully curated with handpicked products from selected independent suppliers.',
+      'Breezy Ridge Vineyard is a haven of food and wine located in the rolling hills of North Dorset. Known for its idyllic setting, chic and contemporary identity, it is the perfect place to come and relax for an afternoon. Specializing in the production of English Sparkling wine, guests can enjoy wine flights, cheese tastings and signature grazing boards, all carefully curated with handpicked products from selected independent suppliers. Opening hours: 12pm–6pm on Saturday.',
     activities: ['English Sparkling Wine', 'Wine flights', 'Cheese tastings', 'Signature Cheese & Charcuterie Boards', 'Live music'],
     image: '/images/Food Trail/Breezy Ridge/Breezy Ridge.jpg',
     website: 'https://breezyridgevineyard.com',
