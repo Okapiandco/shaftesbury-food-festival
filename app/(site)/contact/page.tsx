@@ -32,7 +32,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold text-text">Get in Touch</h2>
               <p className="mt-4 text-text-light leading-relaxed">
-                Whether you have questions about the festival, want to register a trade stand, enter the cheese race, or get involved as a volunteer — we&apos;re here to help.
+                Whether you have questions about the festival, want to enter the cheese race, or get involved as a volunteer — we&apos;re here to help.
               </p>
 
               <div className="mt-8 space-y-6">

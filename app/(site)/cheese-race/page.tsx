@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { AlertTriangle, Calendar, MapPin, Trophy, Users, Droplets } from 'lucide-react'
+import { AlertTriangle, Calendar, Clock, MapPin, Trophy, Users, Droplets } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
 import CheeseRaceForm from '@/components/forms/CheeseRaceForm'
@@ -76,6 +76,61 @@ export default function CheeseRacePage() {
               <p className="mt-1 text-sm text-text-light">Generous prizes<br />from our sponsors</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Race Schedule */}
+      <section className="section">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Race Day Schedule</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-text-light">
+            We&apos;ll do our best to give everyone a run. The winner of each heat progresses to the next round, and we only time first place.
+          </p>
+          <div className="mt-10 space-y-4">
+            <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center sm:gap-6">
+              <div className="flex shrink-0 items-center gap-3 sm:w-56">
+                <Clock size={24} className="text-primary" />
+                <span className="font-bold text-text">10:00 – 12:00</span>
+              </div>
+              <div>
+                <h3 className="font-bold text-text">Kids&apos; Races</h3>
+                <p className="mt-1 text-sm text-text-light">Open to anyone aged 7 up to 16. Heats run throughout the morning.</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center sm:gap-6">
+              <div className="flex shrink-0 items-center gap-3 sm:w-56">
+                <Clock size={24} className="text-primary" />
+                <span className="font-bold text-text">12:00 onwards</span>
+              </div>
+              <div>
+                <h3 className="font-bold text-text">Adult Heats</h3>
+                <p className="mt-1 text-sm text-text-light">Adult races begin from midday. Winner of each heat progresses to the semi-finals.</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center sm:gap-6">
+              <div className="flex shrink-0 items-center gap-3 sm:w-56">
+                <Clock size={24} className="text-primary" />
+                <span className="font-bold text-text">13:00</span>
+              </div>
+              <div>
+                <h3 className="font-bold text-text">Semi-Finals</h3>
+                <p className="mt-1 text-sm text-text-light">Heat winners race head-to-head for a place in the final.</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center sm:gap-6">
+              <div className="flex shrink-0 items-center gap-3 sm:w-56">
+                <Clock size={24} className="text-primary" />
+                <span className="font-bold text-text">14:00</span>
+              </div>
+              <div>
+                <h3 className="font-bold text-text">Finals</h3>
+                <p className="mt-1 text-sm text-text-light">The final showdown up Gold Hill — first place is timed.</p>
+              </div>
+            </div>
+          </div>
+          <p className="mx-auto mt-6 max-w-2xl text-center text-sm italic text-text-light">
+            Times are indicative and may shift slightly depending on the number of entries on the day.
+          </p>
         </div>
       </section>
 

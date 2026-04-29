@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { Download } from 'lucide-react'
+import { Download, FileText } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 
 export const metadata: Metadata = {
@@ -77,6 +77,39 @@ export default function MediaPage() {
           <p className="text-text-light leading-relaxed">
             From the steep cobbles of Gold Hill to bustling market streets filled with Dorset&rsquo;s finest producers, the Shaftesbury Food Festival offers a rich visual and editorial story. From the iconic Gold Hill Cheese Race to vibrant street scenes and chef demonstrations, this media hub provides access to photography, press information and resources that bring the festival&rsquo;s flavour, energy and community spirit to life.
           </p>
+        </div>
+      </section>
+
+      {/* Press Releases */}
+      <section className="section">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Press Releases</h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
+            Download the latest press materials about the Shaftesbury Food Festival.
+          </p>
+          <div className="mx-auto mt-8 max-w-2xl">
+            <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <FileText size={22} />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-text">A Feast for the Eyes</h3>
+                    <p className="mt-1 text-sm text-text-light">Press release announcing the &lsquo;A Feast for the Eyes&rsquo; art exhibition at Shaftesbury Arts Centre (29 Apr – 5 May), part of the 2026 Shaftesbury Food Festival.</p>
+                  </div>
+                </div>
+                <a
+                  href="/Feast for  the eyes press release.pdf"
+                  download
+                  className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
+                >
+                  <Download size={14} />
+                  Download PDF
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

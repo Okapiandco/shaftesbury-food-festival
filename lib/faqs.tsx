@@ -254,7 +254,7 @@ export const faqs: Record<FAQKey, FAQItem> = {
   traders: {
     question: 'Can traders or exhibitors apply?',
     answer: (
-      <p>Yes. The Street Market features over 100 traders, and applications are typically managed in advance through the festival team: <Link href="/trade-stands" className="text-primary hover:text-accent-dark font-medium">shaftesbury-food-festival.co.uk/trade-stands</Link>.</p>
+      <p>Trade stand applications for the 2026 festival are now closed. The Street Market is fully booked with over 100 traders. Browse the line-up at <Link href="/trade-stands" className="text-primary hover:text-accent-dark font-medium">shaftesbury-food-festival.co.uk/trade-stands</Link>.</p>
     ),
   },
   foodTrailChildren: {

@@ -1,8 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { TrendingUp, Users, Megaphone, MapPin } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
-import TradeStandForm from '@/components/forms/TradeStandForm'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import { getFaqs } from '@/lib/faqs'
 
@@ -12,13 +10,6 @@ export const metadata: Metadata = {
     'Over 100 food vendors and street market stalls at Shaftesbury Food Festival on 3rd May. Express your interest to become a food vendor, local producer or craft stall.',
   alternates: { canonical: '/trade-stands' },
 }
-
-const benefits = [
-  { icon: TrendingUp, title: 'High Footfall', description: 'Over 100 stalls and thousands of visitors throughout the day.' },
-  { icon: MapPin, title: 'Prime Location', description: 'Access to high street and Park Walk locations in historic Shaftesbury.' },
-  { icon: Megaphone, title: 'Marketing & Promotion', description: 'Social media promotion and media coverage of the festival.' },
-  { icon: Users, title: 'Community', description: 'Join a vibrant community of local food producers and artisans.' },
-]
 
 export default function TradeStandsPage() {
   return (
@@ -101,45 +92,16 @@ export default function TradeStandsPage() {
         />
         <div className="absolute inset-0 bg-primary/40 flex items-center justify-center">
           <div className="text-center text-white px-4">
-            <h2 className="text-3xl font-bold md:text-4xl">Join Over 100 Stalls</h2>
-            <p className="mt-3 text-lg text-blue-200">Showcase your produce to thousands of visitors</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Participate */}
-      <section className="section bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Why Have a Stall?</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map((item) => (
-              <div key={item.title} className="rounded-xl bg-white p-6 text-center shadow-sm">
-                <item.icon size={28} className="mx-auto text-secondary" />
-                <h3 className="mt-3 font-bold text-text">{item.title}</h3>
-                <p className="mt-2 text-sm text-text-light">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Expression of Interest */}
-      <section className="section" id="apply">
-        <div className="container mx-auto max-w-2xl px-4">
-          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Expression of Interest</h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Interested in having a stall? Fill in the form below and we&apos;ll be in touch.
-          </p>
-          <div className="mt-8 rounded-xl bg-white p-6 shadow-sm md:p-8">
-            <TradeStandForm />
+            <h2 className="text-3xl font-bold md:text-4xl">Over 100 Stalls</h2>
+            <p className="mt-3 text-lg text-blue-200">Filling Shaftesbury&apos;s historic high street and Park Walk</p>
           </div>
         </div>
       </section>
 
       <FAQAccordion
         title="Street Market FAQs"
-        subtitle="Visiting the market or applying as a trader — here are the essentials."
-        items={getFaqs(['streetMarket', 'traders'])}
+        subtitle="Everything you need to know about visiting the Street Market."
+        items={getFaqs(['streetMarket'])}
         className="bg-gray-50"
       />
     </>

@@ -79,7 +79,6 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <CTAButton href="/cheese-race" variant="accent">Register for Cheese Race</CTAButton>
-            <CTAButton href="/trade-stands" variant="secondary">Register as Trade Stand</CTAButton>
             <CTAButton href="https://www.eventbrite.com/e/ping-coombes-tickets-1985447778753" external variant="primary" className="border-2 border-white/30 bg-transparent hover:bg-white/10">Book a Food Demo</CTAButton>
           </div>
         </div>
@@ -230,27 +229,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trade Stand Call-to-Action */}
-      <section className="bg-primary py-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">Trade Stands Available</p>
-          <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-            Calling All Dorset &amp; South Wiltshire Producers!
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-200">
-            We still have trade stand spaces available for local food and drink producers.
-            If you&apos;re based in Dorset or South Wiltshire and want to showcase your products
-            to thousands of visitors, we&apos;d love to hear from you.
-          </p>
-          <div className="mt-6">
-            <CTAButton href="/trade-stands" variant="accent">
-              <Store size={16} className="mr-2" /> Apply for a Trade Stand
-            </CTAButton>
-          </div>
-        </div>
-      </section>
-
-
       {/* Featured Vendors */}
       <section className="section">
         <div className="container mx-auto px-4">
@@ -339,9 +317,6 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <CTAButton href="/cheese-race" variant="primary">
               <Trophy size={16} className="mr-2" /> Enter the Cheese Race
-            </CTAButton>
-            <CTAButton href="/trade-stands" variant="primary">
-              <Store size={16} className="mr-2" /> Register a Trade Stand
             </CTAButton>
             <CTAButton href="/volunteers" variant="primary">
               <Heart size={16} className="mr-2" /> Volunteer With Us
