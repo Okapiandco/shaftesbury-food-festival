@@ -3,6 +3,7 @@ import Footer from '@/components/layout/Footer'
 import CountdownTicker from '@/components/shared/CountdownTicker'
 import GlobalSponsorsCarousel from '@/components/shared/GlobalSponsorsCarousel'
 import ScrollReveal from '@/components/shared/ScrollReveal'
+import ChatWidget from '@/components/Chat/ChatWidget'
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,6 +19,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <GlobalSponsorsCarousel />
       <Footer />
       <ScrollReveal />
+      <ChatWidget />
     </>
   )
 }
