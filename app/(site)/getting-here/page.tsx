@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import { Train, Bus, Car, MapPin, Clock, PoundSterling, AlertTriangle, Users } from 'lucide-react'
+
 import PageHeader from '@/components/shared/PageHeader'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import { getFaqs } from '@/lib/faqs'
@@ -51,9 +52,13 @@ export default function GettingHerePage() {
           <div className="grid gap-8 md:grid-cols-2 items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-accent">Recommended</p>
-              <h2 className="mt-2 text-3xl font-bold">Park &amp; Ride</h2>
-              <p className="mt-4 text-blue-200 leading-relaxed">
-                We strongly encourage visitors to use the official Park &amp; Ride service running from <span className="font-semibold text-white">Port Regis School</span> directly into Shaftesbury town centre.
+              <h2 className="mt-2 text-3xl font-bold">Park smart &mdash; arrive happy</h2>
+              <p className="mt-1 text-lg font-semibold text-accent">Use the Food Festival Park &amp; Ride</p>
+              <p className="mt-4 text-blue-100 leading-relaxed">
+                Parking in Shaftesbury is limited. We have <span className="font-semibold text-white">600 spaces</span> and <span className="font-semibold text-white">two buses</span> running regularly from <span className="font-semibold text-white">10am till 4pm</span> between <span className="font-semibold text-white">Port Regis School</span> and the centre of town. Arrive ready to eat, drink and explore.
+              </p>
+              <p className="mt-3 text-blue-100 leading-relaxed">
+                You can pre-book on Eventbrite or pay at the car park &mdash; <span className="font-semibold text-white">£5 per car</span>, with all proceeds going to supporting Shaftesbury through the Chamber of Commerce.
               </p>
               <ul className="mt-6 space-y-3">
                 <li className="flex items-start gap-3">
@@ -66,8 +71,15 @@ export default function GettingHerePage() {
                 <li className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-white">10:00 – 16:30</p>
-                    <p className="text-sm text-blue-200">First coach departs Port Regis School roundabout at 10:00. Final return bus leaves Shaftesbury Post Office at 16:30.</p>
+                    <p className="font-semibold text-white">10am – 4pm</p>
+                    <p className="text-sm text-blue-200">Two buses running regularly. First coach departs Port Regis School at 10:00; final return bus leaves Shaftesbury Post Office at 16:30.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <PoundSterling className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-white">£5 per car</p>
+                    <p className="text-sm text-blue-200">Pre-book on Eventbrite or pay at the car park. Proceeds support Shaftesbury through the Chamber of Commerce.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -77,23 +89,17 @@ export default function GettingHerePage() {
                     <p className="text-sm text-blue-200">If the return coach is full, the driver will take you back to Port Regis School so you can collect your passengers by driving back into Shaftesbury.</p>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <PoundSterling className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-white">£5 per car — cash only</p>
-                    <p className="text-sm text-blue-200">All proceeds support the Shaftesbury &amp; District Chamber of Commerce</p>
-                  </div>
-                </li>
               </ul>
               <a
                 href="https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-block rounded-lg bg-accent px-6 py-3 font-semibold text-primary hover:bg-accent/90 transition-colors"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-primary hover:bg-accent/90 transition-colors"
               >
-                Book on Eventbrite
+                <Bus className="w-5 h-5" />
+                Go stress free &mdash; use the Park &amp; Ride
               </a>
-              <p className="mt-2 text-xs text-blue-300">No refunds.</p>
+              <p className="mt-2 text-xs text-blue-300">Pre-book on Eventbrite or pay £5 per car at Port Regis School on the day. No refunds.</p>
             </div>
             <div className="rounded-2xl bg-white/10 p-6">
               <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-4">In partnership with</p>

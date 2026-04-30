@@ -3,7 +3,10 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays, ChefHat, Facebook, Instagram } from 'lucide-react'
+import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays, ChefHat, Facebook, Instagram, Bus } from 'lucide-react'
+
+const PARK_AND_RIDE_URL =
+  'https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl'
 
 const sideEvents = [
   {
@@ -135,25 +138,39 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop social icons + CTA */}
-        <div className="hidden lg:flex items-center gap-2">
-          <a href="https://www.facebook.com/ShaftesburyFoodFestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-md p-2 text-text hover:bg-gray-100 hover:text-primary transition-colors">
-            <Facebook size={18} />
-          </a>
-          <a href="https://www.instagram.com/shaftesburyfoodfestival" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-md p-2 text-text hover:bg-gray-100 hover:text-primary transition-colors">
-            <Instagram size={18} />
-          </a>
-        </div>
+        {/* Right side: social (desktop), Park & Ride CTA (all sizes), hamburger (mobile) */}
+        <div className="flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-1">
+            <a href="https://www.facebook.com/ShaftesburyFoodFestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-md p-2 text-text hover:bg-gray-100 hover:text-primary transition-colors">
+              <Facebook size={18} />
+            </a>
+            <a href="https://www.instagram.com/shaftesburyfoodfestival" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="rounded-md p-2 text-text hover:bg-gray-100 hover:text-primary transition-colors">
+              <Instagram size={18} />
+            </a>
+          </div>
 
-        {/* Mobile menu button */}
-        <button
-          className="lg:hidden rounded-md p-2 text-text hover:bg-gray-100"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Park & Ride CTA — always visible on every page, every size */}
+          <a
+            href={PARK_AND_RIDE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-2 text-xs font-bold text-primary shadow-sm ring-1 ring-accent-dark/20 hover:bg-accent/90 hover:scale-105 transition-all sm:gap-2 sm:px-4 sm:text-sm"
+            aria-label="Book the Park &amp; Ride on Eventbrite"
+          >
+            <Bus className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
+            <span>Park &amp; Ride</span>
+          </a>
+
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden rounded-md p-2 text-text hover:bg-gray-100"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Full-width mega menu panel */}
@@ -270,6 +287,18 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+
+          <a
+            href={PARK_AND_RIDE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileOpen(false)}
+            className="mt-3 flex items-center gap-3 rounded-lg bg-accent px-3 py-3 text-sm font-bold text-primary shadow-sm hover:bg-accent/90 transition-colors"
+          >
+            <Bus className="h-5 w-5 shrink-0" />
+            <span>Go stress free &mdash; use the Park &amp; Ride</span>
+          </a>
+
           <div className="mt-4 flex gap-3 px-3">
             <a href="https://www.facebook.com/ShaftesburyFoodFestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full bg-gray-100 p-2 text-text hover:bg-gray-200 transition-colors">
               <Facebook size={18} />
