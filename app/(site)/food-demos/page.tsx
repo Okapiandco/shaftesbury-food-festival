@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { Clock, MapPin, Heart, BookOpen, ChefHat, Utensils } from 'lucide-react'
+import { Clock, MapPin, Heart, BookOpen, ChefHat, Utensils, Sparkles } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import { getFaqs } from '@/lib/faqs'
@@ -39,6 +39,29 @@ const chefs = [
     images: ['/images/Food Demos/Shelina Headshots_240_DW.jpg', '/images/Food Demos/Shelina Headshots_303_DW.jpg'],
     imageAlts: ['Shelina Permaloo', 'Shelina Permaloo portrait'],
     ticketUrl: 'https://www.eventbrite.co.uk/e/shelina-permaloo-tickets-1985448117767?aff=oddtdtcreator',
+  },
+]
+
+const chocolateMasterclasses = [
+  {
+    name: "Chocolate Gâteau Masterclass",
+    presenter: "Barber’s Bean-to-Bar",
+    time: '10:00 AM',
+    venue: 'Live Demo Cookery Theatre, The Grosvenor',
+    image: '/images/Food Demos/Chocolate Tasting.jpeg',
+    imageAlt: 'Chocolate gâteau masterclass with Barber’s Bean-to-Bar',
+    bio: 'Join pastry chef and chocolate genius Michael Barber as he creates and decorates a truly show-stopping chocolate gâteau. Transforming his exquisite chocolate into elegant finishing touches, he’ll reveal how origin and process shape both flavour and texture.',
+    extra: 'Expect expert piping and decorating tips, professional finishing techniques, and a behind-the-scenes look at what makes artisan chocolate genuinely exceptional. With 15 years in professional pastry kitchens and five years crafting bean-to-bar chocolate in Devon, Michael brings together classical patisserie technique and true craft chocolate expertise.',
+  },
+  {
+    name: 'Taste the Journey: A Guided Bean-to-Bar Chocolate Tasting',
+    presenter: "Barber’s Bean-to-Bar",
+    time: '1:00 PM',
+    venue: 'The Library (downstairs through the dining room), The Grosvenor',
+    image: '/images/Food Demos/Chocolate Tasting 2.jpeg',
+    imageAlt: 'Bean-to-bar chocolate tasting with Michael Barber',
+    bio: 'Explore chocolate like you’ve never experienced it before. Join pastry chef and bean-to-bar chocolate maker Michael Barber for an immersive tasting journey from cocoa bean to finished bar.',
+    extra: 'With 15 years of pastry expertise and five years running Barber’s Bean-to-Bar Chocolate in Devon, Michael guides guests through a curated tasting of craft chocolate, revealing how origin, roast, and refining shape every nuance of flavour. This is a sensory deep dive into texture, aroma, and taste, with storytelling, insider knowledge, and plenty of delicious moments along the way. Perfect for food lovers, chocolate enthusiasts, and anyone curious about what truly great chocolate can be.',
   },
 ]
 
@@ -188,8 +211,59 @@ export default function FoodDemosPage() {
         </div>
       </section>
 
-      {/* What to Expect */}
+      {/* Festival Special: Bean-to-Bar Chocolate */}
       <section className="section">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+              <Sparkles className="w-4 h-4" />
+              Festival Special
+            </span>
+            <h2 className="mt-4 text-2xl font-bold text-text md:text-3xl">Bean-to-Bar Chocolate Masterclasses</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-text-light">
+              A bonus pair of sessions with Michael Barber of <span className="font-semibold text-text">Barber’s Bean-to-Bar</span> — pastry chef and Devon-based craft chocolate maker. Both events take place at The Grosvenor.
+            </p>
+          </div>
+
+          <div className="mt-10 space-y-8">
+            {chocolateMasterclasses.map((event) => (
+              <div key={event.name} className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
+                <div className="bg-primary px-6 py-4 flex items-center justify-between gap-4">
+                  <div>
+                    <span className="text-white font-bold text-lg block">{event.name}</span>
+                    <span className="text-accent text-xs font-semibold uppercase tracking-wider">{event.presenter}</span>
+                  </div>
+                  <span className="flex items-center gap-2 text-blue-200 text-sm font-semibold shrink-0">
+                    <Clock className="w-4 h-4" />
+                    {event.time}
+                  </span>
+                </div>
+                <div className="md:flex">
+                  <div className="relative w-full md:w-72 aspect-[4/3] md:aspect-auto md:h-auto shrink-0 min-h-56">
+                    <Image
+                      src={event.image}
+                      alt={event.imageAlt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col gap-4">
+                    <div className="flex items-start gap-2 text-sm text-text-light">
+                      <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                      <span>{event.venue}</span>
+                    </div>
+                    <p className="text-text-light leading-relaxed">{event.bio}</p>
+                    <p className="text-text-light leading-relaxed">{event.extra}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What to Expect */}
+      <section className="section bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">What to Expect</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">

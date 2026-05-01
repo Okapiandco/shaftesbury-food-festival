@@ -255,6 +255,59 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Chocolate Masterclasses Promo */}
+      <section className="relative overflow-hidden bg-[#3a1f10] py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid items-center gap-8 md:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src="/images/Food Demos/Chocolate Tasting.jpeg"
+                  alt="Chocolate Gâteau Masterclass"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-xl shadow-lg mt-8">
+                <Image
+                  src="/images/Food Demos/Chocolate Tasting 2.jpeg"
+                  alt="Bean-to-Bar Chocolate Tasting"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="text-white">
+              <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+                Festival Special
+              </span>
+              <h2 className="mt-4 text-3xl font-bold md:text-4xl">Bean-to-Bar Chocolate Masterclasses</h2>
+              <p className="mt-3 text-base leading-relaxed text-amber-100/90">
+                Two bonus sessions with Michael Barber of <span className="font-semibold text-white">Barber’s Bean-to-Bar</span>, hosted at <span className="font-semibold text-white">The Grosvenor</span>.
+              </p>
+              <ul className="mt-6 space-y-3 text-sm">
+                <li className="flex gap-3">
+                  <span className="font-bold text-accent shrink-0 w-20">10:00 AM</span>
+                  <span className="text-amber-100/90">Chocolate Gâteau Masterclass — show-stopping pastry &amp; finishing techniques.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="font-bold text-accent shrink-0 w-20">1:00 PM</span>
+                  <span className="text-amber-100/90">Taste the Journey — a guided sensory tasting from cocoa bean to finished bar.</span>
+                </li>
+              </ul>
+              <div className="mt-8">
+                <Link
+                  href="/food-demos"
+                  className="inline-block rounded-lg bg-accent px-6 py-3 text-sm font-bold text-primary hover:bg-accent/90 transition-colors"
+                >
+                  See the Chocolate Sessions →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Getting Here */}
       <section className="section bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
