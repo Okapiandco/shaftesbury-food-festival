@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { MapPin, TreePine, ExternalLink, Navigation } from 'lucide-react'
+import { MapPin, TreePine, ExternalLink, Navigation, AlertCircle } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import TrailStopSlideshow from '@/components/shared/TrailStopSlideshow'
@@ -20,6 +20,7 @@ interface TrailStop {
   shortDescription: string
   description: string
   highlight?: string
+  notice?: string
   hours?: string
   activities: string[]
   images: string[]
@@ -158,17 +159,14 @@ const trailStops: TrailStop[] = [
     location: 'West Hatch, Tisbury',
     address: 'Pyt House, West Hatch, Tisbury SP3 6PA',
     shortDescription:
-      'Taste Sprigster non-alcoholic botanical drinks at the garden bar in the heart of the garden that inspired them — with garden tours through the day.',
-    highlight:
-      'Taste Sprigster non-alcoholic botanical drinks at the garden bar in the heart of the garden that inspired them. Tours of the garden through the day.',
+      'Pythouse have had to step back from the Food Trail. Garden tours will not be running, but if you’ve booked a meal it’s still going ahead as planned.',
+    notice:
+      'Due to unforeseen circumstances, Pythouse Kitchen Garden are sadly unable to take part in this year’s Food Trail and there will be no garden tours. If you’ve booked a meal, please don’t worry — your reservation is still going ahead as planned. With apologies and best wishes from all at Pythouse — please enjoy the rest of the Food Trail.',
     description:
       'Tucked away just outside Tisbury, Pythouse Kitchen Garden is a seasonal restaurant, working kitchen garden and gathering place set in the Wiltshire countryside. Behind the walls sits a productive garden where vegetables, herbs and fruit are grown just steps from the kitchen and harvested daily for the menu. Pythouse holds both a Michelin Green Star — awarded for sustainable, environmentally responsible cooking — and a Bib Gourmand for exceptional food at good value, the only restaurant in the UK currently to hold both together.',
-    hours: 'Open 12pm – 4.30pm',
     activities: [
-      'Sprigster botanical drinks at the garden bar',
-      'Tours of the kitchen garden through the day',
-      'Garden-to-plate seasonal restaurant',
-      'Michelin Green Star & Bib Gourmand',
+      'Pre-booked meals still going ahead as planned',
+      'Garden tours unfortunately not running this year',
     ],
     images: [
       '/images/Food Trail/Pythouse Kitchen Garden/Outside Bar.jpg',
@@ -398,7 +396,17 @@ export default function FoodTrailPage() {
                       </div>
                     </div>
 
-                    {stop.highlight && (
+                    {stop.notice && (
+                      <div className="mt-4 rounded-lg border-l-4 border-amber-500 bg-amber-50 px-4 py-3">
+                        <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-amber-700">
+                          <AlertCircle size={14} />
+                          Update
+                        </p>
+                        <p className="mt-1 text-text leading-relaxed">{stop.notice}</p>
+                      </div>
+                    )}
+
+                    {stop.highlight && !stop.notice && (
                       <div className="mt-4 rounded-lg border-l-4 border-accent bg-accent/10 px-4 py-3">
                         <p className="text-sm font-semibold uppercase tracking-wider text-accent-dark">On the day</p>
                         <p className="mt-1 text-text leading-relaxed">{stop.highlight}</p>
