@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ChefHat, Store, Trophy, Heart, Car, Bus } from 'lucide-react'
+import { ChefHat, Store, Trophy, Heart, Sparkles } from 'lucide-react'
 import CTAButton from '@/components/shared/CTAButton'
 import VendorCard from '@/components/cards/VendorCard'
 import SponsorsCarousel from '@/components/shared/SponsorsCarousel'
@@ -78,20 +78,20 @@ export default function HomePage() {
             This year&apos;s festival welcomed more than 12,000 visitors to Shaftesbury — our biggest turnout ever. Shaftesbury also featured in most of the major newspapers on Bank Holiday Monday, including <span className="font-semibold text-text">The Times</span>, <span className="font-semibold text-text">The Telegraph</span> and <span className="font-semibold text-text">The Guardian</span>.
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-text-light">
-            We look forward to welcoming you next year.
+            We look forward to welcoming you back on <span className="font-semibold text-text">Sunday 2nd May 2027</span>.
           </p>
 
           <div className="mt-10 rounded-2xl bg-white border border-gray-200 shadow-sm p-8 md:p-10">
             <div className="flex items-center justify-center gap-2 text-primary">
               <Store className="w-5 h-5" />
-              <p className="text-xs font-semibold uppercase tracking-widest">Traders — 2027</p>
+              <p className="text-xs font-semibold uppercase tracking-widest">Traders — 2nd May 2027</p>
             </div>
             <h3 className="mt-3 text-2xl font-bold text-text md:text-3xl">Expressions of Interest Now Open</h3>
             <p className="mx-auto mt-3 max-w-xl text-text-light">
-              We are now taking expressions of interest from traders who would like to join us at next year&apos;s Shaftesbury Food Festival.
+              We are now taking expressions of interest from traders who would like to join us for the next festival on Sunday 2nd May 2027.
             </p>
             <div className="mt-6">
-              <CTAButton href="/trade-stands" variant="primary">Register Your Interest</CTAButton>
+              <CTAButton href="/trade-stands#apply" variant="primary">Trade Stands 2027 — Register Interest</CTAButton>
             </div>
           </div>
         </div>
@@ -321,54 +321,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Getting Here */}
+      {/* Join the Chamber */}
       <section className="section bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-center text-3xl font-bold text-text md:text-4xl">Getting Here</h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Parking in Shaftesbury will be limited — plan ahead and use our Park &amp; Ride.
-          </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            <a
-              href="https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block rounded-xl bg-white border border-gray-200 p-5 shadow-sm hover:shadow-md hover:border-primary/40 transition-all"
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <Bus className="w-5 h-5 text-primary" />
-                <h3 className="font-bold text-text">Park &amp; Ride</h3>
-              </div>
-              <p className="text-sm text-text-light leading-relaxed">Buses every 30 minutes from <span className="font-semibold text-text">Port Regis School</span>. £5 cash per car — all proceeds to the Chamber of Commerce.</p>
-              <p className="mt-2 text-xs font-semibold text-primary">Book on Eventbrite →</p>
-              <div className="mt-3 pt-3 border-t border-gray-100">
-                <p className="text-xs text-text-muted">In partnership with</p>
-                <div className="mt-1 flex items-center gap-3">
-                  <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre Inn Dorset" className="h-8 w-auto object-contain" />
-                  <img src="/Sponsors/Port regis.png" alt="Port Regis School" className="h-8 w-auto object-contain" />
-                </div>
-                <p className="mt-2 text-xs text-text-muted leading-relaxed">Huge thanks to <span className="font-semibold text-text">Port Regis School</span> for offering their car park, and to <span className="font-semibold text-text">The Mitre</span> for sponsoring the service.</p>
-              </div>
-            </a>
-            <div className="rounded-xl bg-white border border-gray-200 p-5 shadow-sm">
-              <div className="flex items-center gap-2 mb-3">
-                <Car className="w-5 h-5 text-primary" />
-                <h3 className="font-bold text-text">By Car</h3>
-              </div>
-              <p className="text-sm text-text-light leading-relaxed">Use <span className="font-semibold text-text">SP7 8JY</span> for the High Street. Please car share wherever possible — we&apos;re expecting a large number of visitors and town parking will be very limited.</p>
+          <div className="rounded-2xl bg-primary p-8 md:p-12 text-white text-center shadow-lg">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent text-primary">
+              <Sparkles className="w-7 h-7" />
             </div>
-            <div className="rounded-xl bg-white border border-gray-200 p-5 shadow-sm">
-              <div className="flex items-center gap-2 mb-3">
-                <Bus className="w-5 h-5 text-primary" />
-                <h3 className="font-bold text-text">Train &amp; Bus</h3>
-              </div>
-              <p className="text-sm text-text-light leading-relaxed">Nearest stations are <span className="font-semibold text-text">Gillingham (8 miles)</span> and <span className="font-semibold text-text">Tisbury (10 miles)</span>. Local bus services also run into town from across the region.</p>
+            <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-accent">Get Involved</p>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">Join the Shaftesbury &amp; District Chamber of Commerce</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-blue-100 leading-relaxed">
+              The Chamber is the team behind the Food Festival and many other community projects. Join us to help promote our wonderful town, support local businesses, and get involved in projects like this one.
+            </p>
+            <div className="mt-8">
+              <a
+                href="https://www.shaftesburychamber.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-bold text-primary hover:bg-accent/90 transition-colors"
+              >
+                <Heart className="w-4 h-4" />
+                Sign Up Online
+              </a>
             </div>
-          </div>
-          <div className="mt-6 text-center">
-            <Link href="/getting-here" className="inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary/90 transition-colors">
-              Full Journey Planner
-            </Link>
           </div>
         </div>
       </section>
@@ -381,6 +356,9 @@ export default function HomePage() {
             Whether you&apos;re racing, selling, volunteering or visiting — there&apos;s something for everyone.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <CTAButton href="/trade-stands#apply" variant="primary">
+              <Store size={16} className="mr-2" /> Trade Stands 2027
+            </CTAButton>
             <CTAButton href="/cheese-race" variant="primary">
               <Trophy size={16} className="mr-2" /> Cheese Race Info
             </CTAButton>

@@ -1,27 +1,27 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { Train, Bus, Car, MapPin, Clock, PoundSterling, AlertTriangle, Users } from 'lucide-react'
+import { Train, Bus, Car, Users, Heart } from 'lucide-react'
 
 import PageHeader from '@/components/shared/PageHeader'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
-  title: 'Getting Here | Shaftesbury Food Festival 3rd May 2026',
+  title: 'Getting Here | Shaftesbury Food Festival 2nd May 2027',
   description:
-    'Plan your journey to the Shaftesbury Food Festival on 3rd May 2026. Park & Ride from Port Regis School, train, bus, and driving directions from all directions.',
+    'Plan your journey to the Shaftesbury Food Festival on 2nd May 2027. Train, bus, and driving directions to Shaftesbury from all directions.',
   alternates: { canonical: '/getting-here' },
   openGraph: {
-    title: 'Getting Here | Shaftesbury Food Festival 3rd May 2026',
+    title: 'Getting Here | Shaftesbury Food Festival 2nd May 2027',
     description:
-      'Plan your journey to the Shaftesbury Food Festival. Park & Ride from Port Regis School, train, bus, and driving directions from all directions.',
-    images: [{ url: '/Shaftesbury food festival Logo.png', alt: 'Shaftesbury Food Festival 2026 Logo' }],
+      'Plan your journey to the Shaftesbury Food Festival. Train, bus, and driving directions to Shaftesbury from all directions.',
+    images: [{ url: '/Shaftesbury food festival Logo.png', alt: 'Shaftesbury Food Festival Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Getting Here | Shaftesbury Food Festival 3rd May 2026',
+    title: 'Getting Here | Shaftesbury Food Festival 2nd May 2027',
     description:
-      'Plan your journey to the Shaftesbury Food Festival. Park & Ride from Port Regis School, train, bus, and driving directions.',
+      'Plan your journey to the Shaftesbury Food Festival. Train, bus, and driving directions.',
     images: ['/Shaftesbury food festival Logo.png'],
   },
 }
@@ -31,99 +31,29 @@ export default function GettingHerePage() {
     <>
       <PageHeader
         title="Getting Here"
-        subtitle="Everything you need to plan your journey to the Shaftesbury Food Festival on Sunday 3rd May 2026."
+        subtitle="Everything you need to plan your journey to the Shaftesbury Food Festival on Sunday 2nd May 2027."
       />
 
-      {/* Parking Warning Banner */}
-      <section className="bg-accent/20 border-b border-accent/30">
-        <div className="container mx-auto px-4 py-5 max-w-4xl">
-          <div className="flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-accent-dark shrink-0 mt-0.5" />
-            <p className="text-sm text-text leading-relaxed">
-              <span className="font-bold">Parking in Shaftesbury will be very limited on festival day.</span> We&apos;re expecting a large number of visitors — please use the Park &amp; Ride, arrive by public transport, or <span className="font-semibold">car share wherever possible</span>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Park & Ride — featured section */}
+      {/* Join the Chamber */}
       <section className="section bg-primary text-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="grid gap-8 md:grid-cols-2 items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-accent">Recommended</p>
-              <h2 className="mt-2 text-3xl font-bold">Park smart &mdash; arrive happy</h2>
-              <p className="mt-1 text-lg font-semibold text-accent">Use the Food Festival Park &amp; Ride</p>
-              <p className="mt-4 text-blue-100 leading-relaxed">
-                Parking in Shaftesbury is limited. We have <span className="font-semibold text-white">600 spaces</span> and <span className="font-semibold text-white">two buses</span> running regularly from <span className="font-semibold text-white">10am till 4pm</span> between <span className="font-semibold text-white">Port Regis School</span> and the centre of town. Arrive ready to eat, drink and explore.
-              </p>
-              <p className="mt-3 text-blue-100 leading-relaxed">
-                You can pre-book on Eventbrite or pay at the car park &mdash; <span className="font-semibold text-white">£5 per car</span>, with all proceeds going to supporting Shaftesbury through the Chamber of Commerce.
-              </p>
-              <ul className="mt-6 space-y-3">
-                <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-white">Port Regis School</p>
-                    <p className="text-sm text-blue-200">Motcombe Park, Shaftesbury, SP7 9QA</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-white">10am – 4pm</p>
-                    <p className="text-sm text-blue-200">Two buses running regularly. First coach departs Port Regis School at 10:00; final return bus leaves Shaftesbury Post Office at 16:30.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <PoundSterling className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-white">£5 per car</p>
-                    <p className="text-sm text-blue-200">Pre-book on Eventbrite or pay at the car park. Proceeds support Shaftesbury through the Chamber of Commerce.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <AlertTriangle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-white">Return capacity</p>
-                    <p className="text-sm text-blue-200">If the return coach is full, the driver will take you back to Port Regis School so you can collect your passengers by driving back into Shaftesbury.</p>
-                  </div>
-                </li>
-              </ul>
-              <a
-                href="https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-primary hover:bg-accent/90 transition-colors"
-              >
-                <Bus className="w-5 h-5" />
-                Go stress free &mdash; use the Park &amp; Ride
-              </a>
-              <p className="mt-2 text-xs text-blue-300">Pre-book on Eventbrite or pay £5 per car at Port Regis School on the day. No refunds.</p>
-            </div>
-            <div className="rounded-2xl bg-white/10 p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-4">In partnership with</p>
-              <div className="flex items-center gap-4 flex-wrap">
-                <a href="https://www.themitredorset.co.uk" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
-                  <img
-                    src="/Sponsors/The Mitre Inn Dorset.jpeg"
-                    alt="The Mitre Inn Dorset — Park & Ride Sponsor"
-                    className="h-20 w-auto object-contain rounded-lg bg-white p-1"
-                  />
-                </a>
-                <a href="https://www.portregis.com" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
-                  <img
-                    src="/Sponsors/Port regis.png"
-                    alt="Port Regis School — Park & Ride Partner"
-                    className="h-20 w-auto object-contain rounded-lg bg-white p-1"
-                  />
-                </a>
-              </div>
-              <p className="mt-4 text-sm text-blue-200 leading-relaxed">
-                The Park &amp; Ride service is kindly sponsored by <span className="text-white font-semibold">The Mitre</span>, a beloved local pub in Shaftesbury. Huge thanks to <span className="text-white font-semibold">Port Regis School</span> for generously offering their car park — together they make this excellent service between the school and the festival possible.
-              </p>
-            </div>
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent text-primary">
+            <Heart className="w-7 h-7" />
           </div>
+          <p className="mt-4 text-xs font-semibold uppercase tracking-widest text-accent">Get Involved</p>
+          <h2 className="mt-2 text-3xl font-bold">Join the Chamber of Commerce</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-blue-100 leading-relaxed">
+            The Shaftesbury &amp; District Chamber of Commerce is behind the Food Festival and many other community projects. Sign up online to help promote our wonderful town and get involved in projects like this.
+          </p>
+          <a
+            href="https://www.shaftesburychamber.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-bold text-primary hover:bg-accent/90 transition-colors"
+          >
+            <Heart className="w-4 h-4" />
+            Join the Chamber
+          </a>
         </div>
       </section>
 
@@ -199,7 +129,7 @@ export default function GettingHerePage() {
               </div>
               <div className="p-6 space-y-4 text-sm text-text-light leading-relaxed">
                 <p>
-                  Shaftesbury is easily reached by road from most directions. Use postcode <span className="font-semibold text-text">SP7 8JY</span> for the High Street in your sat nav, or head for the Park &amp; Ride at <span className="font-semibold text-text">SP7 9QA</span> (Port Regis School, Motcombe).
+                  Shaftesbury is easily reached by road from most directions. Use postcode <span className="font-semibold text-text">SP7 8JY</span> for the High Street in your sat nav.
                 </p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="rounded-lg bg-gray-50 p-4">
@@ -268,7 +198,7 @@ export default function GettingHerePage() {
 
       <FAQAccordion
         title="Getting Here FAQs"
-        subtitle="Postcodes, Park & Ride, parking and dogs."
+        subtitle="Postcodes, parking, public transport and dogs."
         items={getFaqs(['postcodes', 'gettingThere', 'parking', 'dogs'])}
         className="bg-gray-50"
       />

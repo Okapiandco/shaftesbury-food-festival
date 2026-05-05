@@ -60,7 +60,6 @@ export const faqs: Record<FAQKey, FAQItem> = {
     answer: (
       <ul className="list-disc pl-5 space-y-1">
         <li>Shaftesbury town centre (High Street &amp; Park Walk): <strong>SP7 8LY</strong></li>
-        <li>Park &amp; Ride (Port Regis School): <strong>SP7 9QA</strong></li>
       </ul>
     ),
   },
@@ -69,11 +68,7 @@ export const faqs: Record<FAQKey, FAQItem> = {
     answer: (
       <>
         <p>Yes, the vast majority of the festival is <strong>FREE entry</strong>.</p>
-        <p className="mt-3">Some experiences are:</p>
-        <ul className="mt-2 list-disc pl-5 space-y-1">
-          <li>Ticketed via Eventbrite (by donation or booking)</li>
-          <li>Or require advance booking for capacity management: Park &amp; Ride</li>
-        </ul>
+        <p className="mt-3">Some experiences are ticketed via Eventbrite (by donation or booking) or require advance booking for capacity management.</p>
       </>
     ),
   },
@@ -187,29 +182,19 @@ export const faqs: Record<FAQKey, FAQItem> = {
   gettingThere: {
     question: 'How do I get to the festival?',
     answer: (
-      <p>A dedicated <strong>Park &amp; Ride</strong> service operates from Port Regis School (SP7 9QA), running every 30 minutes. Bookable by Eventbrite. It is the easiest way to access the town during the event.</p>
+      <p>Shaftesbury is well connected by road, rail and bus. The nearest train stations are Gillingham (8 miles) and Tisbury (10 miles), and local buses run into town from across the region. See the <Link href="/getting-here" className="text-primary hover:text-accent-dark font-medium">Getting Here</Link> page for full details.</p>
     ),
   },
   parking: {
     question: 'Is parking available?',
     answer: (
-      <>
-        <p>Yes. Parking is available via the Park &amp; Ride system.</p>
-        <ul className="mt-2 list-disc pl-5 space-y-1">
-          <li>£5 per car (advance booking recommended via Eventbrite)</li>
-          <li>Capacity for up to 600 vehicles</li>
-          <li>Regular shuttle service into town, every half hour</li>
-        </ul>
-      </>
+      <p>Town-centre parking in Shaftesbury is limited on festival day. Please car-share where possible and allow extra time. Use postcode <strong>SP7 8JY</strong> for the High Street.</p>
     ),
   },
   dogs: {
     question: 'Can I bring my dog?',
     answer: (
-      <>
-        <p>Well-behaved dogs are welcome, particularly in outdoor areas. Please be mindful of crowds and hot surfaces when planning your visit.</p>
-        <p className="mt-3">Dogs are also permitted on the Park &amp; Ride minibuses, at the driver&rsquo;s discretion.</p>
-      </>
+      <p>Well-behaved dogs are welcome, particularly in outdoor areas. Please be mindful of crowds and hot surfaces when planning your visit.</p>
     ),
   },
   finish: {
@@ -224,7 +209,6 @@ export const faqs: Record<FAQKey, FAQItem> = {
         <ul className="mt-2 list-disc pl-5 space-y-1">
           <li>Gold Hill Cheese Race entry</li>
           <li>Your place in the audience for the MasterChefs LIVE demos (tickets by donation)</li>
-          <li>Park &amp; Ride parking</li>
         </ul>
         <p className="mt-3">Booking in advance is via Eventbrite.</p>
       </>
@@ -254,7 +238,7 @@ export const faqs: Record<FAQKey, FAQItem> = {
   traders: {
     question: 'Can traders or exhibitors apply?',
     answer: (
-      <p>Trade stand applications for the 2026 festival are now closed. The Street Market is fully booked with over 100 traders. Browse the line-up at <Link href="/trade-stands" className="text-primary hover:text-accent-dark font-medium">shaftesbury-food-festival.co.uk/trade-stands</Link>.</p>
+      <p>Yes — expressions of interest are now open for the next festival on Sunday 2nd May 2027. The Street Market features over 100 traders and stalls fill up quickly. Register your interest at <Link href="/trade-stands#apply" className="text-primary hover:text-accent-dark font-medium">shaftesbury-food-festival.co.uk/trade-stands</Link>.</p>
     ),
   },
   foodTrailChildren: {

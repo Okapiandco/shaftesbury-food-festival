@@ -3,10 +3,9 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays, ChefHat, Facebook, Instagram, Bus } from 'lucide-react'
+import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays, ChefHat, Facebook, Instagram, Heart } from 'lucide-react'
 
-const PARK_AND_RIDE_URL =
-  'https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl'
+const CHAMBER_URL = 'https://www.shaftesburychamber.co.uk/'
 
 const sideEvents = [
   {
@@ -149,16 +148,16 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Park & Ride CTA — always visible on every page, every size */}
+          {/* Chamber of Commerce CTA — always visible on every page, every size */}
           <a
-            href={PARK_AND_RIDE_URL}
+            href={CHAMBER_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-2 text-xs font-bold text-primary shadow-sm ring-1 ring-accent-dark/20 hover:bg-accent/90 hover:scale-105 transition-all sm:gap-2 sm:px-4 sm:text-sm"
-            aria-label="Book the Park &amp; Ride on Eventbrite"
+            aria-label="Join the Shaftesbury &amp; District Chamber of Commerce"
           >
-            <Bus className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
-            <span>Park &amp; Ride</span>
+            <Heart className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
+            <span>Join the Chamber</span>
           </a>
 
           {/* Mobile menu button */}
@@ -289,14 +288,14 @@ export default function Header() {
           ))}
 
           <a
-            href={PARK_AND_RIDE_URL}
+            href={CHAMBER_URL}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
             className="mt-3 flex items-center gap-3 rounded-lg bg-accent px-3 py-3 text-sm font-bold text-primary shadow-sm hover:bg-accent/90 transition-colors"
           >
-            <Bus className="h-5 w-5 shrink-0" />
-            <span>Go stress free &mdash; use the Park &amp; Ride</span>
+            <Heart className="h-5 w-5 shrink-0" />
+            <span>Join the Shaftesbury &amp; District Chamber of Commerce</span>
           </a>
 
           <div className="mt-4 flex gap-3 px-3">

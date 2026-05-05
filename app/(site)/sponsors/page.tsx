@@ -46,7 +46,7 @@ export default function SponsorsPage() {
 
           {/* Cornerstone Sponsor */}
           <div className="mt-14">
-            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Cornerstone Sponsor — Park &amp; Ride</h3>
+            <h3 className="text-center text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Cornerstone Partners</h3>
             <div className="flex flex-wrap items-center justify-center gap-10">
               <a href="https://www.themitredorset.co.uk" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
                 <img src="/Sponsors/The Mitre Inn Dorset.jpeg" alt="The Mitre" className="h-24 w-auto object-contain" />
