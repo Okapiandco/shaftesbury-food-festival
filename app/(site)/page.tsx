@@ -46,40 +46,53 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden animate-fade-in">
         <Image
-          src="/images/Food Demos.jpg"
-          alt="MasterChefs Live at the Shaftesbury Food Festival"
+          src="/images/Cheese Race Image.jpg"
+          alt="The Gold Hill Cheese Race at the Shaftesbury Food Festival"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-primary/70" />
-        <a
-          href="https://www.eventbrite.com/e/park-and-ride-to-shaftesbury-food-festival-tickets-1987056807401?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:flex absolute top-8 right-8 z-20 h-36 w-36 lg:h-44 lg:w-44 rotate-12 items-center justify-center rounded-full border-4 border-accent bg-accent text-primary shadow-xl hover:scale-105 transition-transform"
-        >
-          <div className="text-center px-2">
-            <p className="text-[10px] lg:text-xs font-bold uppercase tracking-wider">Park &amp; Ride</p>
-            <p className="text-2xl lg:text-3xl font-extrabold leading-none mt-1">£5</p>
-            <p className="text-[10px] lg:text-xs font-semibold mt-1">per car</p>
-            <p className="text-[9px] lg:text-[10px] mt-1 leading-tight">from Port Regis<br />— Book Now —</p>
-          </div>
-        </a>
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white md:py-32">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">3rd May 2026 — Bank Holiday</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">3rd May 2026 — That&apos;s a Wrap!</p>
           <h1 className="mt-4 text-4xl font-bold md:text-6xl lg:text-7xl">
-            Shaftesbury<br />Food Festival 2026
+            Thank You,<br />Shaftesbury!
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-blue-200 md:text-xl">
-            A day brimming with food, fun, and festivities across Shaftesbury&apos;s historic High Street, Park Walk, and surrounding areas.
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-blue-100 md:text-xl">
+            A heartfelt thank you to everyone who took part — our brilliant volunteers, traders, cheese racers, and our generous sponsors. You made the day unforgettable.
           </p>
-          <p className="mt-3 text-sm italic text-blue-300">
+          <p className="mt-3 text-sm italic text-blue-200">
             Shaftesbury Food Festival &hellip; proudly local, deliciously global.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <CTAButton href="/cheese-race" variant="accent">Register for Cheese Race</CTAButton>
-            <CTAButton href="https://www.eventbrite.com/e/ping-coombes-tickets-1985447778753" external variant="primary" className="border-2 border-white/30 bg-transparent hover:bg-white/10">Book a Food Demo</CTAButton>
+        </div>
+      </section>
+
+      {/* Post-Event Recap */}
+      <section className="section bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+            A Record-Breaking Day
+          </span>
+          <h2 className="mt-4 text-3xl font-bold text-text md:text-4xl">Over 12,000 Visitors — A New Record</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-text-light">
+            This year&apos;s festival welcomed more than 12,000 visitors to Shaftesbury — our biggest turnout ever. Shaftesbury also featured in most of the major newspapers on Bank Holiday Monday, including <span className="font-semibold text-text">The Times</span>, <span className="font-semibold text-text">The Telegraph</span> and <span className="font-semibold text-text">The Guardian</span>.
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-text-light">
+            We look forward to welcoming you next year.
+          </p>
+
+          <div className="mt-10 rounded-2xl bg-white border border-gray-200 shadow-sm p-8 md:p-10">
+            <div className="flex items-center justify-center gap-2 text-primary">
+              <Store className="w-5 h-5" />
+              <p className="text-xs font-semibold uppercase tracking-widest">Traders — 2027</p>
+            </div>
+            <h3 className="mt-3 text-2xl font-bold text-text md:text-3xl">Expressions of Interest Now Open</h3>
+            <p className="mx-auto mt-3 max-w-xl text-text-light">
+              We are now taking expressions of interest from traders who would like to join us at next year&apos;s Shaftesbury Food Festival.
+            </p>
+            <div className="mt-6">
+              <CTAButton href="/trade-stands" variant="primary">Register Your Interest</CTAButton>
+            </div>
           </div>
         </div>
       </section>
@@ -369,7 +382,7 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <CTAButton href="/cheese-race" variant="primary">
-              <Trophy size={16} className="mr-2" /> Enter the Cheese Race
+              <Trophy size={16} className="mr-2" /> Cheese Race Info
             </CTAButton>
             <CTAButton href="/volunteers" variant="primary">
               <Heart size={16} className="mr-2" /> Volunteer With Us
