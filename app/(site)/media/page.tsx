@@ -61,6 +61,91 @@ const pressImages = [
     alt: 'Gold Hill Cheese Race',
     description: 'The famous Gold Hill Cheese Race',
   },
+  {
+    src: "/images/Media/Barber's Cocoa Demo _ by Randall Photography.jpg",
+    alt: "Barber's Cocoa Demo",
+    description: "Barber's Cocoa demonstration at the Shaftesbury Food Festival (credit: Randall Photography)",
+  },
+  {
+    src: '/images/Media/Carolyn Hopkins and Philippa Davis at The Great Food Quiz _ by Randall Photography.jpg',
+    alt: 'Carolyn Hopkins and Philippa Davis at The Great Food Quiz',
+    description: 'Carolyn Hopkins and Philippa Davis at The Great Food Quiz (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Crowds along Park Walk  _ by Randall Photography.jpg',
+    alt: 'Crowds along Park Walk',
+    description: 'Festival crowds enjoying Park Walk in Shaftesbury (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Enjoying ice creams _ by Randall Photography.jpg',
+    alt: 'Visitors enjoying ice creams',
+    description: 'Festival-goers enjoying ice creams at the Shaftesbury Food Festival (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Gold Hill Cheese Race runners in action _ by Randall Photography.jpg',
+    alt: 'Gold Hill Cheese Race runners in action',
+    description: 'Runners in action on the cobbles of Gold Hill during the Cheese Race (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Gold Hill Cheese Race sole runner _ by Randall Photography.jpg',
+    alt: 'Gold Hill Cheese Race sole runner',
+    description: 'A lone runner on Gold Hill during the Cheese Race (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Local music producer Tom Jobling  _ by Randall Photography.jpg',
+    alt: 'Local music producer Tom Jobling',
+    description: 'Local music producer Tom Jobling at the Shaftesbury Food Festival (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Maddie & Nick Crosley enjoying lunch along Park Walk _ by Randall Photography.jpg',
+    alt: 'Maddie & Nick Crosley enjoying lunch along Park Walk',
+    description: 'Maddie & Nick Crosley enjoying lunch along Park Walk (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/MasterChef demo by Anurag Aggarwal _ by Randall Photography.jpg',
+    alt: 'MasterChef demo by Anurag Aggarwal',
+    description: 'MasterChef Anurag Aggarwal demonstrating at the festival (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Race Stewards on film _ by Randall Photography.jpg',
+    alt: 'Race Stewards on film',
+    description: 'Race stewards captured on film at the Gold Hill Cheese Race (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Shaftesbury Football Club _ by Randall Photography.jpg',
+    alt: 'Shaftesbury Football Club',
+    description: 'Shaftesbury Football Club at the Shaftesbury Food Festival (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Sue McGoldrick giving out prizes for the Ingredients Hunt _ by Randall Photography.jpg',
+    alt: 'Sue McGoldrick giving out prizes for the Ingredients Hunt',
+    description: 'Sue McGoldrick presenting prizes for the Ingredients Hunt (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/The Finish Line _ by Randall Photography.jpg',
+    alt: 'The Finish Line — Gold Hill Cheese Race',
+    description: 'Runners crossing the finish line at the Gold Hill Cheese Race (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/The Steps in Time  dance side outside Town Hall _ by Randall Photography.jpg',
+    alt: 'Steps in Time dance side outside the Town Hall',
+    description: 'The Steps in Time dance side performing outside Shaftesbury Town Hall (credit: Randall Photography)',
+  },
+  {
+    src: '/images/Media/Town Crier Philip Elsworth _ by Randall Photography.jpg',
+    alt: 'Town Crier Philip Elsworth',
+    description: 'Town Crier Philip Elsworth at the Shaftesbury Food Festival (credit: Randall Photography)',
+  },
+  {
+    src: "/images/Media/Triumphant After The Men's Heat  _ by Randall Photography.jpg",
+    alt: "Triumphant after the Men's Heat — Gold Hill Cheese Race",
+    description: "Triumphant runners after the Men's Heat at the Gold Hill Cheese Race (credit: Randall Photography)",
+  },
+  {
+    src: '/images/Media/Triumphant Junior  _ by Randall Photography.jpg',
+    alt: 'Triumphant Junior — Gold Hill Cheese Race',
+    description: 'A triumphant junior runner at the Gold Hill Cheese Race (credit: Randall Photography)',
+  },
 ]
 
 export default function MediaPage() {
