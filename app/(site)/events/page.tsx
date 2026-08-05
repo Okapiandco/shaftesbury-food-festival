@@ -7,9 +7,9 @@ import { getFaqs } from '@/lib/faqs'
 import { MapPin, Clock, Users, CalendarDays, Footprints, HelpCircle, UtensilsCrossed, Palette, Search, Trophy, ChefHat, Store, Brush } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Events | Shaftesbury Food Festival 2026',
+  title: 'Events | Shaftesbury Food Festival 2027',
   description:
-    'Full schedule for Shaftesbury Food Festival 2026. Art exhibition from 29th April, Food Quiz on 1st May, Food Trail on 2nd May, and the main festival day on 3rd May with Cheese Race, MasterChefs Live, Street Market and more.',
+    'Full schedule for Shaftesbury Food Festival 2027. Art exhibition from 28th April, Food Quiz on 30th April, Food Trail on 1st May, and the main festival day on 2nd May with Cheese Race, MasterChefs Live, Street Market and more.',
   alternates: { canonical: '/events' },
 }
 
@@ -35,7 +35,7 @@ export default function EventsPage() {
             <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
               <div className="bg-secondary px-5 py-3 flex items-center gap-2">
                 <CalendarDays className="w-4 h-4 text-white shrink-0" />
-                <span className="text-white font-semibold text-sm">29th April – 5th May (ongoing)</span>
+                <span className="text-white font-semibold text-sm">28th April – 4th May (ongoing)</span>
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-3">
@@ -58,7 +58,7 @@ export default function EventsPage() {
             <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
               <div className="bg-primary px-5 py-3 flex items-center gap-2">
                 <CalendarDays className="w-4 h-4 text-white shrink-0" />
-                <span className="text-white font-semibold text-sm">Friday 1st May</span>
+                <span className="text-white font-semibold text-sm">Friday 30th April</span>
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-3">
@@ -81,7 +81,7 @@ export default function EventsPage() {
             <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
               <div className="bg-secondary px-5 py-3 flex items-center gap-2">
                 <CalendarDays className="w-4 h-4 text-white shrink-0" />
-                <span className="text-white font-semibold text-sm">Saturday 2nd May</span>
+                <span className="text-white font-semibold text-sm">Saturday 1st May</span>
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-3">
@@ -104,7 +104,7 @@ export default function EventsPage() {
             <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
               <div className="bg-accent px-5 py-3 flex items-center gap-2">
                 <CalendarDays className="w-4 h-4 text-white shrink-0" />
-                <span className="text-white font-semibold text-sm">Sunday 3rd May — Main Festival Day</span>
+                <span className="text-white font-semibold text-sm">Sunday 2nd May — Main Festival Day</span>
               </div>
               <div className="p-6 space-y-6">
                 {/* Headline Events */}
@@ -195,7 +195,7 @@ export default function EventsPage() {
 
             <div className="bg-primary px-6 py-4 flex items-center gap-3">
               <CalendarDays className="w-5 h-5 text-white shrink-0" />
-              <span className="text-white font-semibold text-sm">Fri 1 May 2026 &nbsp;·&nbsp; Pre-festival Event</span>
+              <span className="text-white font-semibold text-sm">Fri 30 Apr 2027 &nbsp;·&nbsp; Pre-festival Event</span>
             </div>
 
             {/* Event image */}
@@ -296,7 +296,7 @@ export default function EventsPage() {
 
             <div className="bg-secondary px-6 py-4 flex items-center gap-3">
               <CalendarDays className="w-5 h-5 text-white shrink-0" />
-              <span className="text-white font-semibold text-sm">Sat 2 May 2026 &nbsp;·&nbsp; Pre-festival Event</span>
+              <span className="text-white font-semibold text-sm">Sat 1 May 2027 &nbsp;·&nbsp; Pre-festival Event</span>
             </div>
 
             <div className="p-6 md:p-8">
@@ -316,7 +316,7 @@ export default function EventsPage() {
                 <Clock className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-semibold text-text">10am–4pm</p>
-                  <p className="text-sm text-text-light">Saturday 2nd May 2026 — explore at your own pace</p>
+                  <p className="text-sm text-text-light">Saturday 1st May 2027 — explore at your own pace</p>
                 </div>
               </div>
 
@@ -332,7 +332,7 @@ export default function EventsPage() {
           <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
             <div className="bg-secondary px-6 py-4 flex items-center gap-3">
               <CalendarDays className="w-5 h-5 text-white shrink-0" />
-              <span className="text-white font-semibold text-sm">29 Apr – 5 May 2026 &nbsp;·&nbsp; Art Exhibition</span>
+              <span className="text-white font-semibold text-sm">28 Apr – 4 May 2027 &nbsp;·&nbsp; Art Exhibition</span>
             </div>
 
             <div className="relative h-56 sm:h-72 w-full">
@@ -360,7 +360,7 @@ export default function EventsPage() {
               <div className="mt-6 flex gap-3">
                 <Clock className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-semibold text-text">29th April – 5th May 2026</p>
+                  <p className="text-sm font-semibold text-text">28th April – 4th May 2027</p>
                   <p className="text-sm text-text-light">10am–4pm daily</p>
                 </div>
               </div>
@@ -377,7 +377,7 @@ export default function EventsPage() {
           <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
             <div className="bg-accent px-6 py-4 flex items-center gap-3">
               <CalendarDays className="w-5 h-5 text-white shrink-0" />
-              <span className="text-white font-semibold text-sm">Sun 3 May 2026 &nbsp;·&nbsp; Family Activity</span>
+              <span className="text-white font-semibold text-sm">Sun 2 May 2027 &nbsp;·&nbsp; Family Activity</span>
             </div>
 
             <div className="p-6 md:p-8">
@@ -396,7 +396,7 @@ export default function EventsPage() {
               <div className="mt-6 flex gap-3">
                 <Clock className="w-5 h-5 text-accent-dark shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-semibold text-text">Sunday 3rd May 2026</p>
+                  <p className="text-sm font-semibold text-text">Sunday 2nd May 2027</p>
                   <p className="text-sm text-text-light">10:00 AM – 4:00 PM</p>
                 </div>
               </div>

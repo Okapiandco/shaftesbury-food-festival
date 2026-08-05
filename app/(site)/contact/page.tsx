@@ -1,21 +1,14 @@
 import { Metadata } from 'next'
-import { Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Shaftesbury Food Festival 3rd May 2026',
+  title: 'Contact Us | Shaftesbury Food Festival 2nd May 2027',
   description:
-    'Contact the Shaftesbury Food Festival team. Questions about trade stands, the Gold Hill Cheese Race, sponsorship or volunteering on 3rd May 2026? Get in touch.',
+    'Contact the Shaftesbury Food Festival team. Questions about trade stands, the Gold Hill Cheese Race, sponsorship or volunteering on 2nd May 2027? Get in touch.',
   alternates: { canonical: '/contact' },
 }
-
-const socialLinks = [
-  { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-]
 
 export default function ContactPage() {
   return (
@@ -56,25 +49,6 @@ export default function ContactPage() {
                     <h3 className="font-bold text-text">Festival Location</h3>
                     <p className="text-text-light">High Street &amp; Park Walk<br />Shaftesbury, Dorset</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Social */}
-              <div className="mt-8">
-                <h3 className="font-bold text-text">Follow Us</h3>
-                <div className="mt-3 flex gap-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors"
-                      aria-label={social.label}
-                    >
-                      <social.icon size={18} />
-                    </a>
-                  ))}
                 </div>
               </div>
 

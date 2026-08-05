@@ -4,15 +4,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
-
-const schema = z.object({
-  firstName: z.string().min(1, 'First name is required'),
-  surname: z.string().min(1, 'Surname is required'),
-  email: z.string().email('Please enter a valid email'),
-  age: z.coerce.number().min(1, 'Age is required').max(120, 'Please enter a valid age'),
-  gender: z.enum(['male', 'female', 'other'], { errorMap: () => ({ message: 'Please select a gender' }) }),
-  acknowledgement: z.literal(true, { errorMap: () => ({ message: 'You must acknowledge the health warning' }) }),
-})
+import { cheeseRaceSchema as schema } from '@/lib/formSchemas'
 
 type FormData = z.infer<typeof schema>
 

@@ -7,9 +7,9 @@ import FAQAccordion from '@/components/shared/FAQAccordion'
 import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
-  title: 'About | Shaftesbury Food Festival 3rd May 2026',
+  title: 'About | Shaftesbury Food Festival 2nd May 2027',
   description:
-    'Shaftesbury Food Festival on 3rd May 2026 celebrates Dorset food and drink on the historic high street. A variety of local food and drink producers, the Gold Hill Cheese Race, chef talks and live entertainment.',
+    'Shaftesbury Food Festival on 2nd May 2027 celebrates Dorset food and drink on the historic high street. A variety of local food and drink producers, the Gold Hill Cheese Race, chef talks and live entertainment.',
   alternates: { canonical: '/about' },
 }
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
                 From the steep cobbles of Gold Hill to the lively sweep of the High Street and Park Walk, the Shaftesbury Food Festival transforms this historic hilltop town into a vibrant celebration of flavour, craft and community.
               </p>
               <p className="mt-4 text-text-light leading-relaxed">
-                Taking place on the May Bank Holiday, Sunday 3rd May 2026, the festival brings together over 100 producers, makers and street food traders, showcasing the very best of Dorset alongside flavours from further afield. It is a place to taste, discover and connect, where local provenance meets global inspiration.
+                Taking place on the May Bank Holiday, Sunday 2nd May 2027, the festival brings together over 100 producers, makers and street food traders, showcasing the very best of Dorset alongside flavours from further afield. It is a place to taste, discover and connect, where local provenance meets global inspiration.
               </p>
               <p className="mt-4 text-text-light leading-relaxed">
                 At its heart sits the iconic Gold Hill Cheese Race, a test of strength and spirit on one of England&apos;s most recognisable streets, alongside MasterChefs demonstrations curated by Great Taste Awards and The Kitchen Table, live entertainment and a full programme of activity that unfolds across the town.
@@ -92,7 +92,7 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-3xl px-4 text-center">
           <h2 className="text-2xl font-bold text-text md:text-3xl">A Message from the Organisers</h2>
           <blockquote className="mt-6 rounded-xl border-l-4 border-accent bg-accent/5 p-6 text-left text-text-light italic leading-relaxed">
-            &ldquo;We are thrilled to invite you to the Shaftesbury Food Festival 2026. This event is a true celebration of our local food producers, our incredible community, and our beautiful town. Whether you&apos;re here to race a cheese up Gold Hill, sample the finest Dorset produce, or simply enjoy a fantastic day out — we can&apos;t wait to welcome you.&rdquo;
+            &ldquo;We are thrilled to invite you to the Shaftesbury Food Festival 2027. This event is a true celebration of our local food producers, our incredible community, and our beautiful town. Whether you&apos;re here to race a cheese up Gold Hill, sample the finest Dorset produce, or simply enjoy a fantastic day out — we can&apos;t wait to welcome you.&rdquo;
           </blockquote>
           <p className="mt-4 font-semibold text-text">— Shaftesbury Chamber of Commerce</p>
         </div>
@@ -124,9 +124,9 @@ export default function AboutPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Event',
-            name: 'Shaftesbury Food Festival 2026',
-            startDate: '2026-05-03T10:00:00+01:00',
-            endDate: '2026-05-03T16:00:00+01:00',
+            name: 'Shaftesbury Food Festival 2027',
+            startDate: '2027-05-02T10:00:00+01:00',
+            endDate: '2027-05-02T16:00:00+01:00',
             location: {
               '@type': 'Place',
               name: 'Shaftesbury High Street & Park Walk',

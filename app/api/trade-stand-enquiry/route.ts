@@ -1,17 +1,24 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { tradeStandSchema } from '@/lib/formSchemas'
+import { escapeHtml } from '@/lib/utils'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 const FESTIVAL_EMAIL = 'hello@shaftesbury-food-festival.co.uk'
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    const { businessName, contactName, email, phone, category, description, specialRequirements } = body
-
-    if (!businessName || !contactName || !email || !category || !description) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    if (!checkRateLimit(request, 'trade-stand-enquiry', { limit: 5, windowMs: 60_000 })) {
+      return NextResponse.json({ error: 'Too many requests, please try again shortly' }, { status: 429 })
     }
+
+    const body = await request.json()
+    const parsed = tradeStandSchema.safeParse(body)
+    if (!parsed.success) {
+      return NextResponse.json({ error: 'Invalid submission', issues: parsed.error.flatten() }, { status: 400 })
+    }
+    const { businessName, contactName, email, phone, category, description, specialRequirements } = parsed.data
 
     // Store in Sanity
     if (!process.env.SANITY_API_WRITE_TOKEN) {
@@ -40,13 +47,13 @@ export async function POST(request: Request) {
         subject: `New Trade Stand Enquiry: ${businessName}`,
         html: `
           <h2>New Trade Stand Enquiry</h2>
-          <p><strong>Business:</strong> ${businessName}</p>
-          <p><strong>Contact:</strong> ${contactName}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-          <p><strong>Category:</strong> ${category}</p>
-          <p><strong>Description:</strong> ${description}</p>
-          <p><strong>Special Requirements:</strong> ${specialRequirements || 'None'}</p>
+          <p><strong>Business:</strong> ${escapeHtml(businessName)}</p>
+          <p><strong>Contact:</strong> ${escapeHtml(contactName)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Phone:</strong> ${escapeHtml(phone || 'Not provided')}</p>
+          <p><strong>Category:</strong> ${escapeHtml(category)}</p>
+          <p><strong>Description:</strong> ${escapeHtml(description)}</p>
+          <p><strong>Special Requirements:</strong> ${escapeHtml(specialRequirements || 'None')}</p>
         `,
       })
     }

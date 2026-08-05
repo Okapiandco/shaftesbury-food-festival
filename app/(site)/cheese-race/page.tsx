@@ -1,16 +1,15 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { AlertTriangle, Calendar, Clock, MapPin, Trophy, Users, Droplets } from 'lucide-react'
+import { AlertTriangle, Calendar, Clock, MapPin, Trophy, Users, Droplets, Lock } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
-import CheeseRaceForm from '@/components/forms/CheeseRaceForm'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
-  title: 'Gold Hill Cheese Race | Shaftesbury Food Festival 3rd May 2026',
+  title: 'Gold Hill Cheese Race | Shaftesbury Food Festival 2nd May 2027',
   description:
-    'Enter the world-famous Gold Hill Cheese Race on 3rd May at Shaftesbury Food Festival. All age groups welcome. Carry a 23kg cheese up the iconic Gold Hill. Register now!',
+    'Enter the world-famous Gold Hill Cheese Race on 2nd May 2027 at Shaftesbury Food Festival. All age groups welcome. Carry a 23kg cheese up the iconic Gold Hill. Register now!',
   alternates: { canonical: '/cheese-race' },
 }
 
@@ -58,7 +57,7 @@ export default function CheeseRacePage() {
             <div className="rounded-xl bg-white p-6 text-center shadow-sm">
               <Calendar size={28} className="mx-auto text-primary" />
               <h3 className="mt-3 font-bold text-text">Date &amp; Time</h3>
-              <p className="mt-1 text-sm text-text-light">3rd May 2026<br />10:00 AM – 3:00 PM</p>
+              <p className="mt-1 text-sm text-text-light">2nd May 2027<br />10:00 AM – 3:00 PM</p>
             </div>
             <div className="rounded-xl bg-white p-6 text-center shadow-sm">
               <MapPin size={28} className="mx-auto text-primary" />
@@ -166,15 +165,18 @@ export default function CheeseRacePage() {
         </div>
       </section>
 
-      {/* Entry Form */}
+      {/* Entries Closed */}
       <section className="section bg-gray-50" id="enter">
         <div className="container mx-auto max-w-2xl px-4">
-          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Enter the Cheese Race</h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Fill in the form below to register your entry. You&apos;ll receive race details and your race number via email.
-          </p>
-          <div className="mt-8 rounded-xl bg-white p-6 shadow-sm md:p-8">
-            <CheeseRaceForm />
+          <div className="rounded-xl border-2 border-primary/20 bg-white p-8 text-center shadow-sm md:p-10">
+            <Lock size={36} className="mx-auto text-primary" />
+            <h2 className="mt-4 text-2xl font-bold text-text md:text-3xl">Entries Are Now Closed</h2>
+            <p className="mx-auto mt-4 max-w-xl text-text-light leading-relaxed">
+              Thank you to everyone who has signed up — entries to the Gold Hill Cheese Race are now closed for 2026. If you&apos;re already registered, look out for race details and your race number arriving by email shortly.
+            </p>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-text-muted">
+              Not racing? Come along to cheer on the runners — Gold Hill on Sunday 2nd May 2027 from 10am.
+            </p>
           </div>
         </div>
       </section>
@@ -230,11 +232,11 @@ export default function CheeseRacePage() {
             '@context': 'https://schema.org',
             '@type': 'Event',
             name: 'Gold Hill Cheese Race',
-            startDate: '2026-05-03T10:00:00+01:00',
-            endDate: '2026-05-03T15:00:00+01:00',
+            startDate: '2027-05-02T10:00:00+01:00',
+            endDate: '2027-05-02T15:00:00+01:00',
             location: { '@type': 'Place', name: 'Gold Hill, Shaftesbury', address: { '@type': 'PostalAddress', addressLocality: 'Shaftesbury', addressRegion: 'Dorset', addressCountry: 'GB' } },
             description: 'The world-famous Gold Hill Cheese Race. Contestants carry a 23kg cheese up iconic Gold Hill.',
-            superEvent: { '@type': 'Event', name: 'Shaftesbury Food Festival 2026' },
+            superEvent: { '@type': 'Event', name: 'Shaftesbury Food Festival 2027' },
           }),
         }}
       />

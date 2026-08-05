@@ -4,9 +4,9 @@ import { Download, FileText } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 
 export const metadata: Metadata = {
-  title: 'Media | Shaftesbury Food Festival 2026',
+  title: 'Media | Shaftesbury Food Festival 2027',
   description:
-    'Press resources and downloadable images for the Shaftesbury Food Festival 2026. High-resolution photos available for media use.',
+    'Press resources and downloadable images for the Shaftesbury Food Festival 2027. High-resolution photos available for media use.',
   alternates: { canonical: '/media' },
 }
 

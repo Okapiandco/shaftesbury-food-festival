@@ -9,7 +9,7 @@ export const festivalConfig = defineType({
       name: 'festivalName',
       title: 'Festival Name',
       type: 'string',
-      initialValue: 'Shaftesbury Food Festival 2026',
+      initialValue: 'Shaftesbury Food Festival 2027',
     }),
     defineField({
       name: 'festivalDate',

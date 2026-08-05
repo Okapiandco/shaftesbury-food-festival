@@ -7,9 +7,9 @@ import VendorCard from '@/components/cards/VendorCard'
 import SponsorsCarousel from '@/components/shared/SponsorsCarousel'
 
 export const metadata: Metadata = {
-  title: 'Shaftesbury Food Festival 2026 | 3rd May Bank Holiday',
+  title: 'Shaftesbury Food Festival 2027 | 2nd May Bank Holiday',
   description:
-    'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and Dorset food and drink. Bank holiday celebration on Shaftesbury\'s historic high street.',
+    'Join us on 2nd May 2027 for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and Dorset food and drink. Bank holiday celebration on Shaftesbury\'s historic high street.',
 }
 
 const highlights = [
@@ -133,7 +133,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-secondary">29th Apr – 5th May</p>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-secondary">28th Apr – 4th May</p>
                 <h3 className="mt-1 text-sm font-bold text-text group-hover:text-primary transition-colors">A Feast for the Eyes</h3>
                 <p className="mt-1 text-xs text-text-light">Art exhibition — 10am–4pm daily at Shaftesbury Arts Centre.</p>
               </div>
@@ -153,7 +153,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-primary">Friday 1st May</p>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-primary">Friday 30th April</p>
                 <h3 className="mt-1 text-sm font-bold text-text group-hover:text-primary transition-colors">The Great Food Quiz</h3>
                 <span className="inline-block mt-1 rounded bg-red-600 px-2 py-0.5 text-[10px] font-bold uppercase text-white">Sold Out</span>
                 <p className="mt-1 text-xs text-text-light">Fun quiz night at Sorelle, Motcombe.</p>
@@ -174,7 +174,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-secondary">Saturday 2nd May</p>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-secondary">Saturday 1st May</p>
                 <h3 className="mt-1 text-sm font-bold text-text group-hover:text-primary transition-colors">The Food Trail</h3>
                 <p className="mt-1 text-xs text-text-light">Explore local producers with tastings and tours.</p>
               </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-accent-dark">Sunday 3rd May</p>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-accent-dark">Sunday 2nd May</p>
                 <h3 className="mt-1 text-sm font-bold text-text group-hover:text-primary transition-colors">Food Festival Day</h3>
                 <p className="mt-1 text-xs text-text-light">Street Market, Cheese Race, MasterChefs Live &amp; live music.</p>
               </div>
@@ -376,9 +376,9 @@ export default function HomePage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Event',
-            name: 'Shaftesbury Food Festival 2026',
-            startDate: '2026-05-03T10:00:00+01:00',
-            endDate: '2026-05-03T16:00:00+01:00',
+            name: 'Shaftesbury Food Festival 2027',
+            startDate: '2027-05-02T10:00:00+01:00',
+            endDate: '2027-05-02T16:00:00+01:00',
             eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
             eventStatus: 'https://schema.org/EventScheduled',
             location: {
@@ -397,9 +397,9 @@ export default function HomePage() {
             organizer: {
               '@type': 'Organization',
               name: 'Shaftesbury Chamber of Commerce',
-              url: 'https://shaftesbury-food-festival.co.uk',
+              url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.shaftesbury-food-festival.co.uk',
             },
-            image: 'https://shaftesbury-food-festival.co.uk/images/Food Demos.jpg',
+            image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.shaftesbury-food-festival.co.uk'}/images/Food%20Demos.jpg`,
           }),
         }}
       />

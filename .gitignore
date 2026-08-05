@@ -33,3 +33,7 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# form-submission CSV exports — contain personal data, never commit
+/exports/
+

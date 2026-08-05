@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export:forms": "node scripts/export-forms.mjs",
+    "export:cheese": "node scripts/export-forms.mjs cheeseRaceEntry"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.1",
@@ -32,6 +34,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.21",
+    "dotenv": "^17.4.2",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.1.0",
     "postcss": "^8.5.3",

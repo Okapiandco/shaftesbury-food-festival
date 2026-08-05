@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest } from 'next/server'
 import { SITE_KNOWLEDGE } from '@/lib/chatKnowledge'
+import { checkRateLimit } from '@/lib/rateLimit'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -26,6 +27,10 @@ function isValidMessage(m: unknown): m is ClientMessage {
 export async function POST(req: NextRequest) {
   if (!process.env.ANTHROPIC_API_KEY) {
     return new Response('Chat is not configured', { status: 503 })
+  }
+
+  if (!checkRateLimit(req, 'chat', { limit: 20, windowMs: 60_000 })) {
+    return new Response('Too many requests, please try again shortly', { status: 429 })
   }
 
   let body: unknown

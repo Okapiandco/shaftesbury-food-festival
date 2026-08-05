@@ -4,16 +4,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
-
-const schema = z.object({
-  businessName: z.string().min(1, 'Business name is required'),
-  contactName: z.string().min(1, 'Contact name is required'),
-  email: z.string().email('Please enter a valid email'),
-  phone: z.string().optional(),
-  category: z.string().min(1, 'Please select a category'),
-  description: z.string().min(1, 'Please describe what you offer'),
-  specialRequirements: z.string().optional(),
-})
+import { tradeStandSchema as schema } from '@/lib/formSchemas'
 
 type FormData = z.infer<typeof schema>
 

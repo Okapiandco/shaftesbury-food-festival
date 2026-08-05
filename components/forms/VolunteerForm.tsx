@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useState } from 'react'
+import { volunteerSchema as schema } from '@/lib/formSchemas'
 
 const roleOptions = [
   { value: 'marshal', label: 'Marshal' },
@@ -13,16 +14,6 @@ const roleOptions = [
   { value: 'pre-event', label: 'Pre-event Planning' },
   { value: 'other', label: 'Other' },
 ]
-
-const schema = z.object({
-  fullName: z.string().min(1, 'Full name is required'),
-  email: z.string().email('Please enter a valid email'),
-  phone: z.string().min(1, 'Phone number is required'),
-  preferredRoles: z.array(z.string()).min(1, 'Please select at least one role'),
-  availability: z.string().optional(),
-  skills: z.string().optional(),
-  previousExperience: z.string().optional(),
-})
 
 type FormData = z.infer<typeof schema>
 

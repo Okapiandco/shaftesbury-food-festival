@@ -4,9 +4,9 @@ import PageHeader from '@/components/shared/PageHeader'
 import CTAButton from '@/components/shared/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Sponsors | Shaftesbury Food Festival 3rd May 2026',
+  title: 'Sponsors | Shaftesbury Food Festival 2nd May 2027',
   description:
-    'Sponsor the Shaftesbury Food Festival on 3rd May 2026. Gold, Silver, Bronze and In-Kind sponsorship opportunities available. Support Dorset food, the Gold Hill Cheese Race and local community.',
+    'Sponsor the Shaftesbury Food Festival on 2nd May 2027. Gold, Silver, Bronze and In-Kind sponsorship opportunities available. Support Dorset food, the Gold Hill Cheese Race and local community.',
   alternates: { canonical: '/sponsors' },
 }
 

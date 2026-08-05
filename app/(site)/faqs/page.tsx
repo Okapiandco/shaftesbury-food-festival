@@ -5,7 +5,7 @@ import CTAButton from '@/components/shared/CTAButton'
 import { faqs, allFaqOrder } from '@/lib/faqs'
 
 export const metadata: Metadata = {
-  title: 'FAQs | Shaftesbury Food Festival 2026',
+  title: 'FAQs | Shaftesbury Food Festival 2027',
   description:
     'Frequently asked questions about the Shaftesbury Food Festival — dates, location, tickets, the Cheese Race, Food Trail, MasterChefs Live, accessibility and more.',
   alternates: { canonical: '/faqs' },
@@ -18,7 +18,7 @@ export default function FAQsPage() {
     <>
       <PageHeader
         title="Frequently Asked Questions"
-        subtitle="Everything you need to know about visiting the Shaftesbury Food Festival 2026."
+        subtitle="Everything you need to know about visiting the Shaftesbury Food Festival 2027."
       />
 
       <FAQAccordion items={allFaqs} />
@@ -59,11 +59,11 @@ export default function FAQsPage() {
 
 function faqPlainText(key: typeof allFaqOrder[number]): string {
   const map: Record<string, string> = {
-    when: 'The festival takes place over three days on the early May bank holiday weekend: Friday 1st May 2026 — The Great Food Quiz at Sorelle (SOLD OUT); Saturday 2nd May 2026 — The Food Trail; Sunday 3rd May 2026 — Main town festival day (10am–5pm).',
+    when: 'The festival takes place over three days on the early May bank holiday weekend: Friday 30th April 2027 — The Great Food Quiz at Sorelle; Saturday 1st May 2027 — The Food Trail; Sunday 2nd May 2027 — Main town festival day (10am–5pm).',
     where: 'On Sunday, the main festival is based across Gold Hill, Shaftesbury High Street, Park Walk and the town centre (SP7 8LY). On Saturday, the Food Trail extends into the surrounding Dorset countryside.',
     postcodes: 'Shaftesbury town centre (High Street & Park Walk): SP7 8LY.',
     free: 'Yes, the vast majority of the festival is FREE entry. Some experiences are ticketed via Eventbrite (by donation or booking) or require advance booking for capacity management.',
-    foodTrail: 'The Food Trail (Saturday 2nd May) is a new, free, self-guided experience taking visitors beyond the town into the Dorset landscape with behind-the-scenes access to producers. Participating locations include Sorelle Dorset, Compton McRae, Madjeston Milk Station & Animal Park, Primrose Organic Produce, Gold Hill Organic Farm, Cann Mills (Stoate & Sons), Sprigs Co at Pythouse Kitchen Garden, Dorset Blue Vinny, Olives Et Al and Breezy Ridge Vineyard.',
+    foodTrail: 'The Food Trail (Saturday 1st May) is a new, free, self-guided experience taking visitors beyond the town into the Dorset landscape with behind-the-scenes access to producers. Participating locations include Sorelle Dorset, Compton McRae, Madjeston Milk Station & Animal Park, Primrose Organic Produce, Gold Hill Organic Farm, Cann Mills (Stoate & Sons), Sprigs Co at Pythouse Kitchen Garden, Dorset Blue Vinny, Olives Et Al and Breezy Ridge Vineyard.',
     highlights: 'Sunday features Gold Hill Cheese Race, MasterChefs LIVE Demos, 100+ trader Street Market, live music, the traditional Byzant Walk, A Feast For The Eyes art exhibition, and family activities including the Ingredients Hunt and Children’s Art Competition.',
     cheeseRace: 'Competitors race up the steep cobbles of Gold Hill carrying a 23kg wheel of cheese, cheered on by crowds. Entry is FREE but must be booked via Eventbrite.',
     masterChefs: 'Yes. The cookery demonstrations are ticketed via Eventbrite by donation, featuring Ping Coombes (11:30am), Anurag Aggarwal (1:00pm) and Shelina Permalloo (2:30pm).',

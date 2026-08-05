@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shaftesbury-food-festival.co.uk'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.shaftesbury-food-festival.co.uk'
 
   return [
     { url: siteUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
@@ -15,5 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/sponsors`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${siteUrl}/volunteers`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${siteUrl}/feast-for-the-eyes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${siteUrl}/food-demos`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${siteUrl}/getting-here`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${siteUrl}/media`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
   ]
 }

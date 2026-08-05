@@ -6,20 +6,20 @@ import '@/styles/globals.css'
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.shaftesbury-food-festival.co.uk'),
   title: {
-    default: 'Shaftesbury Food Festival 3rd May 2026',
-    template: '%s | Shaftesbury Food Festival 2026',
+    default: 'Shaftesbury Food Festival 2nd May 2027',
+    template: '%s | Shaftesbury Food Festival 2027',
   },
   description:
-    'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and more. Bank holiday celebration on Shaftesbury\'s historic high street.',
+    'Join us on 2nd May 2027 for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and more. Bank holiday celebration on Shaftesbury\'s historic high street.',
   keywords: [
     'Shaftesbury Food Festival',
-    'Shaftesbury Food Festival 2026',
+    'Shaftesbury Food Festival 2027',
     'Gold Hill Cheese Race',
     'Dorset food festival',
     'Dorset food and drink',
-    'Dorset events May 2026',
+    'Dorset events May 2027',
     'bank holiday events Dorset',
     'Shaftesbury high street',
     'Shaftesbury',
@@ -38,17 +38,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    siteName: 'Shaftesbury Food Festival 2026',
-    title: 'Shaftesbury Food Festival 2026 | 3rd May Bank Holiday',
+    siteName: 'Shaftesbury Food Festival 2027',
+    title: 'Shaftesbury Food Festival 2027 | 2nd May Bank Holiday',
     description:
-      'Join us on 3rd May for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and more.',
-    images: [{ url: '/Shaftesbury food festival Logo.png', alt: 'Shaftesbury Food Festival 2026 Logo' }],
+      'Join us on 2nd May 2027 for the Shaftesbury Food Festival. Watch the famous Gold Hill Cheese Race, enjoy a variety of local food and drink producers, chef talks and more.',
+    images: [{ url: '/Shaftesbury food festival Logo.png', alt: 'Shaftesbury Food Festival 2027 Logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shaftesbury Food Festival 2026',
+    title: 'Shaftesbury Food Festival 2027',
     description:
-      'Join us on 3rd May for the Shaftesbury Food Festival. Gold Hill Cheese Race, local food and drink producers, chef talks and more.',
+      'Join us on 2nd May 2027 for the Shaftesbury Food Festival. Gold Hill Cheese Race, local food and drink producers, chef talks and more.',
     images: ['/Shaftesbury food festival Logo.png'],
   },
   icons: {
