@@ -85,6 +85,21 @@ export default function TradeStandForm() {
       </div>
 
       <div>
+        <label className="block text-sm font-medium text-text">Number of Pitches *</label>
+        <div className="mt-2 flex gap-4">
+          <label className="flex items-center gap-2 text-sm text-text">
+            <input type="radio" value="1" {...register('pitches')} className="text-primary focus:ring-primary" />
+            1 pitch (3m) — £50
+          </label>
+          <label className="flex items-center gap-2 text-sm text-text">
+            <input type="radio" value="2" {...register('pitches')} className="text-primary focus:ring-primary" />
+            2 pitches (3m each) — £100
+          </label>
+        </div>
+        {errors.pitches && <p className="mt-1 text-xs text-red-600">{errors.pitches.message}</p>}
+      </div>
+
+      <div>
         <label htmlFor="description" className="block text-sm font-medium text-text">What Do You Offer? *</label>
         <textarea id="description" rows={3} {...register('description')} className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary" />
         {errors.description && <p className="mt-1 text-xs text-red-600">{errors.description.message}</p>}

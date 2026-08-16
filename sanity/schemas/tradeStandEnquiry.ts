@@ -42,6 +42,17 @@ export const tradeStandEnquiry = defineType({
       },
     }),
     defineField({
+      name: 'pitches',
+      title: 'Number of Pitches',
+      type: 'string',
+      options: {
+        list: [
+          { title: '1 pitch (3m) — £50', value: '1' },
+          { title: '2 pitches (3m each) — £100', value: '2' },
+        ],
+      },
+    }),
+    defineField({
       name: 'description',
       title: 'What You Offer',
       type: 'text',

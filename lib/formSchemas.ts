@@ -22,6 +22,7 @@ export const tradeStandSchema = z.object({
   email: z.string().trim().email('Please enter a valid email').max(320),
   phone: z.string().trim().max(50).optional().or(z.literal('')),
   category: z.string().trim().min(1, 'Please select a category').max(100),
+  pitches: z.enum(['1', '2'], { errorMap: () => ({ message: 'Please select 1 or 2 pitches' }) }),
   description: z.string().trim().min(1, 'Please describe what you offer').max(3000),
   specialRequirements: z.string().trim().max(3000).optional().or(z.literal('')),
 })

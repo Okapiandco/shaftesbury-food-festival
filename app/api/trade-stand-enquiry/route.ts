@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     if (!parsed.success) {
       return NextResponse.json({ error: 'Invalid submission', issues: parsed.error.flatten() }, { status: 400 })
     }
-    const { businessName, contactName, email, phone, category, description, specialRequirements } = parsed.data
+    const { businessName, contactName, email, phone, category, pitches, description, specialRequirements } = parsed.data
 
     // Store in Sanity
     if (!process.env.SANITY_API_WRITE_TOKEN) {
@@ -34,6 +34,7 @@ export async function POST(request: NextRequest) {
       email,
       phone: phone || '',
       category,
+      pitches,
       description,
       specialRequirements: specialRequirements || '',
       submittedAt: new Date().toISOString(),
@@ -52,6 +53,7 @@ export async function POST(request: NextRequest) {
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
           <p><strong>Phone:</strong> ${escapeHtml(phone || 'Not provided')}</p>
           <p><strong>Category:</strong> ${escapeHtml(category)}</p>
+          <p><strong>Pitches:</strong> ${pitches === '2' ? '2 pitches (3m each) — £100' : '1 pitch (3m) — £50'}</p>
           <p><strong>Description:</strong> ${escapeHtml(description)}</p>
           <p><strong>Special Requirements:</strong> ${escapeHtml(specialRequirements || 'None')}</p>
         `,
