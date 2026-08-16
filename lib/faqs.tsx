@@ -238,7 +238,11 @@ export const faqs: Record<FAQKey, FAQItem> = {
   traders: {
     question: 'Can traders or exhibitors apply?',
     answer: (
-      <p>Yes — expressions of interest are now open for the next festival on Sunday 2nd May 2027. The Street Market features over 100 traders and stalls fill up quickly. Register your interest at <Link href="/trade-stands#apply" className="text-primary hover:text-accent-dark font-medium">shaftesbury-food-festival.co.uk/trade-stands</Link>.</p>
+      <>
+        <p>Yes — expressions of interest are now open for the next festival on Sunday 2nd May 2027. The Street Market features over 100 traders and stalls fill up quickly.</p>
+        <p className="mt-3">Pitch fees are a flat rate for every trader: <strong>£50 for a single 3m pitch</strong>, or <strong>£100 for two 3m pitches side by side</strong>.</p>
+        <p className="mt-3">Register your interest at <Link href="/trade-stands#apply" className="text-primary hover:text-accent-dark font-medium">shaftesbury-food-festival.co.uk/trade-stands</Link>.</p>
+      </>
     ),
   },
   foodTrailChildren: {

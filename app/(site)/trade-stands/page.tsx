@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { TrendingUp, Users, Megaphone, MapPin } from 'lucide-react'
+import { TrendingUp, Users, Megaphone, MapPin, PoundSterling } from 'lucide-react'
 import PageHeader from '@/components/shared/PageHeader'
 import TradeStandForm from '@/components/forms/TradeStandForm'
 import FAQAccordion from '@/components/shared/FAQAccordion'
@@ -119,6 +119,28 @@ export default function TradeStandsPage() {
                 <p className="mt-2 text-sm text-text-light">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pitch Fees */}
+      <section className="section">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Pitch Fees</h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
+            One flat rate for every trader — no separate pricing by category.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+              <PoundSterling size={28} className="mx-auto text-secondary" />
+              <p className="mt-3 text-3xl font-bold text-text">£50</p>
+              <p className="mt-1 text-sm text-text-light">Single 3m pitch</p>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+              <PoundSterling size={28} className="mx-auto text-secondary" />
+              <p className="mt-3 text-3xl font-bold text-text">£100</p>
+              <p className="mt-1 text-sm text-text-light">Two 3m pitches, side by side</p>
+            </div>
           </div>
         </div>
       </section>
