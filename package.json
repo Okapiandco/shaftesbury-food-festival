@@ -11,7 +11,7 @@
     "export:cheese": "node scripts/export-forms.mjs cheeseRaceEntry"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.91.1",
+    "@anthropic-ai/sdk": "^0.124.0",
     "@hookform/resolvers": "^3.9.1",
     "@sanity/client": "^6.22.5",
     "@sanity/image-url": "^1.1.0",
@@ -19,25 +19,25 @@
     "lucide-react": "^0.462.0",
     "next": "^15.1.0",
     "next-sanity": "^9.8.22",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hook-form": "^7.54.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-hook-form": "^7.87.0",
     "resend": "^4.0.0",
     "sanity": "^3.63.0",
-    "styled-components": "^6.1.0",
+    "styled-components": "^6.5.3",
     "tailwind-merge": "^2.5.5",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@sanity/vision": "^3.63.0",
     "@types/node": "^22.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "autoprefixer": "^10.4.21",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "autoprefixer": "^10.5.5",
     "dotenv": "^17.4.2",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.1.0",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.28",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
   }
