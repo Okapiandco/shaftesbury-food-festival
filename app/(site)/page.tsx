@@ -54,12 +54,12 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white md:py-32">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">3rd May 2026 — That&apos;s a Wrap!</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">Sunday 2nd May 2027</p>
           <h1 className="mt-4 text-4xl font-bold md:text-6xl lg:text-7xl">
-            Thank You,<br />Shaftesbury!
+            Save The Date,<br />Shaftesbury!
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-blue-100 md:text-xl">
-            A heartfelt thank you to everyone who took part — our brilliant volunteers, traders, cheese racers, and our generous sponsors. You made the day unforgettable.
+            The Shaftesbury Food Festival is back for another day of food, fun and community — featuring the world-famous Gold Hill Cheese Race, over 100 stalls and live entertainment. We&apos;re looking for volunteers and traders to help make it happen.
           </p>
           <p className="mt-3 text-sm italic text-blue-200">
             Shaftesbury Food Festival &hellip; proudly local, deliciously global.
@@ -75,10 +75,10 @@ export default function HomePage() {
           </span>
           <h2 className="mt-4 text-3xl font-bold text-text md:text-4xl">Over 12,000 Visitors — A New Record</h2>
           <p className="mx-auto mt-4 max-w-2xl text-text-light">
-            This year&apos;s festival welcomed more than 12,000 visitors to Shaftesbury — our biggest turnout ever. Shaftesbury also featured in most of the major newspapers on Bank Holiday Monday, including <span className="font-semibold text-text">The Times</span>, <span className="font-semibold text-text">The Telegraph</span> and <span className="font-semibold text-text">The Guardian</span>.
+            Last year&apos;s festival welcomed more than 12,000 visitors to Shaftesbury — our biggest turnout ever. Shaftesbury also featured in most of the major newspapers on Bank Holiday Monday, including <span className="font-semibold text-text">The Times</span>, <span className="font-semibold text-text">The Telegraph</span> and <span className="font-semibold text-text">The Guardian</span>.
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-text-light">
-            We look forward to welcoming you back on <span className="font-semibold text-text">Sunday 2nd May 2027</span>.
+            Now we&apos;re gearing up to do it all again on <span className="font-semibold text-text">Sunday 2nd May 2027</span>.
           </p>
 
           <div className="mt-10 rounded-2xl bg-white border border-gray-200 shadow-sm p-8 md:p-10">
