@@ -1,35 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { timingSafeEqual } from 'node:crypto'
-import { checkRateLimit } from '@/lib/rateLimit'
 import { SUBMISSION_TYPES, escapeCsv, isSubmissionType } from '@/lib/submissionTypes'
-
-const EXPORT_SECRET = process.env.EXPORT_SECRET
-
-function isAuthorized(request: NextRequest): boolean {
-  if (!EXPORT_SECRET) return false
-  const header = request.headers.get('authorization') || ''
-  const provided = header.startsWith('Bearer ') ? header.slice(7) : ''
-  const providedBuf = Buffer.from(provided)
-  const secretBuf = Buffer.from(EXPORT_SECRET)
-  if (providedBuf.length !== secretBuf.length) return false
-  return timingSafeEqual(providedBuf, secretBuf)
-}
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl
   const type = searchParams.get('type') || ''
-
-  if (!EXPORT_SECRET) {
-    return NextResponse.json({ error: 'Export not configured. Set EXPORT_SECRET in environment variables.' }, { status: 500 })
-  }
-
-  if (!checkRateLimit(request, 'export', { limit: 10, windowMs: 60_000 })) {
-    return NextResponse.json({ error: 'Too many requests, please try again shortly' }, { status: 429 })
-  }
-
-  if (!isAuthorized(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
 
   if (!isSubmissionType(type)) {
     return NextResponse.json(
@@ -59,6 +33,7 @@ export async function GET(request: NextRequest) {
     headers: {
       'Content-Type': 'text/csv; charset=utf-8',
       'Content-Disposition': `attachment; filename="${config.filename}-${date}.csv"`,
+      'Cache-Control': 'no-store',
     },
   })
 }
