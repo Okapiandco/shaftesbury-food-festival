@@ -18,18 +18,16 @@ export async function POST(request: NextRequest) {
     }
     const { email } = parsed.data
 
-    // Store in Sanity
-    if (!process.env.SANITY_API_WRITE_TOKEN) {
-      console.error('SANITY_API_WRITE_TOKEN is not configured')
+    if (!process.env.DATABASE_URL) {
+      console.error('DATABASE_URL is not configured')
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
     }
 
-    const { writeClient } = await import('@/lib/sanity')
-    await writeClient.create({
-      _type: 'newsletterSignup',
-      email,
-      signupDate: new Date().toISOString(),
-    })
+    const { sql } = await import('@/lib/db')
+    await sql`
+      INSERT INTO newsletter_signups (email, signup_date)
+      VALUES (${email}, ${new Date().toISOString()})
+    `
 
     // Send confirmation email
     if (resend) {

@@ -20,24 +20,16 @@ export async function POST(request: NextRequest) {
     }
     const { fullName, email, phone, preferredRoles, availability, skills, previousExperience } = parsed.data
 
-    // Store in Sanity
-    if (!process.env.SANITY_API_WRITE_TOKEN) {
-      console.error('SANITY_API_WRITE_TOKEN is not configured')
+    if (!process.env.DATABASE_URL) {
+      console.error('DATABASE_URL is not configured')
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
     }
 
-    const { writeClient } = await import('@/lib/sanity')
-    await writeClient.create({
-      _type: 'volunteerEnquiry',
-      fullName,
-      email,
-      phone,
-      preferredRoles,
-      availability: availability || '',
-      skills: skills || '',
-      previousExperience: previousExperience || '',
-      submittedAt: new Date().toISOString(),
-    })
+    const { sql } = await import('@/lib/db')
+    await sql`
+      INSERT INTO volunteer_enquiries (full_name, email, phone, preferred_roles, availability, skills, previous_experience, submitted_at)
+      VALUES (${fullName}, ${email}, ${phone}, ${preferredRoles}, ${availability || ''}, ${skills || ''}, ${previousExperience || ''}, ${new Date().toISOString()})
+    `
 
     // Send notification email
     if (resend) {

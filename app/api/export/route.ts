@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { timingSafeEqual } from 'node:crypto'
-import { client } from '@/lib/sanity'
 import { checkRateLimit } from '@/lib/rateLimit'
 
 const EXPORT_SECRET = process.env.EXPORT_SECRET
@@ -17,33 +16,27 @@ function isAuthorized(request: NextRequest): boolean {
 
 const TYPES = {
   'trade-stands': {
-    query: `*[_type == "tradeStandEnquiry"] | order(submittedAt desc) {
-      businessName, contactName, email, phone, category, description, specialRequirements, submittedAt
-    }`,
-    headers: ['Business Name', 'Contact', 'Email', 'Phone', 'Category', 'Description', 'Special Requirements', 'Submitted'],
-    fields: ['businessName', 'contactName', 'email', 'phone', 'category', 'description', 'specialRequirements', 'submittedAt'],
+    query: `SELECT business_name, contact_name, email, phone, category, pitches, description, special_requirements, submitted_at FROM trade_stand_enquiries ORDER BY submitted_at DESC`,
+    headers: ['Business Name', 'Contact', 'Email', 'Phone', 'Category', 'Pitches', 'Description', 'Special Requirements', 'Submitted'],
+    fields: ['business_name', 'contact_name', 'email', 'phone', 'category', 'pitches', 'description', 'special_requirements', 'submitted_at'],
     filename: 'trade-stand-enquiries',
   },
   'cheese-race': {
-    query: `*[_type == "cheeseRaceEntry"] | order(entryDate desc) {
-      firstName, surname, email, age, gender, entryDate
-    }`,
+    query: `SELECT first_name, surname, email, age, gender, entry_date FROM cheese_race_entries ORDER BY entry_date DESC`,
     headers: ['First Name', 'Surname', 'Email', 'Age', 'Gender', 'Entry Date'],
-    fields: ['firstName', 'surname', 'email', 'age', 'gender', 'entryDate'],
+    fields: ['first_name', 'surname', 'email', 'age', 'gender', 'entry_date'],
     filename: 'cheese-race-entries',
   },
   volunteers: {
-    query: `*[_type == "volunteerEnquiry"] | order(submittedAt desc) {
-      fullName, email, phone, preferredRoles, availability, skills, previousExperience, submittedAt
-    }`,
+    query: `SELECT full_name, email, phone, preferred_roles, availability, skills, previous_experience, submitted_at FROM volunteer_enquiries ORDER BY submitted_at DESC`,
     headers: ['Name', 'Email', 'Phone', 'Preferred Roles', 'Availability', 'Skills', 'Previous Experience', 'Submitted'],
-    fields: ['fullName', 'email', 'phone', 'preferredRoles', 'availability', 'skills', 'previousExperience', 'submittedAt'],
+    fields: ['full_name', 'email', 'phone', 'preferred_roles', 'availability', 'skills', 'previous_experience', 'submitted_at'],
     filename: 'volunteer-enquiries',
   },
   newsletter: {
-    query: `*[_type == "newsletterSignup"] | order(signupDate desc) { email, signupDate }`,
+    query: `SELECT email, signup_date FROM newsletter_signups ORDER BY signup_date DESC`,
     headers: ['Email', 'Signup Date'],
-    fields: ['email', 'signupDate'],
+    fields: ['email', 'signup_date'],
     filename: 'newsletter-signups',
   },
 } as const
@@ -52,7 +45,9 @@ type ExportType = keyof typeof TYPES
 
 function escapeCsv(value: unknown): string {
   if (value == null) return ''
-  const str = Array.isArray(value) ? value.join('; ') : String(value)
+  const str = value instanceof Date
+    ? value.toISOString()
+    : Array.isArray(value) ? value.join('; ') : String(value)
   if (str.includes(',') || str.includes('"') || str.includes('\n')) {
     return `"${str.replace(/"/g, '""')}"`
   }
@@ -82,11 +77,16 @@ export async function GET(request: NextRequest) {
     )
   }
 
+  if (!process.env.DATABASE_URL) {
+    return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
+  }
+
+  const { sql } = await import('@/lib/db')
   const config = TYPES[type]
-  const results = await client.fetch(config.query)
+  const results = await sql.query(config.query)
 
   const rows = [config.headers.join(',')]
-  for (const row of results) {
+  for (const row of results as Record<string, unknown>[]) {
     rows.push(config.fields.map((field) => escapeCsv(row[field])).join(','))
   }
 

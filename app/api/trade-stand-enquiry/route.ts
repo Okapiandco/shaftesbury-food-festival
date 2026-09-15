@@ -20,25 +20,16 @@ export async function POST(request: NextRequest) {
     }
     const { businessName, contactName, email, phone, category, pitches, description, specialRequirements } = parsed.data
 
-    // Store in Sanity
-    if (!process.env.SANITY_API_WRITE_TOKEN) {
-      console.error('SANITY_API_WRITE_TOKEN is not configured')
+    if (!process.env.DATABASE_URL) {
+      console.error('DATABASE_URL is not configured')
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
     }
 
-    const { writeClient } = await import('@/lib/sanity')
-    await writeClient.create({
-      _type: 'tradeStandEnquiry',
-      businessName,
-      contactName,
-      email,
-      phone: phone || '',
-      category,
-      pitches,
-      description,
-      specialRequirements: specialRequirements || '',
-      submittedAt: new Date().toISOString(),
-    })
+    const { sql } = await import('@/lib/db')
+    await sql`
+      INSERT INTO trade_stand_enquiries (business_name, contact_name, email, phone, category, pitches, description, special_requirements, submitted_at)
+      VALUES (${businessName}, ${contactName}, ${email}, ${phone || ''}, ${category}, ${pitches}, ${description}, ${specialRequirements || ''}, ${new Date().toISOString()})
+    `
 
     // Send notification email
     if (resend) {

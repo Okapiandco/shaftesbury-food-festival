@@ -20,23 +20,16 @@ export async function POST(request: NextRequest) {
     }
     const { firstName, surname, email, age, gender, acknowledgement } = parsed.data
 
-    // Store in Sanity (requires write token)
-    if (!process.env.SANITY_API_WRITE_TOKEN) {
-      console.error('SANITY_API_WRITE_TOKEN is not configured')
+    if (!process.env.DATABASE_URL) {
+      console.error('DATABASE_URL is not configured')
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
     }
 
-    const { writeClient } = await import('@/lib/sanity')
-    await writeClient.create({
-      _type: 'cheeseRaceEntry',
-      firstName,
-      surname,
-      email,
-      age,
-      gender,
-      acknowledgement,
-      entryDate: new Date().toISOString(),
-    })
+    const { sql } = await import('@/lib/db')
+    await sql`
+      INSERT INTO cheese_race_entries (first_name, surname, email, age, gender, acknowledgement, entry_date)
+      VALUES (${firstName}, ${surname}, ${email}, ${age}, ${gender}, ${acknowledgement}, ${new Date().toISOString()})
+    `
 
     // Send notification email
     if (resend) {

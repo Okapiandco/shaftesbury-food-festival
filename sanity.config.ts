@@ -28,19 +28,6 @@ export default defineConfig({
             S.documentTypeListItem('event').title('Events & Timetable'),
             S.documentTypeListItem('sponsor').title('Sponsors'),
             S.documentTypeListItem('page').title('Pages'),
-            S.divider(),
-            S.listItem()
-              .title('Form Submissions')
-              .child(
-                S.list()
-                  .title('Form Submissions')
-                  .items([
-                    S.documentTypeListItem('cheeseRaceEntry').title('Cheese Race Entries'),
-                    S.documentTypeListItem('tradeStandEnquiry').title('Trade Stand Enquiries'),
-                    S.documentTypeListItem('volunteerEnquiry').title('Volunteer Enquiries'),
-                    S.documentTypeListItem('newsletterSignup').title('Newsletter Signups'),
-                  ])
-              ),
           ]),
     }),
     visionTool(),
