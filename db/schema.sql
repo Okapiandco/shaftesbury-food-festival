@@ -20,6 +20,8 @@ CREATE TABLE IF NOT EXISTS trade_stand_enquiries (
   contact_name TEXT NOT NULL,
   email TEXT NOT NULL,
   phone TEXT NOT NULL DEFAULT '',
+  county TEXT NOT NULL DEFAULT '',
+  nearest_town TEXT NOT NULL DEFAULT '',
   category TEXT NOT NULL,
   pitches TEXT NOT NULL,
   description TEXT NOT NULL,
@@ -27,6 +29,12 @@ CREATE TABLE IF NOT EXISTS trade_stand_enquiries (
   submitted_at TIMESTAMPTZ NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+-- Migration: added Sept 2026, kept as an idempotent ALTER so re-running
+-- this file against an existing database (via scripts/db-migrate.mjs)
+-- brings it up to date without dropping data.
+ALTER TABLE trade_stand_enquiries ADD COLUMN IF NOT EXISTS county TEXT NOT NULL DEFAULT '';
+ALTER TABLE trade_stand_enquiries ADD COLUMN IF NOT EXISTS nearest_town TEXT NOT NULL DEFAULT '';
 
 CREATE TABLE IF NOT EXISTS volunteer_enquiries (
   id SERIAL PRIMARY KEY,

@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     if (!parsed.success) {
       return NextResponse.json({ error: 'Invalid submission', issues: parsed.error.flatten() }, { status: 400 })
     }
-    const { businessName, contactName, email, phone, category, pitches, description, specialRequirements } = parsed.data
+    const { businessName, contactName, email, phone, county, nearestTown, category, pitches, description, specialRequirements } = parsed.data
 
     if (!process.env.DATABASE_URL) {
       console.error('DATABASE_URL is not configured')
@@ -27,8 +27,8 @@ export async function POST(request: NextRequest) {
 
     const { sql } = await import('@/lib/db')
     await sql`
-      INSERT INTO trade_stand_enquiries (business_name, contact_name, email, phone, category, pitches, description, special_requirements, submitted_at)
-      VALUES (${businessName}, ${contactName}, ${email}, ${phone || ''}, ${category}, ${pitches}, ${description}, ${specialRequirements || ''}, ${new Date().toISOString()})
+      INSERT INTO trade_stand_enquiries (business_name, contact_name, email, phone, county, nearest_town, category, pitches, description, special_requirements, submitted_at)
+      VALUES (${businessName}, ${contactName}, ${email}, ${phone || ''}, ${county}, ${nearestTown}, ${category}, ${pitches}, ${description}, ${specialRequirements || ''}, ${new Date().toISOString()})
     `
 
     // Send notification email
@@ -43,6 +43,8 @@ export async function POST(request: NextRequest) {
           <p><strong>Contact:</strong> ${escapeHtml(contactName)}</p>
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
           <p><strong>Phone:</strong> ${escapeHtml(phone || 'Not provided')}</p>
+          <p><strong>Nearest Town:</strong> ${escapeHtml(nearestTown)}</p>
+          <p><strong>County:</strong> ${escapeHtml(county)}</p>
           <p><strong>Category:</strong> ${escapeHtml(category)}</p>
           <p><strong>Pitches:</strong> ${pitches === '2' ? '2 pitches (3m each) — £100' : '1 pitch (3m) — £50'}</p>
           <p><strong>Description:</strong> ${escapeHtml(description)}</p>

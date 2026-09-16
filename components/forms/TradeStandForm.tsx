@@ -72,6 +72,19 @@ export default function TradeStandForm() {
         </div>
       </div>
 
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label htmlFor="county" className="block text-sm font-medium text-text">County *</label>
+          <input id="county" {...register('county')} className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary" />
+          {errors.county && <p className="mt-1 text-xs text-red-600">{errors.county.message}</p>}
+        </div>
+        <div>
+          <label htmlFor="nearestTown" className="block text-sm font-medium text-text">Nearest Town *</label>
+          <input id="nearestTown" {...register('nearestTown')} className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary" />
+          {errors.nearestTown && <p className="mt-1 text-xs text-red-600">{errors.nearestTown.message}</p>}
+        </div>
+      </div>
+
       <div>
         <label htmlFor="category" className="block text-sm font-medium text-text">Business Type *</label>
         <select id="category" {...register('category')} className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary focus:ring-1 focus:ring-primary">

@@ -22,6 +22,8 @@ export const SUBMISSION_TYPES = {
       { field: 'contact_name', header: 'Contact' },
       { field: 'email', header: 'Email' },
       { field: 'phone', header: 'Phone' },
+      { field: 'nearest_town', header: 'Nearest Town' },
+      { field: 'county', header: 'County' },
       { field: 'category', header: 'Category' },
       { field: 'pitches', header: 'Pitches' },
       { field: 'description', header: 'Description' },

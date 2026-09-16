@@ -24,7 +24,7 @@ const FORM_TYPES = {
   tradeStandEnquiry: {
     table: 'trade_stand_enquiries',
     orderBy: 'submitted_at desc',
-    headers: ['created_at', 'business_name', 'contact_name', 'email', 'phone', 'category', 'pitches', 'description', 'special_requirements', 'submitted_at'],
+    headers: ['created_at', 'business_name', 'contact_name', 'email', 'phone', 'nearest_town', 'county', 'category', 'pitches', 'description', 'special_requirements', 'submitted_at'],
   },
   volunteerEnquiry: {
     table: 'volunteer_enquiries',
