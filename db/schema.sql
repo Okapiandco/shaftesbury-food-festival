@@ -49,9 +49,24 @@ CREATE TABLE IF NOT EXISTS volunteer_enquiries (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+-- Added Oct 2026: general contact form (also carries sponsorship enquiries).
+-- Previously email-only, so nothing was kept for export.
+CREATE TABLE IF NOT EXISTS contact_enquiries (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  subject TEXT NOT NULL,
+  message TEXT NOT NULL,
+  submitted_at TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
 CREATE TABLE IF NOT EXISTS newsletter_signups (
   id SERIAL PRIMARY KEY,
   email TEXT NOT NULL,
   signup_date TIMESTAMPTZ NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+-- Added Oct 2026: which updates the person asked for (chef-demos, food-trail, market, general)
+ALTER TABLE newsletter_signups ADD COLUMN IF NOT EXISTS topics TEXT[] NOT NULL DEFAULT '{}';

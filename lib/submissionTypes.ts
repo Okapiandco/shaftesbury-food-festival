@@ -48,12 +48,26 @@ export const SUBMISSION_TYPES = {
     ],
     filename: 'volunteer-enquiries',
   },
+  contact: {
+    label: 'Contact & Sponsorship Enquiries',
+    table: 'contact_enquiries',
+    orderBy: 'submitted_at desc',
+    columns: [
+      { field: 'name', header: 'Name' },
+      { field: 'email', header: 'Email' },
+      { field: 'subject', header: 'Subject' },
+      { field: 'message', header: 'Message' },
+      { field: 'submitted_at', header: 'Submitted' },
+    ],
+    filename: 'contact-enquiries',
+  },
   newsletter: {
     label: 'Newsletter Signups',
     table: 'newsletter_signups',
     orderBy: 'signup_date desc',
     columns: [
       { field: 'email', header: 'Email' },
+      { field: 'topics', header: 'Updates Wanted' },
       { field: 'signup_date', header: 'Signup Date' },
     ],
     filename: 'newsletter-signups',

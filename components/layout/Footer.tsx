@@ -3,12 +3,11 @@ import { Facebook, Instagram } from 'lucide-react'
 import NewsletterForm from '@/components/shared/NewsletterForm'
 
 const footerLinks = [
-  { href: '/events', label: 'What\'s On' },
-  { href: '/cheese-race', label: 'Gold Hill Cheese Race' },
-  { href: '/food-demos', label: 'MasterChefs Live' },
-  { href: '/trade-stands', label: 'Street Market' },
   { href: '/food-trail', label: 'Food Trail' },
-  { href: '/feast-for-the-eyes', label: 'Foodie Art' },
+  { href: '/cheese-race', label: 'Gold Hill Cheese Races' },
+  { href: '/trade-stands', label: 'Street Market' },
+  { href: '/food-demos', label: 'Live Action Kitchen' },
+  { href: '/events', label: 'What\'s On' },
   { href: '/contact', label: 'Contact Us' },
   { href: '/about', label: 'About the Festival' },
   { href: '/volunteers', label: 'Volunteers' },
@@ -32,7 +31,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold">Shaftesbury Food Festival</h3>
             <p className="mt-2 text-sm text-blue-200">
-              3rd May 2026 — A day packed full of fun food and festivities on Shaftesbury&apos;s historic high street.
+              Food Trail Saturday 1st May, Festival Sunday 2nd May 2027. A weekend of fabulous food in Shaftesbury and beyond.
             </p>
             <div className="mt-4 flex gap-3">
               {socialLinks.map((social) => (

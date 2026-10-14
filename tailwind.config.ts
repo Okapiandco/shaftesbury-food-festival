@@ -24,6 +24,21 @@ const config: Config = {
           light: '#FFC94D',
           dark: '#E6A000',
         },
+        tomato: {
+          DEFAULT: '#C8381E',
+          dark: '#A32B15',
+          light: '#FCE9E4',
+        },
+        leaf: {
+          DEFAULT: '#2F7D32',
+          dark: '#235F26',
+          light: '#E6F2E6',
+        },
+        plum: {
+          DEFAULT: '#7A2E7E',
+          dark: '#5E2262',
+          light: '#F3E6F4',
+        },
         text: {
           DEFAULT: '#333333',
           light: '#666666',

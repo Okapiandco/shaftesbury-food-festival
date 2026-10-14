@@ -4,12 +4,13 @@ import { MapPin, TreePine, ExternalLink, Navigation, AlertCircle } from 'lucide-
 import PageHeader from '@/components/shared/PageHeader'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import TrailStopSlideshow from '@/components/shared/TrailStopSlideshow'
+import UpdatesSignup from '@/components/shared/UpdatesSignup'
 import { getFaqs } from '@/lib/faqs'
 
 export const metadata: Metadata = {
-  title: 'Food Trail | Shaftesbury Food Festival 2nd May 2026',
+  title: 'Food Trail | Shaftesbury Food Festival Saturday 1st May 2027',
   description:
-    'Follow the Shaftesbury Food Trail on Saturday 2nd May around local food producers including Gold Hill Organic Farm, Sorelle Dorset, Compton McRae, Madjeston Animal Park, Primrose Organic Produce, Pythouse Kitchen Garden, Dorset Blue Vinny, Olives Et Al, Breezy Ridge and Cann Mills.',
+    'Follow the Shaftesbury Food Trail on Saturday 1st May 2027 around local food producers. Stops from 2026 included Gold Hill Organic Farm, Sorelle Dorset, Compton McRae, Madjeston Animal Park, Primrose Organic Produce, Pythouse Kitchen Garden, Dorset Blue Vinny, Olives Et Al, Breezy Ridge and Cann Mills.',
   alternates: { canonical: '/food-trail' },
 }
 
@@ -259,32 +260,36 @@ export default function FoodTrailPage() {
   return (
     <>
       <PageHeader
-        title="The Food Trail"
-        subtitle="Saturday 2nd May"
-        backgroundImage="/images/Food Trail/Blue Vinny/Michael Davies- Dorset Blue Vinny.avif"
-        backgroundAlt="Michael Davies at Woodbridge Farm making Dorset Blue Vinny cheese"
+        title="Festival Food Trail"
+        eyebrow="Saturday 1st May"
+        color="leaf"
+        subtitle="Visit wonderful local producers in the stunning countryside around Shaftesbury. Expect tours, tastings, farm walks and demonstrations as doors open to show you what they do, where and how..."
+        image="/images/Food Trail/Blue Vinny/Michael Davies- Dorset Blue Vinny.avif"
+        imageAlt="Michael Davies at Woodbridge Farm making Dorset Blue Vinny cheese"
       />
 
       {/* Introduction */}
       <section className="section">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent-dark">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-leaf-light text-leaf">
               <TreePine size={28} />
             </div>
-            <h2 className="mt-6 text-2xl font-bold text-text md:text-3xl">
-              Discover Dorset&apos;s Finest Food Producers
-            </h2>
-            <p className="mt-4 text-text-light leading-relaxed">
-              On <strong>Saturday 2nd May</strong>, The Food Trail takes the Festival into the stunning countryside
-              around Shaftesbury. A curated selection of fabulous local producers open their doors to show
-              you what they do, where and how&hellip;
+            <p className="mt-6 text-lg leading-relaxed text-text">
+              Find details of our trail stops and locations below.
             </p>
             <p className="mt-4 text-text-light leading-relaxed">
-              Select your destinations from the map below. Will it be a farm walk followed by cheese tasting?
+              Select your destinations from the map. Will it be a farm walk followed by cheese tasting?
               Organic beef from the BBQ and a tour of a historic mill? Fabulous ice creams and walled kitchen gardens?
               The choice is yours!
             </p>
+          </div>
+          <div className="mx-auto mt-10 max-w-2xl rounded-2xl bg-leaf-light p-4 md:p-6">
+            <UpdatesSignup
+              defaultTopics={['food-trail']}
+              heading="Get Food Trail updates"
+              intro="The 2027 trail stops and activities will be announced as they are confirmed. Register and we will email you."
+            />
           </div>
         </div>
       </section>
@@ -368,7 +373,7 @@ export default function FoodTrailPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Trail Stops</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Each producer is offering special activities and experiences on Saturday 2nd May.
+            The stops below are from the 2026 trail, so you can see what to expect. The 2027 stops and activities will be confirmed nearer the time.
           </p>
 
           <div className="mt-12 space-y-16">
@@ -474,12 +479,12 @@ export default function FoodTrailPage() {
             '@context': 'https://schema.org',
             '@type': 'TouristTrip',
             name: 'Shaftesbury Food Trail',
-            description: 'A trail around local food producers near Shaftesbury on Saturday 2nd May, featuring farm walks, tastings and tours.',
+            description: 'A trail around local food producers near Shaftesbury on Saturday 1st May 2027, featuring farm walks, tastings and tours.',
             touristType: 'Food lovers',
             subjectOf: {
               '@type': 'Event',
-              name: 'Shaftesbury Food Festival 2026',
-              startDate: '2026-05-02',
+              name: 'Shaftesbury Food Festival 2027',
+              startDate: '2027-05-01',
             },
           }),
         }}

@@ -31,7 +31,8 @@ export default function VolunteersPage() {
     <>
       <PageHeader
         title="Become a Volunteer"
-        subtitle="Help us create an unforgettable day of food and festivities."
+        color="leaf"
+        subtitle="Shaftesbury Food Festival is run on a not-for-profit basis by a small team of volunteers with the backing of the Chamber of Commerce. If you love what we do and would like to be a part of it, why not volunteer? We can use anything from a few hours over the Festival weekend to a range of skills in the months of planning ahead of it..."
       />
 
       {/* Volunteer Roles */}
@@ -98,11 +99,11 @@ export default function VolunteersPage() {
       <section className="section bg-primary text-white">
         <div className="container mx-auto max-w-3xl px-4 text-center">
           <h2 className="text-2xl font-bold md:text-3xl">Shaftesbury Chamber of Commerce</h2>
-          <p className="mt-4 text-blue-200 leading-relaxed">
-            The Shaftesbury Food Festival is proudly run by volunteers from the Shaftesbury Chamber of Commerce. The Chamber supports local businesses and brings the community together through events like this. Interested in joining the Chamber? Get in touch.
+          <p className="mt-4 text-white/90 leading-relaxed">
+            The Shaftesbury Food Festival is proudly run by volunteers with the backing of the Shaftesbury Chamber of Commerce. The Chamber supports local businesses and brings the community together through events like this. Interested in the Chamber? Find out how to join.
           </p>
           <div className="mt-6">
-            <CTAButton href="/contact" variant="accent">Contact the Chamber</CTAButton>
+            <CTAButton href="https://www.shaftesburychamber.co.uk/" variant="accent" external>Find out about joining the Chamber</CTAButton>
           </div>
         </div>
       </section>

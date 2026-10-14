@@ -31,10 +31,15 @@ const FORM_TYPES = {
     orderBy: 'submitted_at desc',
     headers: ['created_at', 'full_name', 'email', 'phone', 'preferred_roles', 'availability', 'skills', 'previous_experience', 'submitted_at'],
   },
+  contactEnquiry: {
+    table: 'contact_enquiries',
+    orderBy: 'submitted_at desc',
+    headers: ['created_at', 'name', 'email', 'subject', 'message', 'submitted_at'],
+  },
   newsletterSignup: {
     table: 'newsletter_signups',
     orderBy: 'signup_date desc',
-    headers: ['created_at', 'email', 'signup_date'],
+    headers: ['created_at', 'email', 'topics', 'signup_date'],
   },
 }
 

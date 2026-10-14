@@ -20,6 +20,22 @@ export async function POST(request: NextRequest) {
     }
     const { name, email, subject, message } = parsed.data
 
+    // Keep a copy for export. A storage failure must not lose the enquiry,
+    // so log it and still send the email.
+    if (process.env.DATABASE_URL) {
+      try {
+        const { sql } = await import('@/lib/db')
+        await sql`
+          INSERT INTO contact_enquiries (name, email, subject, message, submitted_at)
+          VALUES (${name}, ${email}, ${subject}, ${message}, ${new Date().toISOString()})
+        `
+      } catch (dbError) {
+        console.error('Contact enquiry storage error:', dbError)
+      }
+    } else {
+      console.error('DATABASE_URL is not configured, contact enquiry not stored')
+    }
+
     // Send email
     if (resend) {
       await resend.emails.send({

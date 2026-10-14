@@ -17,7 +17,9 @@ export default function CheeseRacePage() {
   return (
     <>
       <PageHeader
-        title="The Gold Hill Cheese Race"
+        title="The Gold Hill Cheese Races"
+        eyebrow="Sunday 2nd May"
+        color="accent"
         subtitle="The world-famous race up iconic Gold Hill — made famous by the Hovis advert."
       />
 

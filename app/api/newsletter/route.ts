@@ -17,6 +17,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Valid email required' }, { status: 400 })
     }
     const { email } = parsed.data
+    const topics = parsed.data.topics?.length ? parsed.data.topics : ['general']
 
     if (!process.env.DATABASE_URL) {
       console.error('DATABASE_URL is not configured')
@@ -25,8 +26,8 @@ export async function POST(request: NextRequest) {
 
     const { sql } = await import('@/lib/db')
     await sql`
-      INSERT INTO newsletter_signups (email, signup_date)
-      VALUES (${email}, ${new Date().toISOString()})
+      INSERT INTO newsletter_signups (email, signup_date, topics)
+      VALUES (${email}, ${new Date().toISOString()}, ${topics})
     `
 
     // Send confirmation email

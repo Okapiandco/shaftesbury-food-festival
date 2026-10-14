@@ -3,61 +3,52 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, HelpCircle, Footprints, UtensilsCrossed, Trophy, Palette, Search, CalendarDays, ChefHat, Facebook, Instagram, Heart } from 'lucide-react'
-
-const CHAMBER_URL = 'https://www.shaftesburychamber.co.uk/'
+import { Menu, X, ChevronDown, Footprints, UtensilsCrossed, Trophy, Search, CalendarDays, ChefHat, Store, Facebook, Instagram } from 'lucide-react'
 
 const sideEvents = [
   {
-    href: '/feast-for-the-eyes',
-    label: 'A Feast for the Eyes',
-    description: '29th Apr – 5th May — Art exhibition, 10am–4pm daily',
-    icon: Palette,
-    color: 'text-secondary',
-  },
-  {
-    href: '/events#quiz',
-    label: 'The Great Food Quiz — SOLD OUT',
-    description: 'Friday 1st May — Quiz night at Sorelle, 6pm–10pm',
-    icon: HelpCircle,
-    color: 'text-primary',
-  },
-  {
     href: '/food-trail',
     label: 'Food Trail',
-    description: 'Saturday 2nd May — Explore local producers, 10am–4pm',
+    description: 'Saturday 1st May: visit local producers in the countryside',
     icon: Footprints,
-    color: 'text-secondary',
+    color: 'text-leaf',
   },
   {
     href: '/cheese-race',
-    label: 'Cheese Race',
-    description: 'Sunday 3rd May — The famous Gold Hill race',
+    label: 'Cheese Races',
+    description: 'Sunday 2nd May: the famous Gold Hill race',
     icon: Trophy,
-    color: 'text-primary',
+    color: 'text-accent-dark',
+  },
+  {
+    href: '/trade-stands',
+    label: 'Street Market',
+    description: 'Sunday 2nd May: 120+ stalls of food, drink and crafts',
+    icon: Store,
+    color: 'text-tomato',
   },
   {
     href: '/food-demos',
-    label: 'MasterChefs Live',
-    description: 'Sunday 3rd May — MasterChefs Live at The Town Hall',
+    label: 'Live Action Kitchen',
+    description: 'Sunday 2nd May: chefs live at the Town Hall',
     icon: ChefHat,
-    color: 'text-accent-dark',
+    color: 'text-plum',
   },
   {
     href: '/ingredients-hunt',
     label: 'Ingredients Hunt',
-    description: 'Sunday 3rd May — Family scavenger hunt',
+    description: 'Sunday 2nd May: family scavenger hunt',
     icon: Search,
-    color: 'text-accent-dark',
+    color: 'text-primary',
   },
 ]
 
 const navLinks = [
-  { href: '/cheese-race', label: 'Cheese Race' },
-  { href: '/food-demos', label: 'MasterChefs Live' },
-  { href: '/trade-stands', label: 'Street Market' },
   { href: '/food-trail', label: 'Food Trail' },
-  { href: '/feast-for-the-eyes', label: 'Foodie Art' },
+  { href: '/cheese-race', label: 'Cheese Races' },
+  { href: '/trade-stands', label: 'Street Market' },
+  { href: '/food-demos', label: 'Live Action Kitchen' },
+  { href: '/volunteers', label: 'Volunteer' },
   { href: '/faqs', label: 'FAQs' },
 ]
 
@@ -102,7 +93,7 @@ export default function Header() {
           <div className="h-48 w-48 group-data-[scrolled=true]/header:h-16 group-data-[scrolled=true]/header:w-16 transition-[height,width] duration-300 ease-in-out">
             <Image
               src="/images/SHaftesbury food festival Logo new.jpeg"
-              alt="Shaftesbury Food Festival 2026"
+              alt="Shaftesbury Food Festival 2027"
               width={192}
               height={192}
               className="h-full w-full object-contain"
@@ -148,18 +139,6 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Chamber of Commerce CTA — always visible on every page, every size */}
-          <a
-            href={CHAMBER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-2 text-xs font-bold text-primary shadow-sm ring-1 ring-accent-dark/20 hover:bg-accent/90 hover:scale-105 transition-all sm:gap-2 sm:px-4 sm:text-sm"
-            aria-label="Join the Shaftesbury &amp; District Chamber of Commerce"
-          >
-            <Heart className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
-            <span>Join the Chamber</span>
-          </a>
-
           {/* Mobile menu button */}
           <button
             className="lg:hidden rounded-md p-2 text-text hover:bg-gray-100"
@@ -183,14 +162,14 @@ export default function Header() {
                 onClick={() => setMegaOpen(false)}
                 className="col-span-4 group rounded-2xl bg-primary p-6 text-white hover:bg-primary-dark transition-colors"
               >
-                <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">The Main Event</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-accent">The Main Event</p>
                 <UtensilsCrossed className="mt-3 w-10 h-10 text-accent" />
                 <h3 className="mt-3 text-xl font-bold">Shaftesbury Food Festival</h3>
-                <p className="mt-2 text-sm text-blue-200">
-                  Sunday 3rd May 2026 — Bank Holiday
+                <p className="mt-2 text-sm text-white/90">
+                  Food Trail Saturday 1st May, Festival Sunday 2nd May 2027
                 </p>
-                <p className="mt-3 text-sm text-blue-100 leading-relaxed">
-                  The high street comes alive with 100+ food &amp; drink stalls, the Gold Hill Cheese Race, MasterChefs Live, live music and family fun.
+                <p className="mt-3 text-sm text-white/90 leading-relaxed">
+                  A weekend of fabulous food in the town and beyond: the Food Trail, the Street Market, chefs live and frantic cheese racing.
                 </p>
                 <span className="mt-4 inline-block text-sm font-semibold text-accent group-hover:underline">
                   Find out more &rarr;
@@ -249,7 +228,7 @@ export default function Header() {
                 <UtensilsCrossed className="w-5 h-5 shrink-0 text-accent-dark" />
                 <div>
                   <p className="text-sm font-bold text-text">Shaftesbury Food Festival</p>
-                  <p className="text-xs text-text-light">Sunday 3rd May — The main event</p>
+                  <p className="text-xs text-text-light">Saturday 1st and Sunday 2nd May 2027</p>
                 </div>
               </Link>
               {sideEvents.map((item) => (
@@ -286,17 +265,6 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-
-          <a
-            href={CHAMBER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMobileOpen(false)}
-            className="mt-3 flex items-center gap-3 rounded-lg bg-accent px-3 py-3 text-sm font-bold text-primary shadow-sm hover:bg-accent/90 transition-colors"
-          >
-            <Heart className="h-5 w-5 shrink-0" />
-            <span>Join the Shaftesbury &amp; District Chamber of Commerce</span>
-          </a>
 
           <div className="mt-4 flex gap-3 px-3">
             <a href="https://www.facebook.com/ShaftesburyFoodFestival" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="rounded-full bg-gray-100 p-2 text-text hover:bg-gray-200 transition-colors">

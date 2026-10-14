@@ -41,4 +41,5 @@ export const volunteerSchema = z.object({
 
 export const newsletterSchema = z.object({
   email: z.string().trim().email('Please enter a valid email').max(320),
+  topics: z.array(z.enum(['chef-demos', 'food-trail', 'market', 'general'])).max(4).optional(),
 })

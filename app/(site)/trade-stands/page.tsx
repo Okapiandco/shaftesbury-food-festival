@@ -25,26 +25,28 @@ export default function TradeStandsPage() {
     <>
       <PageHeader
         title="Street Market"
-        subtitle="Over 100 stalls celebrating food, drink and local artisans. Expressions of interest are now open for traders for the next festival on Sunday 2nd May 2027."
+        eyebrow="Sunday 2nd May"
+        color="tomato"
+        subtitle="Shop, eat, browse, discover, eat some more! Even bigger for 2027, find an exciting slice of Wessex's diverse and vibrant food scene in the Sunday Street Market."
+        image="/images/high-street-festival.jpg"
+        imageAlt="Shaftesbury High Street alive with festival-goers and stalls"
       />
-
-      {/* Food stalls image banner */}
-      <section className="relative h-64 md:h-80 overflow-hidden">
-        <Image
-          src="/images/high-street-festival.jpg"
-          alt="Shaftesbury High Street alive with festival-goers and stalls"
-          fill
-          className="object-cover"
-        />
-      </section>
 
       {/* Trade Stand Gallery */}
       <section className="section bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-2xl font-bold text-text md:text-3xl">Explore the Market</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-text-light">
-            Here&apos;s a taster of what&apos;s on offer at the Shaftesbury Food Festival.
+            Here&apos;s a taster of what&apos;s on offer (as per 2026). We will add imagery from traders as they confirm for 2027.
           </p>
+          <div className="mt-5 text-center">
+            <a
+              href="#apply"
+              className="inline-flex min-h-[44px] items-center rounded-md bg-tomato px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-tomato-dark"
+            >
+              Click here to be part of the market
+            </a>
+          </div>
           <div className="mt-8 columns-2 sm:columns-3 md:columns-4 gap-4 space-y-4">
             {[
               { src: '001_barbers.png', alt: 'Barbers' },
@@ -92,17 +94,26 @@ export default function TradeStandsPage() {
       </section>
 
       {/* Trade stands atmosphere */}
-      <section className="relative h-64 md:h-80 overflow-hidden">
-        <Image
-          src="/images/Trade stands at the festival.jpg"
-          alt="Trade stands and vendors at the Shaftesbury Food Festival"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-primary/40 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-            <h2 className="text-3xl font-bold md:text-4xl">Join Over 100 Stalls</h2>
-            <p className="mt-3 text-lg text-blue-200">Showcase your produce to thousands of visitors</p>
+      <section className="bg-accent py-12 md:py-16">
+        <div className="container mx-auto grid items-center gap-8 px-4 md:grid-cols-2">
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl font-bold text-primary md:text-4xl">Join Over 100 Stalls</h2>
+            <p className="mt-3 text-lg text-primary/90">Showcase your produce to thousands of visitors</p>
+            <a
+              href="#apply"
+              className="mt-6 inline-flex min-h-[44px] items-center rounded-md bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-primary-dark"
+            >
+              Express your interest
+            </a>
+          </div>
+          <div className="relative aspect-[16/9] overflow-hidden rounded-2xl shadow-md">
+            <Image
+              src="/images/Trade stands at the festival.jpg"
+              alt="Trade stands and vendors at the Shaftesbury Food Festival"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
           </div>
         </div>
       </section>
